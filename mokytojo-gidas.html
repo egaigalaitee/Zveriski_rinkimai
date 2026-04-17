@@ -40,18 +40,39 @@
     .topbar {
       background: var(--cream);
       color: var(--black);
-      padding-top: 40px;
+      padding: 22px 34px 16px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: start;
+      gap: 24px;
     }
 
-    .topbar-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-link {
-      font-size: 24px;
+    .topbar__link {
+      margin: 22px 0 0;
+      font-size: clamp(1rem, 1.7vw, 2rem);
       font-weight: 400;
+      letter-spacing: 0.01em;
+      transition: opacity 0.2s ease;
+    }
+
+    .topbar__link:hover {
+      opacity: 0.72;
+    }
+
+    .topbar__link--right {
+      text-align: right;
+    }
+
+    .topbar__logo-link {
+      display: inline-block;
+      justify-self: center;
+      margin-top: 6px;
+    }
+
+    .topbar__logo {
+      width: min(150px, 14vw);
+      height: auto;
+      display: block;
     }
 
     .hero {
@@ -137,27 +158,26 @@
       margin-bottom: 110px;
     }
 
-.glossary-button {
-  background: var(--cream);
-  color: var(--black);
-  border-radius: 300px;
-  width: 322px;
-  height: 65px;
+    .glossary-button {
+      background: var(--cream);
+      color: var(--black);
+      border-radius: 300px;
+      width: 322px;
+      height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 24px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+    }
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-family: 'Poppins', sans-serif;
-  font-size: 24px;
-
-  text-decoration: none;
-  transition: opacity 0.2s ease; /* kad būtų smooth */
-}
-
-.glossary-button:hover {
-  opacity: 0.4;
-}
+    .glossary-button:hover {
+      opacity: 0.4;
+    }
 
     .note-grid {
       display: grid;
@@ -290,11 +310,22 @@
       }
 
       .topbar {
-        padding-top: 24px;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 14px;
+        padding: 16px;
       }
 
-      .nav-link {
+      .topbar__link,
+      .topbar__link--right {
+        margin-top: 0;
+        text-align: center;
         font-size: 14px;
+      }
+
+      .topbar__logo {
+        width: 130px;
       }
 
       .hero {
@@ -352,17 +383,17 @@
   </style>
 </head>
 <body>
-<header class="topbar">
-  <a class="topbar__link" href="mokytojo-gidas.html">MOKYTOJO GIDAS</a>
+  <header class="topbar">
+    <a class="topbar__link" href="mokytojo-gidas.html">MOKYTOJO GIDAS</a>
 
-  <a class="topbar__logo-link" href="index.html">
-    <img class="topbar__logo" src="logo-juodas.png" alt="Žvėriški rinkimai logotipas">
-  </a>
+    <a class="topbar__logo-link" href="index.html">
+      <img class="topbar__logo" src="logo-juodas.png" alt="Žvėriški rinkimai logotipas">
+    </a>
 
-  <a class="topbar__link topbar__link--right" href="laikmatis.html">
-    LAIKMATIS ŽAIDIMUI
-  </a>
-</header>
+    <a class="topbar__link topbar__link--right" href="laikmatis.html">
+      LAIKMATIS ŽAIDIMUI
+    </a>
+  </header>
 
   <main>
     <section class="hero">
@@ -423,11 +454,11 @@ SVARBU: priminkite mokiniams, kad tai – žaidimas. Svarbiausia yra nebijoti kl
 
         <div class="note-grid">
           <div class="big-note">
-            </strong>&nbsp;Sąvokų žodynas: kad mokymosi procesas būtų dar efektyvesnis, pridedamos pagrindinės politinės sąvokos, kurios bus naudojamos žaidime. Rekomenduojama jas peržiūrėti prieš žaidimą arba pasitelkti žaidimo metu, jei mokiniai užduotų klausimų.
+            Sąvokų žodynas: kad mokymosi procesas būtų dar efektyvesnis, pridedamos pagrindinės politinės sąvokos, kurios bus naudojamos žaidime. Rekomenduojama jas peržiūrėti prieš žaidimą arba pasitelkti žaidimo metu, jei mokiniai užduotų klausimų.
           </div>
 
           <div class="big-note">
-            </strong>&nbsp;Autoriaus patarimas: pradžioje rekomenduojama išbandyti žaidimą su paruoštais personažais – taip mokiniai lengviau suvoks politinio identiteto struktūrą.
+            Autoriaus patarimas: pradžioje rekomenduojama išbandyti žaidimą su paruoštais personažais – taip mokiniai lengviau suvoks politinio identiteto struktūrą.
           </div>
         </div>
 
