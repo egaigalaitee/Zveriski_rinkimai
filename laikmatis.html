@@ -9,9 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --page-bg: #e6decb;
+      --page-bg: #E6DECB;
       --ink: #000000;
-      --paper: #f8f2e7;
       --stroke: rgba(230, 222, 203, 0.92);
     }
 
@@ -30,6 +29,7 @@
 
     body {
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
     a {
@@ -43,7 +43,7 @@
 
     .page-frame {
       min-height: 100vh;
-      padding: 28px;
+      padding: 22px 34px 24px;
       background: var(--page-bg);
     }
 
@@ -55,10 +55,10 @@
     }
 
     .topbar__link {
-      margin: 28px 0 0;
-      font-size: clamp(1rem, 1.8vw, 2rem);
+      margin: 22px 0 0;
+      font-size: clamp(1rem, 1.7vw, 2rem);
       font-weight: 400;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
       transition: opacity 0.2s ease;
     }
 
@@ -72,23 +72,23 @@
 
     .topbar__logo-link {
       display: inline-block;
-      margin-top: 8px;
+      margin-top: 6px;
       justify-self: center;
     }
 
     .topbar__logo {
-      width: min(170px, 18vw);
+      width: min(150px, 14vw);
       height: auto;
       display: block;
     }
 
     .timer-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 210px;
+      grid-template-columns: minmax(0, 1fr) 220px;
       gap: 34px;
-      align-items: end;
-      min-height: calc(100vh - 180px);
-      padding: 8px 12px 12px;
+      align-items: center;
+      min-height: calc(100vh - 120px);
+      padding: 0 10px 10px;
     }
 
     .clock-section {
@@ -99,7 +99,7 @@
 
     .clock-shell {
       position: relative;
-      width: min(760px, 100%);
+      width: min(980px, 82vw);
       aspect-ratio: 1 / 1;
     }
 
@@ -116,63 +116,53 @@
 
     .timer-display {
       position: absolute;
-      inset: 50% auto auto 50%;
-      transform: translate(-50%, -31%);
+      left: 50%;
+      top: 56%;
+      transform: translate(-50%, -50%);
       color: var(--page-bg);
-      font-size: clamp(5rem, 14vw, 10rem);
+      font-size: clamp(7rem, 15vw, 12rem);
       font-weight: 700;
       line-height: 1;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.05em;
       user-select: none;
     }
 
     .preset {
       position: absolute;
-      width: clamp(76px, 10vw, 96px);
-      height: clamp(76px, 10vw, 96px);
+      width: 96px;
+      height: 96px;
       border-radius: 50%;
       border: 2px solid var(--stroke);
       background: transparent;
-      color: var(--paper);
-      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--page-bg);
+      font-size: 2.2rem;
       font-weight: 600;
       cursor: pointer;
-      transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     }
 
     .preset:hover,
     .preset:focus-visible,
     .preset.is-active {
-      background: #ffffff;
-      color: var(--ink);
+      background: #E6DECB;
+      color: #000000;
       outline: none;
     }
 
-    .preset:hover,
-    .preset:focus-visible {
-      transform: translateY(-1px);
-    }
-
     .preset--left {
-      top: 35%;
-      left: 17%;
+      top: 34%;
+      left: 16%;
     }
 
     .preset--top {
-      top: 16%;
+      top: 13.5%;
       left: 50%;
       transform: translateX(-50%);
     }
 
-    .preset--top:hover,
-    .preset--top:focus-visible,
-    .preset--top.is-active {
-      transform: translateX(-50%);
-    }
-
     .preset--right {
-      top: 35%;
-      right: 17%;
+      top: 34%;
+      right: 16%;
     }
 
     .controls {
@@ -180,17 +170,18 @@
       flex-direction: column;
       gap: 24px;
       align-self: end;
-      padding-bottom: 18px;
+      padding-bottom: 34px;
     }
 
     .action-button {
-      min-height: 58px;
+      min-height: 60px;
       border: 2px solid var(--ink);
       border-radius: 999px;
       background: var(--ink);
       color: var(--page-bg);
-      font-size: clamp(1.25rem, 2vw, 1.7rem);
+      font-size: clamp(1.2rem, 1.8vw, 1.65rem);
       font-weight: 400;
+      padding: 0 26px;
       cursor: pointer;
       transition: background-color 0.2s ease, color 0.2s ease;
     }
@@ -202,15 +193,35 @@
       outline: none;
     }
 
-    @media (max-width: 980px) {
+    @media (max-width: 1100px) {
+      .timer-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        min-height: auto;
+        padding-top: 20px;
+      }
+
+      .controls {
+        width: min(360px, 100%);
+        margin: 0 auto;
+        padding-bottom: 0;
+      }
+
+      .clock-shell {
+        width: min(760px, 100%);
+      }
+    }
+
+    @media (max-width: 700px) {
       .page-frame {
-        padding: 20px;
+        padding: 16px;
       }
 
       .topbar {
         grid-template-columns: 1fr;
         justify-items: center;
         text-align: center;
+        gap: 14px;
       }
 
       .topbar__link,
@@ -219,35 +230,30 @@
         text-align: center;
       }
 
-      .timer-layout {
-        grid-template-columns: 1fr;
-        min-height: auto;
-        gap: 24px;
-        padding-top: 18px;
-      }
-
-      .controls {
-        width: min(360px, 100%);
-        margin: 0 auto;
-        padding-bottom: 0;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .page-frame {
-        padding: 14px;
+      .topbar__logo {
+        width: 130px;
       }
 
       .clock-shell {
-        width: min(100%, 520px);
+        width: min(100%, 540px);
+      }
+
+      .preset {
+        width: 78px;
+        height: 78px;
+        font-size: 1.8rem;
       }
 
       .preset--left {
-        left: 12%;
+        left: 13%;
       }
 
       .preset--right {
-        right: 12%;
+        right: 13%;
+      }
+
+      .timer-display {
+        font-size: clamp(4.8rem, 16vw, 8rem);
       }
     }
   </style>
@@ -256,9 +262,11 @@
   <div class="page-frame">
     <header class="topbar">
       <a class="topbar__link" href="mokytojo-gidas.html">MOKYTOJO GIDAS</a>
+
       <a class="topbar__logo-link" href="index.html" aria-label="Grįžti į pagrindinį puslapį">
         <img class="topbar__logo" src="logo-juodas.png" alt="Žvėriški rinkimai logotipas">
       </a>
+
       <a class="topbar__link topbar__link--right" href="laikmatis.html">LAIKMATIS ŽAIDIMUI</a>
     </header>
 
@@ -358,7 +366,6 @@
       hasFinished = false;
       remainingSeconds = selectedMinutes * 60;
       updateDisplay();
-
       timerId = setInterval(tick, 1000);
       isRunning = true;
     }
