@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mokytojo gidas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #e6decb;
+      --black: #000000;
+      --container: 1340px;
+      --radius: 30px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--black);
+      color: var(--cream);
+      line-height: 1.35;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: var(--cream);
+      color: var(--black);
+      padding-top: 78px;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-link {
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    .hero {
+      background: var(--cream);
+      color: var(--black);
+      padding: 115px 0 250px;
+    }
+
+    .hero-title {
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 1.08;
+      text-transform: uppercase;
+      margin-bottom: 210px;
+    }
+
+    .hero-text {
+      width: 100%;
+      max-width: 1030px;
+      font-size: 24px;
+      line-height: 1.45;
+    }
+
+    .content {
+      padding: 160px 0 130px;
+    }
+
+    .two-col-head {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 140px;
+      align-items: start;
+    }
+
+    .left-title,
+    .right-title,
+    .section-title {
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 1.08;
+      text-transform: uppercase;
+    }
+
+    .right-title {
+      text-align: center;
+      justify-self: end;
+      width: 100%;
+      max-width: 620px;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: 655px 618px;
+      justify-content: space-between;
+      gap: 60px;
+    }
+
+    .column-text {
+      font-size: 24px;
+      line-height: 1.42;
+      white-space: pre-line;
+    }
+
+    .note-grid {
+      display: grid;
+      grid-template-columns: 685px 618px;
+      justify-content: space-between;
+      gap: 30px;
+      margin-top: 110px;
+      margin-bottom: 80px;
+    }
+
+    .big-note {
+      background: var(--cream);
+      color: var(--black);
+      border-radius: var(--radius);
+      min-height: 307px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 48px;
+      font-size: 24px;
+      line-height: 1.35;
+    }
+
+    .accent-title {
+      text-align: center;
+      margin: 30px 0 90px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 437px);
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--cream);
+      color: var(--black);
+      border-radius: var(--radius);
+      min-height: 431px;
+      padding: 35px 34px 36px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card-title {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.15;
+      text-transform: uppercase;
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 92px;
+      width: 100%;
+    }
+
+    .card-text {
+      font-size: 24px;
+      line-height: 1.35;
+      width: 100%;
+      max-width: 362px;
+      margin-top: auto;
+    }
+
+    .ending {
+      width: 100%;
+      max-width: 889px;
+      margin: 112px 0 0 auto;
+      font-size: 24px;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    @media (max-width: 1400px) {
+      .columns,
+      .note-grid,
+      .cards,
+      .two-col-head {
+        grid-template-columns: 1fr;
+      }
+
+      .right-title,
+      .ending {
+        justify-self: start;
+        max-width: none;
+        margin-left: 0;
+      }
+
+      .cards {
+        justify-items: center;
+      }
+
+      .card,
+      .big-note {
+        width: 100%;
+        max-width: 700px;
+      }
+
+      .column-text {
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        width: calc(100% - 28px);
+      }
+
+      .topbar {
+        padding-top: 24px;
+      }
+
+      .nav-link {
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 60px 0 100px;
+      }
+
+      .hero-title,
+      .left-title,
+      .right-title,
+      .section-title {
+        font-size: 34px;
+      }
+
+      .hero-title {
+        margin-bottom: 80px;
+      }
+
+      .hero-text,
+      .column-text,
+      .big-note,
+      .card-text,
+      .ending {
+        font-size: 18px;
+      }
+
+      .content {
+        padding: 80px 0;
+      }
+
+      .two-col-head {
+        margin-bottom: 60px;
+      }
+
+      .note-grid {
+        margin-top: 60px;
+        margin-bottom: 60px;
+      }
+
+      .card {
+        min-height: auto;
+      }
+
+      .card-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+        min-height: auto;
+      }
+
+      .ending {
+        margin-top: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="nav-link" href="mokytojo-gidas.html">MOKYTOJO GIDAS</a>
+      <a class="nav-link" href="laikmatis.html">LAIKMATIS ŽAIDIMUI</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-title">GIDAS MOKYTOJAMS</h1>
+        <p class="hero-text">
+          Šis žaidimas yra skirtas praktiškai išbandyti demokratinius procesus per saugią,
+          metaforišką gyvūnų pasaulio aplinką. Žaidimo ašis – diskusija ir socializacija,
+          todėl pagrindinė taisyklė: „Nėra kvailų klausimų“
+        </p>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container">
+        <div class="two-col-head">
+          <h2 class="left-title">ŽAIDIMO EIGA</h2>
+          <h2 class="right-title">STRUKTŪRA IR TRUKMĖ</h2>
+        </div>
+
+        <div class="columns">
+          <div class="column-text">Susiskirstymas 2 min: Žaidėjai burtų keliu traukia žetonus, kurie nustato jų rolę: Partijos narys arba Pilietis/Rinkėjas.
+
+Personažų pasirinkimas: Kiekvienas žaidėjas (tiek partijos narys, tiek rinkėjas) traukia kortelę su gyvūno atvaizdu.
+
+Pasiruošimas ir prisistatymas po 2 min: Kūrybinis pasirinkimas: Žaidėjai gali pasirinkti: naudoti autoriaus jau paruoštas vertybes arba pasikliauti fantazija ir susikurti savo partijos bei rinkėjo ideologiją, pavadinimą bei vertybes patys.
+
+Kiekviena partija turi 2 min prisistatyti rinkėjams, kas jie per partija.
+
+Šis procesas kartojamas 4 turus, kurių metu mokiniai sprendžia visuomenines problemas.
+
+Problemos iškėlimas: Rinkėjas (kuris pirmas nori, o vėliau eina pagal laikrodžio rodyklę) traukia kortelę su situacija ir garsiai perskaito joje aprašytą problemą.
+
+Strateginis pasitarimas 5 min: Partijų nariai grupėse tariasi, kaip jų atstovaujamas gyvūnas, remdamasis savo vertybėmis, išspręstų šią problemą.
+
+Sprendimų pristatymas po 2 min: Kiekviena partija turi iki 2 minučių įtikinti rinkėjus, kad jų siūlomas kelias yra geriausias.</div>
+
+          <div class="column-text">Provokacija ir diskusija 10 min: Rinkėjai traukia korteles su klausimais. Jose esantys raktažodžiai tarnauja kaip įkvėpimas sugalvoti provokuojančius klausimus.
+
+Naudodamiesi savo (kaip gyventojo) vertybėmis, rinkėjai kvestionuoja partijų sprendimus, bando juos „susaudyti“ argumentais ar tiesiog užvesti gilesnę diskusiją.
+
+Po kiekvieno turo diskusijos vyksta balsavimas. Rinkėjai nusprendžia, kurios partijos argumentai buvo stipriausi.
+Suskaičiavus visų 4 turų balsus, paskelbiama partija-laimėtoja.
+
+SVARBU: priminkite mokiniams, kad tai – žaidimas. Svarbiausia yra nebijoti klausti, net jei klausimas atrodo kvailas ar nelogiškas. Kiekviena mintis yra svarbi diskusijos variklis!</div>
+        </div>
+
+        <div class="note-grid">
+          <div class="big-note"><strong>Sąvokų žodynas:</strong>&nbsp;Kad mokymosi procesas būtų dar efektyvesnis, pridėta pagrindinės politinės sąvokos, kurie bus naudojami žaidime. Rekomenduojama jas peržiūrėti prieš žaidimą arba pasitelkti žaidimo metu, jei mokiniui užduotų klausimų.</div>
+          <div class="big-note"><strong>Autoriaus patarimas:</strong>&nbsp;Pradžioje rekomenduojama išbandyti žaidimą su paruoštais personažais – taip mokiniai lengviau suvoks politinio identiteto struktūrą.</div>
+        </div>
+
+        <h2 class="section-title accent-title">SVARBŪS AKCENTAI MOKYTOJUI</h2>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-title">FANTAZIJA</div>
+            <div class="card-text">Skatinkite mokinius nežiūrėti į viską pernelyg rimtai. Tai žaidimas, kuriame gyvūnų metaforos padeda kalbėti apie rimtus dalykus be baimės klysti.</div>
+          </article>
+
+          <article class="card">
+            <div class="card-title">DRĄSA KALBĖTI</div>
+            <div class="card-text">Svarbiausia, kad mokiniai nebijotų klausti. Priminkite, kad nėra kvailų klausimų – kiekviena mintis yra svarbi užvesti diskusijai.</div>
+          </article>
+
+          <article class="card">
+            <div class="card-title">KRITINIS MĄSTYMAS</div>
+            <div class="card-text">Rinkėjų tikslas – išprovokuoti partijas, kad jos atskleistų savo tikrąsias vertybes, o ne tik gražius šūkius.</div>
+          </article>
+        </div>
+
+        <p class="ending">Žaidimo pabaigoje mokiniai turėtų suprasti, kad pilietinis dalyvavimas ir balsavimas yra ne prievolė, o įrankis formuoti savo aplinką.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
