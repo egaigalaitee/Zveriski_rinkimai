@@ -235,16 +235,30 @@
       width: calc(100% - 32px);
     }
 
-    .topbar {
-      padding-top: 24px;
-    }
+.topbar-inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
 
-    .topbar-inner {
-      gap: 16px;
-    }
+.logo-link {
+  justify-self: center;
+}
 
-    .nav-link {
-      font-size: 14px;
+.logo-link img {
+  width: 140px;
+}
+
+.nav-link {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link-right {
+  text-align: right;
+}
     }
 
     .hero {
@@ -309,12 +323,18 @@
 </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="nav-link" href="mokytojo-gidas.html">MOKYTOJO GIDAS</a>
-      <a class="nav-link" href="laikmatis.html">LAIKMATIS ŽAIDIMUI</a>
-    </div>
-  </header>
+<header class="topbar">
+  <div class="container topbar-inner">
+
+    <a class="nav-link" href="mokytojo-gidas.html">
+      MOKYTOJO GIDAS
+    </a>
+    <a class="nav-link nav-link-right" href="laikmatis.html">
+      LAIKMATIS ŽAIDIMUI
+    </a>
+
+  </div>
+</header>
 
   <main>
     <section class="hero">
