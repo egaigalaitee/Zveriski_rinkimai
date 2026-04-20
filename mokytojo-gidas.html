@@ -17,15 +17,26 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body class="guide-page">
-    <header class="guide-hero">
-      <nav class="subpage-topbar subpage-topbar--guide">
-        <a class="subpage-topbar__link" href="./mokytojo-gidas.html">Mokytojo gidas</a>
-        <a class="subpage-topbar__logo" href="./index.html" aria-label="Grįžti į pradžią">
-          <img src="./logo-juodas.png" alt="Žvėriški rinkimai" />
-        </a>
-        <a class="subpage-topbar__link" href="./laikmatis.html">Laikmatis žaidimui</a>
+    <header class="hero hero--subpage">
+      <nav class="topbar">
+        <a class="topbar__link" href="./mokytojo-gidas.html">Mokytojo gidas</a>
+        <a class="topbar__link" href="./laikmatis.html">Laikmatis žaidimui</a>
       </nav>
 
+      <div class="hero__content hero__content--subpage">
+        <div class="hero__title-wrap">
+          <a href="./index.html" aria-label="Grįžti į pradžią">
+            <img
+              class="hero__logo"
+              src="./logo.png"
+              alt="Žvėriški rinkimai logotipas"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="guide-hero__intro">
       <div class="guide-hero__content guide-hero__content--compact">
         <h1 class="guide-hero__title">Gidas mokytojams</h1>
         <p class="guide-hero__lead">
@@ -35,7 +46,7 @@
           kūrybai.
         </p>
       </div>
-    </header>
+    </section>
 
     <main class="guide-main guide-main--visual">
       <section class="guide-section guide-section--tight">
