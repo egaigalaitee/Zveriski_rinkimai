@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="lt">
   <head>
@@ -18,14 +17,23 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body class="timer-page">
-    <header class="timer-header">
-      <nav class="subpage-topbar subpage-topbar--timer">
-        <a class="subpage-topbar__link" href="./mokytojo-gidas.html">Mokytojo gidas</a>
-        <a class="subpage-topbar__logo" href="./index.html" aria-label="Grįžti į pradžią">
-          <img src="./logo-juodas.png" alt="Žvėriški rinkimai" />
-        </a>
-        <a class="subpage-topbar__link" href="./laikmatis.html">Laikmatis žaidimui</a>
+    <header class="hero hero--subpage hero--subpage-light">
+      <nav class="topbar topbar--dark">
+        <a class="topbar__link topbar__link--dark" href="./mokytojo-gidas.html">Mokytojo gidas</a>
+        <a class="topbar__link topbar__link--dark" href="./laikmatis.html">Laikmatis žaidimui</a>
       </nav>
+
+      <div class="hero__content hero__content--subpage">
+        <div class="hero__title-wrap">
+          <a href="./index.html" aria-label="Grįžti į pradžią">
+            <img
+              class="hero__logo hero__logo--dark"
+              src="./juodas-logo.png"
+              alt="Žvėriški rinkimai logotipas"
+            />
+          </a>
+        </div>
+      </div>
     </header>
 
     <main class="timer-main">
@@ -43,7 +51,7 @@
             10
           </button>
 
-          <div id="timer-display" class="timer-clock__display">2:00</div>
+          <div id="timer-display" class="timer-clock__display">3:00</div>
         </div>
 
         <div class="timer-side-controls">
