@@ -96,43 +96,43 @@ a {
 }
 
 .topbar {
-  width: min(calc(100% - 48px), var(--container));
-  margin: 0 auto 56px;
+  width: min (calc (100 % - 48 px), var (--container));
+  margin: 0 auto 56 px;
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: 16 px;
   align-items: center;
-  font-size: 0.95rem;
+  font-size: 0.95 rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.08 em;
 }
 
 .topbar--subpage {
-  width: min(calc(100% - 100px), 1340px);
+  width: min (calc (100 % - 100 px), 1340 px);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 216px 117px 232px;
+  grid-template-columns: 216 px 117 px 232 px;
   justify-content: space-between;
   align-items: start;
   gap: 0;
-  font-size: 0.95rem;
+  font-size: 0.19 rem;
   line-height: 1;
   letter-spacing: 0;
 }
 
 .topbar__link {
   opacity: 0.86;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  animation: fade-up 0.7s ease both;
+  transition: opacity 0.2 s ease, transform 0.2 s ease;
+  animation: fade-up 0.7 s ease both;
 }
 
 .topbar__link--dark {
-  color: rgba(24, 21, 18, 0.92);
+  color: rgba (24, 21, 18, 0.92);
 }
 
 .topbar__link:hover {
   opacity: 1;
-  transform: translateY(-2px);
+  transform: translateY (-2 px);
 }
 
 .topbar--subpage .topbar__link:first-child {
@@ -152,14 +152,14 @@ a {
 }
 
 .topbar__logo {
-  width: 117px;
-  height: 58px;
+  width: 117 px;
+  height: 58 px;
   object-fit: contain;
   display: block;
 }
 
 .hero__content {
-  width: min(calc(100% - 48px), 760px);
+  width: min (calc (100 % - 48 px), 760 px);
   margin: 0 auto;
   text-align: center;
   animation: fade-up 0.8s ease both;
@@ -173,18 +173,18 @@ a {
 }
 
 .eyebrow {
-  margin: 0 0 12px;
+  margin: 0 0 12 px;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 0.8rem;
-  color: rgba(230, 222, 203, 0.72);
+  letter-spacing: 0.16 em;
+  font-size: 0.8 rem;
+  color: rgba (230, 222, 203, 0.72);
 }
 
 .hero__logo {
-  width: min(100%, 360px);
-  margin-bottom: 28px;
+  width: min (100 %, 360 px);
+  margin-bottom: 28 px;
   object-fit: contain;
-  animation: fade-up 0.9s ease both;
+  animation: fade-up 0.9 s ease both;
 }
 
 h1,
@@ -194,8 +194,8 @@ p {
 }
 
 h1 {
-  margin-bottom: 28px;
-  font-size: clamp(3rem, 8vw, 5.6rem);
+  margin-bottom: 28 px;
+  font-size: clamp (3 rem, 8 vw, 5.6 rem);
   line-height: 0.9;
   text-transform: uppercase;
   font-weight: 800;
