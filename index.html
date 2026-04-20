@@ -231,7 +231,15 @@
     text-align: center;
   }
 
-  @media (max-width: 1320px) {
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 311px);
+  justify-content: space-between;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+@media (max-width: 1320px) {
   .cards {
     grid-template-columns: repeat(2, 311px);
     justify-content: center;
@@ -242,7 +250,6 @@
 @media (max-width: 760px) {
   .cards {
     grid-template-columns: 1fr;
-    justify-content: center;
     gap: 20px;
   }
 
@@ -251,6 +258,7 @@
     max-width: 311px;
     margin: 0 auto;
   }
+}
 }
 .topbar-inner {
   display: grid;
