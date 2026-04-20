@@ -1,3 +1,4 @@
+
 :root {
   --bg: #050505;
   --text-light: #e6decb;
@@ -96,43 +97,43 @@ a {
 }
 
 .topbar {
-  width: min (calc (100 % - 48 px), var (--container));
-  margin: 0 auto 56 px;
+  width: min(calc(100% - 48px), var(--container));
+  margin: 0 auto 56px;
   display: flex;
   justify-content: space-between;
-  gap: 16 px;
+  gap: 16px;
   align-items: center;
-  font-size: 16 px;
+  font-size: 0.95rem;
   text-transform: uppercase;
-  letter-spacing: 0.08 em;
+  letter-spacing: 0.08em;
 }
 
 .topbar--subpage {
-  width: min (calc (100 % - 100 px), 1340 px);
+  width: min(calc(100% - 100px), 1340px);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 216 px 117 px 232 px;
+  grid-template-columns: 216px minmax(240px, 1fr) 232px;
   justify-content: space-between;
   align-items: start;
-  gap: 0;
-  font-size: 16 px;
+  gap: 24px;
+  font-size: 24px;
   line-height: 1;
   letter-spacing: 0;
 }
 
 .topbar__link {
   opacity: 0.86;
-  transition: opacity 0.2 s ease, transform 0.2 s ease;
-  animation: fade-up 0.7 s ease both;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  animation: fade-up 0.7s ease both;
 }
 
 .topbar__link--dark {
-  color: rgba (24, 21, 18, 0.92);
+  color: rgba(24, 21, 18, 0.92);
 }
 
 .topbar__link:hover {
   opacity: 1;
-  transform: translateY (-2 px);
+  transform: translateY(-2px);
 }
 
 .topbar--subpage .topbar__link:first-child {
@@ -140,26 +141,19 @@ a {
   text-align: left;
 }
 
+.topbar__link--center {
+  justify-self: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
 .topbar--subpage .topbar__link:last-child {
   justify-self: end;
   text-align: right;
 }
 
-.topbar__logo-link {
-  display: inline-flex;
-  justify-self: center;
-  align-self: start;
-}
-
-.topbar__logo {
-  width: 117 px;
-  height: 58 px;
-  object-fit: contain;
-  display: block;
-}
-
 .hero__content {
-  width: min (calc (100 % - 48 px), 760 px);
+  width: min(calc(100% - 48px), 760px);
   margin: 0 auto;
   text-align: center;
   animation: fade-up 0.8s ease both;
@@ -173,18 +167,18 @@ a {
 }
 
 .eyebrow {
-  margin: 0 0 12 px;
+  margin: 0 0 12px;
   text-transform: uppercase;
-  letter-spacing: 0.16 em;
-  font-size: 0.8 rem;
-  color: rgba (230, 222, 203, 0.72);
+  letter-spacing: 0.16em;
+  font-size: 0.8rem;
+  color: rgba(230, 222, 203, 0.72);
 }
 
 .hero__logo {
-  width: min (100 %, 360 px);
-  margin-bottom: 28 px;
+  width: min(100%, 360px);
+  margin-bottom: 28px;
   object-fit: contain;
-  animation: fade-up 0.9 s ease both;
+  animation: fade-up 0.9s ease both;
 }
 
 h1,
@@ -194,8 +188,8 @@ p {
 }
 
 h1 {
-  margin-bottom: 28 px;
-  font-size: clamp (3 rem, 8 vw, 5.6 rem);
+  margin-bottom: 28px;
+  font-size: clamp(3rem, 8vw, 5.6rem);
   line-height: 0.9;
   text-transform: uppercase;
   font-weight: 800;
@@ -548,6 +542,7 @@ h2 {
   min-height: 100vh;
   background: var(--section-light);
   color: var(--text-dark);
+  overflow-x: hidden;
 }
 
 .timer-nav {
@@ -562,7 +557,7 @@ h2 {
 }
 
 .timer-nav__link {
-  font-size: 0.95rem;
+  font-size: clamp(0.92rem, 1.4vw, 1.2rem);
   text-transform: uppercase;
   color: rgba(24, 21, 18, 0.92);
 }
@@ -585,7 +580,33 @@ h2 {
 .timer-main {
   width: min(calc(100% - 72px), 1400px);
   margin: 0 auto;
-  padding: 20px 0 52px;
+  padding: 24px 0 52px;
+}
+
+.timer-stage-shell {
+  position: relative;
+}
+
+.timer-copy {
+  max-width: 560px;
+  margin: 0 auto 18px;
+  text-align: center;
+}
+
+.timer-kicker {
+  margin-bottom: 10px;
+  color: rgba(24, 21, 18, 0.54);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+}
+
+.timer-title {
+  margin: 0;
+  color: rgba(24, 21, 18, 0.9);
+  font-size: clamp(1.7rem, 3vw, 2.8rem);
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .timer-stage {
@@ -595,12 +616,37 @@ h2 {
   align-items: center;
 }
 
+.timer-clock-wrap {
+  position: relative;
+  grid-column: 2;
+}
+
+.timer-halo {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 999px;
+  filter: blur(24px);
+}
+
+.timer-halo--one {
+  inset: 12% 4% auto;
+  height: 54%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.34), transparent 70%);
+}
+
+.timer-halo--two {
+  inset: auto 16% 12%;
+  height: 22%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.08), transparent 74%);
+}
+
 .timer-clock {
   position: relative;
   width: min(100%, 820px);
   margin: 0;
   aspect-ratio: 1 / 1;
   grid-column: 2;
+  filter: drop-shadow(0 28px 40px rgba(0, 0, 0, 0.08));
 }
 
 .timer-clock__image {
@@ -621,6 +667,7 @@ h2 {
   line-height: 1;
   font-weight: 800;
   letter-spacing: -0.03em;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.14);
 }
 
 .timer-badge {
@@ -634,7 +681,9 @@ h2 {
   font-size: clamp(1.8rem, 3.8vw, 3rem);
   font-weight: 700;
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .timer-badge:hover,
@@ -642,6 +691,7 @@ h2 {
   background: var(--section-light);
   color: var(--text-dark);
   transform: scale(1.05);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.14);
 }
 
 .timer-badge--left {
@@ -673,6 +723,13 @@ h2 {
   grid-column: 3;
 }
 
+.timer-side-panel {
+  grid-column: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
 .timer-action {
   min-height: 62px;
   padding: 0 26px;
@@ -683,12 +740,25 @@ h2 {
   font: inherit;
   font-size: clamp(1.15rem, 1.8vw, 1.5rem);
   cursor: pointer;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
 }
 
 .timer-action:hover {
   transform: translateY(-2px);
   opacity: 0.92;
+  box-shadow: 0 22px 36px rgba(0, 0, 0, 0.16);
+}
+
+.timer-action--primary {
+  background: linear-gradient(180deg, #141414 0%, #050505 100%);
+}
+
+.timer-action:disabled {
+  opacity: 0.46;
+  cursor: default;
+  transform: none;
+  box-shadow: none;
 }
 
 .timer-status {
@@ -700,6 +770,29 @@ h2 {
 
 .timer-status--light {
   color: rgba(24, 21, 18, 0.78);
+}
+
+.timer-status--panel {
+  margin: 0;
+  padding: 16px 18px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.34);
+  border: 1px solid rgba(24, 21, 18, 0.08);
+  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.06);
+}
+
+.timer-presets-label {
+  margin: 12px 0 0;
+  text-align: center;
+  color: rgba(24, 21, 18, 0.54);
+  font-size: 0.92rem;
+}
+
+.timer-footnote {
+  margin-top: 22px;
+  text-align: center;
+  color: rgba(24, 21, 18, 0.52);
+  font-size: 0.9rem;
 }
 
 .guide-page {
@@ -722,7 +815,7 @@ h2 {
 }
 
 .guide-nav__link {
-  font-size: 0.95rem;
+  font-size: 0.72rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -971,9 +1064,14 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .timer-clock-wrap,
+  .timer-side-panel,
   .timer-side-controls {
-    width: min(100%, 360px);
+    width: min(100%, 420px);
     margin: 0 auto;
+  }
+
+  .timer-side-panel {
     grid-column: auto;
   }
 }
@@ -1085,13 +1183,18 @@ h2 {
   }
 
   .topbar--subpage .topbar__link:first-child,
-  .topbar--subpage .topbar__link:last-child {
+  .topbar--subpage .topbar__link:last-child,
+  .topbar__link--center {
     justify-self: center;
     text-align: center;
   }
 
   .timer-stage {
     gap: 28px;
+  }
+
+  .timer-copy {
+    margin-bottom: 10px;
   }
 
   .timer-clock {
