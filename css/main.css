@@ -87,8 +87,13 @@ a {
 
 .hero--subpage {
   min-height: auto;
-  padding-bottom: 42px;
+  padding-bottom: 26px;
   color: var(--text-light);
+}
+
+.hero--subpage-light {
+  background: var(--section-light);
+  color: var(--text-dark);
 }
 
 .topbar {
@@ -103,10 +108,22 @@ a {
   letter-spacing: 0.08em;
 }
 
+.topbar--subpage {
+  margin-bottom: 18px;
+}
+
+.topbar--dark {
+  color: var(--text-dark);
+}
+
 .topbar__link {
   opacity: 0.86;
   transition: opacity 0.2s ease, transform 0.2s ease;
   animation: fade-up 0.7s ease both;
+}
+
+.topbar__link--dark {
+  color: rgba(24, 21, 18, 0.92);
 }
 
 .topbar__link:hover {
@@ -154,6 +171,10 @@ a {
 .hero--subpage .hero__logo {
   width: min(100%, 280px);
   margin-bottom: 0;
+}
+
+.hero__logo--subpage-dark {
+  width: min(100%, 72px);
 }
 
 h1,
