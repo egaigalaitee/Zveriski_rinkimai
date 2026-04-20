@@ -102,7 +102,7 @@ a {
   justify-content: space-between;
   gap: 16 px;
   align-items: center;
-  font-size: 0.95 rem;
+  font-size: 16 px;
   text-transform: uppercase;
   letter-spacing: 0.08 em;
 }
@@ -115,7 +115,7 @@ a {
   justify-content: space-between;
   align-items: start;
   gap: 0;
-  font-size: 0.19 rem;
+  font-size: 16 px;
   line-height: 1;
   letter-spacing: 0;
 }
