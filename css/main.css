@@ -103,7 +103,7 @@ a {
   justify-content: space-between;
   gap: 16px;
   align-items: center;
-  font-size: 0.95rem;
+  font-size: 0.95 rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -116,7 +116,7 @@ a {
   justify-content: space-between;
   align-items: start;
   gap: 24px;
-  font-size: 24px;
+  font-size: 0.95 rem;
   line-height: 1;
   letter-spacing: 0;
 }
@@ -557,7 +557,7 @@ h2 {
 }
 
 .timer-nav__link {
-  font-size: clamp(0.92rem, 1.4vw, 1.2rem);
+  font-size: 0.95 rem;
   text-transform: uppercase;
   color: rgba(24, 21, 18, 0.92);
 }
@@ -815,7 +815,7 @@ h2 {
 }
 
 .guide-nav__link {
-  font-size: 0.72rem;
+  font-size: 0.95 rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
