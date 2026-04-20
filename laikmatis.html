@@ -30,8 +30,6 @@
     <main class="timer-main">
       <section class="timer-stage-shell">
         <div class="timer-copy">
-          <p class="timer-kicker">Diskusijai, balsavimui ir refleksijai</p>
-          <h1 class="timer-title">Laikmatis žaidimui</h1>
         </div>
 
         <section class="timer-stage">
@@ -52,16 +50,11 @@
                 10
               </button>
 
-              <div id="timer-display" class="timer-clock__display">3:00</div>
+              <div id="timer-display" class="timer-clock__display">2:00</div>
             </div>
-
-            <p class="timer-presets-label">Pasirink etapą vienu paspaudimu</p>
-          </div>
 
           <aside class="timer-side-panel">
             <div id="timer-status" class="timer-status timer-status--light timer-status--panel">
-              Paruošta pradėti 3 minučių etapą.
-            </div>
 
             <div class="timer-side-controls">
               <button id="start-button" class="timer-action timer-action--primary" type="button">
@@ -73,9 +66,6 @@
           </aside>
         </section>
       </section>
-
-      <div class="timer-footnote">
-        Laikmatis automatiškai paleidžia garsą, kai etapas baigiasi.
       </div>
     </main>
 
@@ -146,7 +136,6 @@
         clearTimer();
         remainingSeconds = selectedSeconds;
         renderTimer();
-        timerStatus.textContent = "Laikmatis paleistas.";
         setActionState("running");
         intervalId = setInterval(tick, 1000);
       }
@@ -157,7 +146,6 @@
         }
 
         clearTimer();
-        timerStatus.textContent = "Laikmatis sustabdytas.";
         setActionState("paused");
       }
 
@@ -165,8 +153,6 @@
         if (intervalId || remainingSeconds <= 0) {
           return;
         }
-
-        timerStatus.textContent = "Laikmatis pratęstas.";
         setActionState("running");
         intervalId = setInterval(tick, 1000);
       }
