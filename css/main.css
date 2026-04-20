@@ -1107,3 +1107,111 @@ h2 {
     right: 8%;
   }
 }
+
+@media (min-width: 1600px) {
+  :root {
+    --container: 1400px;
+  }
+
+  body {
+    font-size: 18px;
+  }
+
+  .hero {
+    padding-top: 42px;
+    padding-bottom: 96px;
+  }
+
+  .topbar,
+  .container,
+  .guide-hero__content,
+  .guide-section,
+  .timer-main {
+    width: min(calc(100% - 120px), 1600px);
+  }
+
+  .hero__logo {
+    width: min(100%, 460px);
+  }
+
+  .hero__animal-frame {
+    width: min(100%, 460px);
+  }
+
+  .hero__text,
+  .section__body,
+  .section__heading p,
+  .section__note {
+    font-size: 1.15rem;
+  }
+
+  .features {
+    gap: 28px;
+  }
+
+  .feature-card {
+    min-height: 320px;
+    padding: 34px 26px 30px;
+  }
+
+  .feature-card img {
+    width: 132px;
+    height: 132px;
+  }
+
+  .guide-main--visual {
+    padding-top: 140px;
+    padding-bottom: 130px;
+  }
+
+  .guide-column p,
+  .guide-quote p,
+  .guide-accent-card p,
+  .guide-summary__text {
+    font-size: 1rem;
+  }
+
+  .timer-clock {
+    width: min(100%, 980px);
+  }
+
+  .timer-stage {
+    grid-template-columns: 1fr auto 260px 1fr;
+    gap: 46px;
+  }
+
+  .timer-action {
+    min-height: 72px;
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 2200px) {
+  :root {
+    --container: 1700px;
+  }
+
+  .topbar,
+  .container,
+  .guide-hero__content,
+  .guide-section,
+  .timer-main {
+    width: min(calc(100% - 160px), 1900px);
+  }
+
+  .hero__logo {
+    width: min(100%, 540px);
+  }
+
+  .hero__animal-frame {
+    width: min(100%, 560px);
+  }
+
+  .timer-clock {
+    width: min(100%, 1120px);
+  }
+
+  .timer-clock__display {
+    font-size: clamp(6rem, 10vw, 10rem);
+  }
+}
