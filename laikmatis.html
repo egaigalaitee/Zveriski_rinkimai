@@ -29,9 +29,6 @@
 
     <main class="timer-main">
       <section class="timer-stage-shell">
-        <div class="timer-copy">
-        </div>
-
         <section class="timer-stage">
           <div class="timer-clock-wrap">
             <div class="timer-halo timer-halo--one"></div>
@@ -50,12 +47,12 @@
                 10
               </button>
 
-              <div id="timer-display" class="timer-clock__display">2:00</div>
+              <div id="timer-display" class="timer-clock__display">3:00</div>
+              <img class="timer-clock__brand" src="./logo.png" alt="" />
             </div>
+          </div>
 
           <aside class="timer-side-panel">
-            <div id="timer-status" class="timer-status timer-status--light timer-status--panel">
-
             <div class="timer-side-controls">
               <button id="start-button" class="timer-action timer-action--primary" type="button">
                 Pradėti
@@ -66,7 +63,6 @@
           </aside>
         </section>
       </section>
-      </div>
     </main>
 
     <audio id="timer-sound" preload="auto">
@@ -75,14 +71,13 @@
 
     <script>
       const timerDisplay = document.getElementById("timer-display");
-      const timerStatus = document.getElementById("timer-status");
       const startButton = document.getElementById("start-button");
       const stopButton = document.getElementById("stop-button");
       const resumeButton = document.getElementById("resume-button");
       const presetButtons = document.querySelectorAll("[data-minutes]");
       const timerSound = document.getElementById("timer-sound");
 
-      let selectedSeconds = 3 * 60;
+      let selectedSeconds = 2 * 60;
       let remainingSeconds = selectedSeconds;
       let intervalId = null;
 
@@ -110,15 +105,14 @@
       function playTimerSound() {
         timerSound.currentTime = 0;
         timerSound.play().catch(() => {
-          timerStatus.textContent = "Laikas baigėsi. Jei garsas negroja, naršyklė jį užblokavo.";
         });
       }
 
       function tick() {
         if (remainingSeconds <= 0) {
           clearTimer();
-          timerStatus.textContent = "Laikas baigėsi.";
           playTimerSound();
+          setActionState("finished");
           return;
         }
 
@@ -127,8 +121,8 @@
 
         if (remainingSeconds <= 0) {
           clearTimer();
-          timerStatus.textContent = "Laikas baigėsi.";
           playTimerSound();
+          setActionState("finished");
         }
       }
 
@@ -153,6 +147,7 @@
         if (intervalId || remainingSeconds <= 0) {
           return;
         }
+
         setActionState("running");
         intervalId = setInterval(tick, 1000);
       }
@@ -166,7 +161,6 @@
           remainingSeconds = selectedSeconds;
           clearTimer();
           renderTimer();
-          timerStatus.textContent = `Pasirinktas ${button.dataset.minutes} min. etapas.`;
           setActionState("idle");
         });
       });
@@ -174,6 +168,12 @@
       startButton.addEventListener("click", startTimer);
       stopButton.addEventListener("click", stopTimer);
       resumeButton.addEventListener("click", resumeTimer);
+
+      presetButtons.forEach((button) => {
+        if (button.dataset.minutes === "2") {
+          button.classList.add("timer-badge--active");
+        }
+      });
 
       renderTimer();
       setActionState("idle");
