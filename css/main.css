@@ -9,6 +9,40 @@
   --container: 1120px;
 }
 
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes soft-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 14px 30px rgba(230, 222, 203, 0.18));
+  }
+
+  50% {
+    filter: drop-shadow(0 18px 42px rgba(230, 222, 203, 0.28));
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -65,17 +99,25 @@ a {
 
 .topbar__link {
   opacity: 0.86;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  animation: fade-up 0.7s ease both;
 }
 
 .topbar__link:hover {
   opacity: 1;
+  transform: translateY(-2px);
+}
+
+.topbar__link:nth-child(2) {
+  animation-delay: 0.12s;
 }
 
 .hero__content {
   width: min(calc(100% - 48px), 760px);
   margin: 0 auto;
   text-align: center;
+  animation: fade-up 0.8s ease both;
+  animation-delay: 0.15s;
 }
 
 .hero__title-wrap {
@@ -96,6 +138,7 @@ a {
   width: min(100%, 360px);
   margin-bottom: 28px;
   object-fit: contain;
+  animation: fade-up 0.9s ease both;
 }
 
 h1,
@@ -119,6 +162,7 @@ h1 {
   display: grid;
   place-items: center;
   padding: 18px;
+  animation: soft-float 5s ease-in-out infinite;
 }
 
 .hero__animal-image {
@@ -127,6 +171,7 @@ h1 {
   object-fit: contain;
   filter: drop-shadow(0 14px 30px rgba(230, 222, 203, 0.18));
   transition: opacity 0.35s ease;
+  animation: glow-pulse 4.5s ease-in-out infinite;
 }
 
 .hero__text {
@@ -135,10 +180,13 @@ h1 {
   color: rgba(230, 222, 203, 0.82);
   font-size: 1rem;
   line-height: 1.75;
+  animation: fade-up 1s ease both;
+  animation-delay: 0.28s;
 }
 
 .section {
   padding: 88px 0;
+  animation: fade-up 0.8s ease both;
 }
 
 .section--dark {
@@ -235,6 +283,29 @@ h2 {
   align-items: center;
   gap: 28px;
   text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: fade-up 0.7s ease both;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28);
+}
+
+.feature-card:nth-child(1) {
+  animation-delay: 0.08s;
+}
+
+.feature-card:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.feature-card:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.feature-card:nth-child(4) {
+  animation-delay: 0.32s;
 }
 
 .feature-card img {
@@ -255,6 +326,16 @@ h2 {
   max-width: 760px;
   margin: 36px auto 0;
   text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 .section--final {
