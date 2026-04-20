@@ -25,10 +25,9 @@
 
       <div class="hero__content">
         <div class="hero__title-wrap">
-          <p class="eyebrow">Edukacinis stalo žaidimas</p>
           <img
             class="hero__logo"
-            src="logo.png"
+            src="./logo.png"
             alt="Žvėriški rinkimai logotipas"
           />
         </div>
@@ -37,7 +36,7 @@
           <img
             id="animal-image"
             class="hero__animal-image"
-            src="gorila.png"
+            src="./gorila.png"
             alt="Žaidimo gyvūno iliustracija"
           />
         </div>
@@ -52,9 +51,9 @@
     <main>
       <section class="section section--dark">
         <div class="container section__grid">
-          <div>
-            <p class="section__label">Kas yra</p>
-            <h2>„Žvėriški rinkimai“?</h2>
+          <div class="section__title-block">
+            <p class="section__title-prefix">Kas yra</p>
+            <h2 class="section__title-main">„Žvėriški rinkimai“?</h2>
           </div>
           <div class="section__body">
             <p>
@@ -87,19 +86,19 @@
 
           <div class="features">
             <article class="feature-card">
-              <img src="balsuoti.png" alt="Balsuoti ikona" />
+              <img src="./balsuoti.png" alt="Balsuoti ikona" />
               <p>Patiria, kaip veikia demokratija realybėje</p>
             </article>
             <article class="feature-card">
-              <img src="diskutuoti.png" alt="Diskutuoti ikona" />
+              <img src="./diskutuoti.png" alt="Diskutuoti ikona" />
               <p>Mokosi kritiškai vertinti informaciją</p>
             </article>
             <article class="feature-card">
-              <img src="klausyti.png" alt="Klausyti ikona" />
+              <img src="./klausyti.png" alt="Klausyti ikona" />
               <p>Mokosi klausytis kitų</p>
             </article>
             <article class="feature-card">
-              <img src="mastyti.png" alt="Mąstyti ikona" />
+              <img src="./mastyti.png" alt="Mąstyti ikona" />
               <p>Lavina gebėjimą argumentuoti</p>
             </article>
           </div>
@@ -142,7 +141,7 @@
 
         setTimeout(() => {
           currentAnimalIndex = (currentAnimalIndex + 1) % animals.length;
-          animalImage.src = `./images/${animals[currentAnimalIndex]}`;
+          animalImage.src = `./${animals[currentAnimalIndex]}`;
           animalImage.style.opacity = "1";
         }, 180);
       }, 5000);
