@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="lt">
   <head>
@@ -18,12 +19,12 @@
   </head>
   <body class="timer-page">
     <header class="timer-header">
-      <nav class="timer-nav">
-        <a class="timer-nav__link" href="./mokytojo-gidas.html">Mokytojo gidas</a>
-        <a class="timer-nav__logo" href="./index.html" aria-label="Grįžti į pradžią">
-          <img src="./logo-juodas.png" alt="Žvėriški rinkimai" />
+      <nav class="subpage-topbar subpage-topbar--timer">
+        <a class="subpage-topbar__link" href="./mokytojo-gidas.html">Mokytojo gidas</a>
+        <a class="subpage-topbar__logo" href="./index.html" aria-label="Grįžti į pradžią">
+          <img src="./juodas-logo.png" alt="Žvėriški rinkimai" />
         </a>
-        <a class="timer-nav__link" href="./laikmatis.html">Laikmatis žaidimui</a>
+        <a class="subpage-topbar__link" href="./laikmatis.html">Laikmatis žaidimui</a>
       </nav>
     </header>
 
@@ -42,7 +43,7 @@
             10
           </button>
 
-          <div id="timer-display" class="timer-clock__display">2:00</div>
+          <div id="timer-display" class="timer-clock__display">3:00</div>
         </div>
 
         <div class="timer-side-controls">
@@ -51,6 +52,11 @@
           <button id="resume-button" class="timer-action" type="button">Pratęsti</button>
         </div>
       </section>
+
+      <p id="timer-status" class="timer-status timer-status--light">
+        Paruošta pradėti 3 minučių etapą.
+      </p>
+    </main>
 
     <script>
       const timerDisplay = document.getElementById("timer-display");
