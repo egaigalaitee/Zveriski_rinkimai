@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="lt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Žvėriški rinkimai</title>
+    <meta
+      name="description"
+      content="Interaktyvus edukacinis žaidimas apie demokratiją, sprendimų priėmimą ir visuomenę."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="topbar">
+        <a class="topbar__link" href="./mokytojo-gidas.html">Mokytojo gidas</a>
+        <a class="topbar__link" href="./laikmatis.html">Laikmatis žaidimui</a>
+      </nav>
+
+      <div class="hero__content">
+        <div class="hero__title-wrap">
+          <p class="eyebrow">Edukacinis stalo žaidimas</p>
+          <img
+            class="hero__logo"
+            src="./images/logo.png"
+            alt="Žvėriški rinkimai logotipas"
+          />
+        </div>
+
+        <div class="hero__animal-frame">
+          <img
+            id="animal-image"
+            class="hero__animal-image"
+            src="./images/gorila.png"
+            alt="Žaidimo gyvūno iliustracija"
+          />
+        </div>
+
+        <p class="hero__text">
+          Tai interaktyvus stalo žaidimas, skirtas jaunimui, kuris padeda
+          suprasti, kaip veikia politika, sprendimų priėmimas ir visuomenė.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section--dark">
+        <div class="container section__grid">
+          <div>
+            <p class="section__label">Kas yra</p>
+            <h2>„Žvėriški rinkimai“?</h2>
+          </div>
+          <div class="section__body">
+            <p>
+              Tai edukacinis stalo žaidimas, sukurtas tam, kad padėtų jaunimui
+              geriau suprasti politiką per patirtį, o ne teoriją. Vietoje
+              sudėtingų sąvokų ar sausos informacijos, žaidimas kviečia
+              įsitraukti į gyvą sprendimų priėmimo procesą, kuriame kiekvienas
+              dalyvis tampa svarbia visuomenės dalimi.
+            </p>
+            <p>
+              Žaidimo metu dalyviai įkūnija skirtingas „partijas“ ir rinkėjus,
+              susiduria su įvairiomis visuomeninėmis problemomis, diskutuoja,
+              argumentuoja ir priima sprendimus. Taip atkuriamas demokratinis
+              procesas – nuo idėjų formavimo iki balsavimo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--light">
+        <div class="container">
+          <div class="section__heading section__heading--center">
+            <h2>Kuo šis žaidimas išskirtinis?</h2>
+            <p>
+              Šis žaidimas nėra apie „teisingus atsakymus“. Jis yra apie
+              mąstymą, argumentavimą ir gebėjimą suprasti skirtingas nuomones.
+              Žaidimo esmė – diskusija ir pasirinkimai.
+            </p>
+          </div>
+
+          <div class="features">
+            <article class="feature-card">
+              <img src="./images/balsuoti.png" alt="Balsuoti ikona" />
+              <p>Patiria, kaip veikia demokratija realybėje</p>
+            </article>
+            <article class="feature-card">
+              <img src="./images/diskutuoti.png" alt="Diskutuoti ikona" />
+              <p>Mokosi kritiškai vertinti informaciją</p>
+            </article>
+            <article class="feature-card">
+              <img src="./images/klausyti.png" alt="Klausyti ikona" />
+              <p>Mokosi klausytis kitų</p>
+            </article>
+            <article class="feature-card">
+              <img src="./images/mastyti.png" alt="Mąstyti ikona" />
+              <p>Lavina gebėjimą argumentuoti</p>
+            </article>
+          </div>
+
+          <p class="section__note">
+            Tai yra mokymasis per patirtį, kuris leidžia ne tik suprasti, bet
+            ir pajusti, ką reiškia būti aktyviu piliečiu.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--dark section--final">
+        <div class="container section__heading section__heading--center">
+          <h2>Kodėl pasirinkta gyvūnų perspektyva?</h2>
+          <p>
+            Siekiant, kad sudėtingos teorinės idėjos ir politinės sąvokos taptų
+            lengviau suprantamos, žaidime jos perteikiamos per metaforišką
+            gyvūnų pasaulį. Kiekvienas personažas tampa politinės istorijos
+            dalimi, padedančia žaidėjams paprasčiau įsisavinti abstrakčias
+            idėjas ir įsitraukti į pasakojimą.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const animals = [
+        "gorila.png",
+        "zuikis.png",
+        "krokodilas.png",
+        "arklys.png",
+        "avis.png",
+      ];
+
+      const animalImage = document.getElementById("animal-image");
+      let currentAnimalIndex = 0;
+
+      setInterval(() => {
+        animalImage.style.opacity = "0";
+
+        setTimeout(() => {
+          currentAnimalIndex = (currentAnimalIndex + 1) % animals.length;
+          animalImage.src = `./images/${animals[currentAnimalIndex]}`;
+          animalImage.style.opacity = "1";
+        }, 180);
+      }, 5000);
+    </script>
+  </body>
+</html>
