@@ -18,7 +18,8 @@
       box-sizing: border-box;
     }
 
-    html, body {
+    html,
+    body {
       margin: 0;
       min-height: 100%;
       font-family: "Poppins", sans-serif;
@@ -42,7 +43,7 @@
 
     .page-frame {
       min-height: 100vh;
-      padding: 28px 34px 24px;
+      padding: 22px 34px 24px;
       background: var(--page-bg);
     }
 
@@ -54,10 +55,10 @@
     }
 
     .topbar__link {
-      margin: 28px 0 0;
-      font-size: clamp(1rem, 1.8vw, 2rem);
+      margin: 22px 0 0;
+      font-size: clamp(1rem, 1.7vw, 2rem);
       font-weight: 400;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
       transition: opacity 0.2s ease;
     }
 
@@ -70,13 +71,13 @@
     }
 
     .topbar__logo-link {
-      justify-self: center;
       display: inline-block;
-      margin-top: 8px;
+      margin-top: 6px;
+      justify-self: center;
     }
 
     .topbar__logo {
-      width: min(170px, 16vw);
+      width: min(150px, 14vw);
       height: auto;
       display: block;
     }
@@ -98,7 +99,7 @@
 
     .clock-shell {
       position: relative;
-      width: min(980px, 78vw);
+      width: min(980px, 82vw);
       aspect-ratio: 1 / 1;
     }
 
@@ -119,7 +120,7 @@
       top: 56%;
       transform: translate(-50%, -50%);
       color: var(--page-bg);
-      font-size: clamp(7rem, 16vw, 12rem);
+      font-size: clamp(7rem, 15vw, 12rem);
       font-weight: 700;
       line-height: 1;
       letter-spacing: -0.05em;
@@ -137,7 +138,7 @@
       font-size: 2.2rem;
       font-weight: 600;
       cursor: pointer;
-      transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     }
 
     .preset:hover,
@@ -146,11 +147,6 @@
       background: #E6DECB;
       color: #000000;
       outline: none;
-    }
-
-    .preset:hover,
-    .preset:focus-visible {
-      transform: translateY(-1px);
     }
 
     .preset--left {
@@ -164,12 +160,6 @@
       transform: translateX(-50%);
     }
 
-    .preset--top:hover,
-    .preset--top:focus-visible,
-    .preset--top.is-active {
-      transform: translateX(-50%);
-    }
-
     .preset--right {
       top: 34%;
       right: 16%;
@@ -177,13 +167,238 @@
 
     .controls {
       position: absolute;
-      right: 54px;
-      bottom: 34px;
+      right: 40px;
+      bottom: 36px;
       display: flex;
       flex-direction: column;
-      gap: 22px;
-      width: 215px;
+      gap: 24px;
+      width: 190px;
     }
 
     .action-button {
-     
+      min-height: 60px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--page-bg);
+      font-size: clamp(1.2rem, 1.8vw, 1.65rem);
+      font-weight: 400;
+      padding: 0 26px;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .action-button:hover,
+    .action-button:focus-visible {
+      background: transparent;
+      color: var(--ink);
+      outline: none;
+    }
+
+    @media (max-width: 1100px) {
+      .timer-layout {
+        min-height: auto;
+        padding: 20px 0 140px;
+      }
+
+      .controls {
+        position: static;
+        width: min(360px, 100%);
+        margin: 24px auto 0;
+      }
+
+      .clock-shell {
+        width: min(760px, 100%);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .page-frame {
+        padding: 16px;
+      }
+
+      .topbar {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 14px;
+      }
+
+      .topbar__link,
+      .topbar__link--right {
+        margin-top: 0;
+        text-align: center;
+      }
+
+      .topbar__logo {
+        width: 130px;
+      }
+
+      .clock-shell {
+        width: min(100%, 540px);
+      }
+
+      .preset {
+        width: 78px;
+        height: 78px;
+        font-size: 1.8rem;
+      }
+
+      .preset--left {
+        left: 13%;
+      }
+
+      .preset--right {
+        right: 13%;
+      }
+
+      .timer-display {
+        font-size: clamp(4.8rem, 16vw, 8rem);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-frame">
+    <header class="topbar">
+      <a class="topbar__link" href="mokytojo-gidas.html">MOKYTOJO GIDAS</a>
+
+      <a class="topbar__logo-link" href="index.html" aria-label="Grįžti į pagrindinį puslapį">
+        <img class="topbar__logo" src="logo-juodas.png" alt="Žvėriški rinkimai logotipas">
+      </a>
+
+      <a class="topbar__link topbar__link--right" href="laikmatis.html">LAIKMATIS ŽAIDIMUI</a>
+    </header>
+
+    <main class="timer-layout">
+      <section class="clock-section" aria-label="Laikmatis">
+        <div class="clock-shell">
+          <img class="clock-shell__image" src="laikrodis.png" alt="Laikrodžio iliustracija">
+
+          <button class="preset preset--left" data-minutes="2" aria-label="Nustatyti 2 minutes">2</button>
+          <button class="preset preset--top is-active" data-minutes="5" aria-label="Nustatyti 5 minutes">5</button>
+          <button class="preset preset--right" data-minutes="10" aria-label="Nustatyti 10 minučių">10</button>
+
+          <div class="timer-display" id="timerDisplay">5:00</div>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="Laikmačio valdymas">
+        <button class="action-button" id="startBtn">Pradėti</button>
+        <button class="action-button" id="pauseBtn">Sustabdyti</button>
+        <button class="action-button" id="resumeBtn">Pratęsti</button>
+      </section>
+    </main>
+  </div>
+
+  <audio id="alarmSound" preload="auto">
+    <source src="alarm.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const presets = document.querySelectorAll('.preset');
+    const timerDisplay = document.getElementById('timerDisplay');
+    const startBtn = document.getElementById('startBtn');
+    const pauseBtn = document.getElementById('pauseBtn');
+    const resumeBtn = document.getElementById('resumeBtn');
+    const alarmSound = document.getElementById('alarmSound');
+
+    let selectedMinutes = 5;
+    let remainingSeconds = selectedMinutes * 60;
+    let timerId = null;
+    let isRunning = false;
+    let hasFinished = false;
+
+    function formatTime(totalSeconds) {
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      return `${minutes}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    function updateDisplay() {
+      timerDisplay.textContent = formatTime(remainingSeconds);
+    }
+
+    function stopAlarm() {
+      alarmSound.pause();
+      alarmSound.currentTime = 0;
+    }
+
+    function setActivePreset(minutes) {
+      selectedMinutes = minutes;
+      presets.forEach((preset) => {
+        const isActive = Number(preset.dataset.minutes) === minutes;
+        preset.classList.toggle('is-active', isActive);
+      });
+    }
+
+    function resetToSelectedTime() {
+      remainingSeconds = selectedMinutes * 60;
+      updateDisplay();
+      hasFinished = false;
+      stopAlarm();
+    }
+
+    function finishTimer() {
+      clearInterval(timerId);
+      timerId = null;
+      isRunning = false;
+      hasFinished = true;
+      remainingSeconds = 0;
+      updateDisplay();
+      alarmSound.play().catch(() => {});
+    }
+
+    function tick() {
+      if (remainingSeconds > 0) {
+        remainingSeconds -= 1;
+        updateDisplay();
+      }
+
+      if (remainingSeconds <= 0) {
+        finishTimer();
+      }
+    }
+
+    function startTimer() {
+      clearInterval(timerId);
+      stopAlarm();
+      hasFinished = false;
+      remainingSeconds = selectedMinutes * 60;
+      updateDisplay();
+      timerId = setInterval(tick, 1000);
+      isRunning = true;
+    }
+
+    function pauseTimer() {
+      if (!isRunning) return;
+      clearInterval(timerId);
+      timerId = null;
+      isRunning = false;
+    }
+
+    function resumeTimer() {
+      if (isRunning || remainingSeconds <= 0 || hasFinished) return;
+      timerId = setInterval(tick, 1000);
+      isRunning = true;
+    }
+
+    presets.forEach((preset) => {
+      preset.addEventListener('click', () => {
+        const minutes = Number(preset.dataset.minutes);
+        setActivePreset(minutes);
+        clearInterval(timerId);
+        timerId = null;
+        isRunning = false;
+        resetToSelectedTime();
+      });
+    });
+
+    startBtn.addEventListener('click', startTimer);
+    pauseBtn.addEventListener('click', pauseTimer);
+    resumeBtn.addEventListener('click', resumeTimer);
+
+    updateDisplay();
+  </script>
+</body>
+</html>
