@@ -47,20 +47,21 @@
       background: var(--page-bg);
     }
 
-    .topbar {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: start;
-      gap: 24px;
-    }
+.topbar {
+    padding: 70px 0 0;
+  }
 
-   .topbar__link {
- margin: 28px 0 0;
- font-size: clamp(14px, 1.2vw, 20px;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  transition: opacity 0.2s ease;
-    }
+  .topbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-link {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    transition: opacity 0.2s ease;
 
     .topbar__link:hover {
       opacity: 0.72;
