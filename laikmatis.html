@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="lt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laikmatis žaidimui | Žvėriški rinkimai</title>
+    <meta
+      name="description"
+      content="Žaidimo laikmatis edukaciniam stalo žaidimui Žvėriški rinkimai."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body class="timer-page">
+    <header class="timer-header">
+      <nav class="timer-nav">
+        <a class="timer-nav__link" href="./mokytojo-gidas.html">Mokytojo gidas</a>
+        <a class="timer-nav__logo" href="./index.html" aria-label="Grįžti į pradžią">
+          <img src="./juodas-logo.png" alt="Žvėriški rinkimai" />
+        </a>
+        <a class="timer-nav__link" href="./laikmatis.html">Laikmatis žaidimui</a>
+      </nav>
+    </header>
+
+    <main class="timer-main">
+      <section class="timer-stage">
+        <div class="timer-clock">
+          <img class="timer-clock__image" src="./laikrodis.png" alt="" />
+
+          <button class="timer-badge timer-badge--left" type="button" data-minutes="2">
+            2
+          </button>
+          <button class="timer-badge timer-badge--top" type="button" data-minutes="5">
+            5
+          </button>
+          <button class="timer-badge timer-badge--right" type="button" data-minutes="10">
+            10
+          </button>
+
+          <div id="timer-display" class="timer-clock__display">3:00</div>
+        </div>
+
+        <div class="timer-side-controls">
+          <button id="start-button" class="timer-action" type="button">Pradėti</button>
+          <button id="stop-button" class="timer-action" type="button">Sustabdyti</button>
+          <button id="resume-button" class="timer-action" type="button">Pratęsti</button>
+        </div>
+      </section>
+
+      <p id="timer-status" class="timer-status timer-status--light">
+        Paruošta pradėti 3 minučių etapą.
+      </p>
+    </main>
+
+    <script>
+      const timerDisplay = document.getElementById("timer-display");
+      const timerStatus = document.getElementById("timer-status");
+      const startButton = document.getElementById("start-button");
+      const stopButton = document.getElementById("stop-button");
+      const resumeButton = document.getElementById("resume-button");
+      const presetButtons = document.querySelectorAll("[data-minutes]");
+
+      let selectedSeconds = 3 * 60;
+      let remainingSeconds = selectedSeconds;
+      let intervalId = null;
+
+      function formatTime(totalSeconds) {
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = String(totalSeconds % 60).padStart(2, "0");
+        return `${minutes}:${seconds}`;
+      }
+
+      function renderTimer() {
+        timerDisplay.textContent = formatTime(remainingSeconds);
+      }
+
+      function clearTimer() {
+        clearInterval(intervalId);
+        intervalId = null;
+      }
+
+      function tick() {
+        if (remainingSeconds <= 0) {
+          clearTimer();
+          timerStatus.textContent = "Laikas baigėsi.";
+          return;
+        }
+
+        remainingSeconds -= 1;
+        renderTimer();
+
+        if (remainingSeconds <= 0) {
+          clearTimer();
+          timerStatus.textContent = "Laikas baigėsi.";
+        }
+      }
+
+      function startTimer() {
+        clearTimer();
+        remainingSeconds = selectedSeconds;
+        renderTimer();
+        timerStatus.textContent = "Laikmatis paleistas.";
+        intervalId = setInterval(tick, 1000);
+      }
+
+      function stopTimer() {
+        if (!intervalId) {
+          return;
+        }
+
+        clearTimer();
+        timerStatus.textContent = "Laikmatis sustabdytas.";
+      }
+
+      function resumeTimer() {
+        if (intervalId || remainingSeconds <= 0) {
+          return;
+        }
+
+        timerStatus.textContent = "Laikmatis pratęstas.";
+        intervalId = setInterval(tick, 1000);
+      }
+
+      presetButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          presetButtons.forEach((item) => item.classList.remove("timer-badge--active"));
+          button.classList.add("timer-badge--active");
+
+          selectedSeconds = Number(button.dataset.minutes) * 60;
+          remainingSeconds = selectedSeconds;
+          clearTimer();
+          renderTimer();
+          timerStatus.textContent = `Pasirinktas ${button.dataset.minutes} min. etapas.`;
+        });
+      });
+
+      startButton.addEventListener("click", startTimer);
+      stopButton.addEventListener("click", stopTimer);
+      resumeButton.addEventListener("click", resumeTimer);
+
+      renderTimer();
+    </script>
+  </body>
+</html>
