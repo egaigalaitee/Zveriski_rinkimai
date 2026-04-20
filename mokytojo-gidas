@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="lt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mokytojo gidas | Žvėriški rinkimai</title>
+    <meta
+      name="description"
+      content="Mokytojo gidas edukaciniam stalo žaidimui Žvėriški rinkimai."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body class="guide-page">
+    <header class="guide-hero">
+      <nav class="guide-nav">
+        <a class="guide-nav__link" href="./mokytojo-gidas.html">Mokytojo gidas</a>
+        <a class="guide-nav__logo" href="./index.html">
+          <img src="./logo.png" alt="Žvėriški rinkimai" />
+        </a>
+        <a class="guide-nav__link" href="./laikmatis.html">Laikmatis žaidimui</a>
+      </nav>
+
+      <div class="guide-hero__content guide-hero__content--compact">
+        <h1 class="guide-hero__title">Gidas mokytojams</h1>
+        <p class="guide-hero__lead">
+          Šis žaidimas yra skirtas praturtinti istorijų demokratinius procesus
+          per saugią, metaforinę gyvūnų pasaulio aplinką. Žaidimo esmė –
+          diskusija ir socializacija, todėl pagrindinė taisyklė: leisk vaikų
+          kūrybai.
+        </p>
+      </div>
+    </header>
+
+    <main class="guide-main guide-main--visual">
+      <section class="guide-section guide-section--tight">
+        <div class="guide-section__heading guide-section__heading--visual">
+          <h2>Struktūra ir trukmė</h2>
+          <p>
+            Trukmė: 2 pamokos arba apie 90 min.<br />
+            Amžius: 4 klasė ir vyresni<br />
+            Žaidėjų: iki 30
+          </p>
+        </div>
+      </section>
+
+      <section class="guide-section guide-section--tight">
+        <h2 class="guide-block-title">Žaidimo eiga</h2>
+
+        <div class="guide-columns guide-columns--visual">
+          <article class="guide-column">
+            <p>
+              Suskirstymas į mini žaidėjų būrius tokiu principu, kur maždaug po
+              tris. Partijų krypčių bei siekių pristatymas.
+            </p>
+            <p>
+              Personažų paskirstymas dalyviams burtų keliu. Bet kuris būrys gali
+              rinktis ir vieną kitokio būrio tipą nei pradžioje numatyta.
+            </p>
+            <p>
+              Problemos ir pristatymas po 2 min. Kiekviena pasirenkama žaidimo
+              problema: norėdami atsikratyti pasirinktos situacijos būriai
+              pradeda vykdyti savo bendrą balsavimą.
+            </p>
+            <p>
+              Kiekvienas pasirinktas turi leisti pasireikšti idėjoms, kas joje
+              geriausia.
+            </p>
+            <p>
+              Šis procesas kartojamas 4 turus, kurių metu mokiniai įvertina
+              vis skirtingas situacijas.
+            </p>
+            <p>
+              Refleksija išklausant. Kiekviena idėja svarbi, o jų visuma padeda
+              susitarti, kuris sprendimas būtų labiausiai naudingas visai
+              bendruomenei.
+            </p>
+          </article>
+
+          <article class="guide-column">
+            <p>
+              Provokacijų ir diskusijų 10 min: išsirinkti turinį remiantis tuo,
+              kokios vertybės ir tradicijos bus saugomos ateinančiuose
+              pasirinkimuose.
+            </p>
+            <p>
+              Naudodamiesi savo žinių argumentų vertybėmis, dalyviai analizuoja,
+              kokie sprendimai būtų visiems priimtini ir suprantami.
+            </p>
+            <p>
+              Po kiekvieno turo diskusijos vedėjas trumpai primena tikslus,
+              apibendrina mintis ir padeda pereiti prie kito sprendimo.
+            </p>
+            <p>
+              Svarbu priminti mokiniams, kad net ir nedidelė idėja gali būti
+              vertinga, jei ji pagrįsta ir naudinga visiems.
+            </p>
+          </article>
+
+          <article class="guide-column guide-column--aside">
+            <p>
+              Svarbu prisiminti mokiniams, kad kiekviena idėja gali būti svarbi
+              ir reikalinga, net jei ne visi jai pritars. Kiekviena nuomonė yra
+              verta išklausymo.
+            </p>
+            <div class="guide-pill">Sąvokų žodynas</div>
+          </article>
+        </div>
+
+        <div class="guide-quote-grid guide-quote-grid--visual">
+          <article class="guide-quote">
+            <p>
+              Žaidimų situacijos turi remtis pagrindinėmis žvėrių gyvenimo
+              bendromis vertybėmis, prigimtimi ir bendru sutarimu, kurias bus
+              pasiekta per kūrybinį bendradarbiavimą, pavyzdžiui: maisto
+              poreikis, namų ar migracijos keliai.
+            </p>
+          </article>
+
+          <article class="guide-quote">
+            <p>
+              Autoriteto panaikinimas: Politinėje visuomenėje spontaniškai
+              būdingų nuostatų peržiūrėjimas mokiniui yra įdomus, nes parodo
+              kaip veikia demokratiškas balsas.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="guide-section guide-section--tight">
+        <h2 class="guide-block-title guide-block-title--center">
+          Svarbūs akcentai mokytojui
+        </h2>
+
+        <div class="guide-cards guide-cards--visual">
+          <article class="guide-accent-card">
+            <h3>Fantazija</h3>
+            <p>
+              Skatinkite mokinius nebijoti įsivaizduoti, kas yra teisinga jų
+              gyvūnų bendruomenei. Kūryba padeda atverti daugiau būdų spręsti
+              situacijas.
+            </p>
+          </article>
+
+          <article class="guide-accent-card">
+            <h3>Drąsa kalbėti</h3>
+            <p>
+              Sustiprinkite, kad mokiniai nebijotų kalbėti. Priminkite, kad
+              svarbiausia yra argumentuoti ir aiškiai išsakyti savo mintis.
+            </p>
+          </article>
+
+          <article class="guide-accent-card">
+            <h3>Kritinis mąstymas</h3>
+            <p>
+              Brėžkite ribas – nepakanka vien balso, reikia ir geros,
+              pagrįstos idėjos, kuri būtų naudinga visiems.
+            </p>
+          </article>
+        </div>
+
+        <div class="guide-summary guide-summary--visual">
+          <div class="guide-summary__label">Tikslas ir rezultatas</div>
+          <p class="guide-summary__text">
+            Žaidimo pabaigoje mokiniai turėtų suprasti, kad politinis
+            dalyvavimas ir susitarimas yra ne prievolė, o noras formuoti savo
+            aplinką.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
