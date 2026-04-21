@@ -172,6 +172,7 @@
       const mobileMenu = document.getElementById("mobile-menu");
       const mobileMenuButton = document.querySelector(".mobile-menu-button");
       const mobileMenuClose = document.querySelector(".mobile-menu__close");
+      const mobileMenuLinks = document.querySelectorAll(".mobile-menu__link");
 
       function setMobileMenu(open) {
         mobileMenu.hidden = !open;
@@ -183,6 +184,16 @@
       mobileMenuClose.addEventListener("click", () => setMobileMenu(false));
       mobileMenu.addEventListener("click", (event) => {
         if (event.target === mobileMenu) {
+          setMobileMenu(false);
+        }
+      });
+
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", () => setMobileMenu(false));
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
           setMobileMenu(false);
         }
       });
