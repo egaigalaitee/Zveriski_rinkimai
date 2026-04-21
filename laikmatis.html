@@ -204,6 +204,9 @@
 
       function setMobileMenu(open) {
         mobileMenu.hidden = !open;
+        mobileMenu.classList.toggle("is-open", open);
+        mobileMenu.style.display = open ? "block" : "none";
+        mobileMenu.setAttribute("aria-hidden", String(!open));
         document.body.classList.toggle("menu-open", open);
         mobileMenuButton.setAttribute("aria-expanded", String(open));
       }
@@ -228,6 +231,7 @@
 
       renderTimer();
       setActionState("idle");
+      setMobileMenu(false);
     </script>
   </body>
 </html>
