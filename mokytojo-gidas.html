@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="lt">
   <head>
@@ -19,6 +18,29 @@
   </head>
   <body class="guide-page">
     <header class="hero hero--subpage hero--subpage-light">
+      <button
+        class="mobile-menu-button mobile-menu-button--dark"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Atidaryti meniu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div id="mobile-menu" class="mobile-menu mobile-menu--light" hidden>
+        <div class="mobile-menu__panel">
+          <button class="mobile-menu__close" type="button" aria-label="Uždaryti meniu">
+            ×
+          </button>
+          <a class="mobile-menu__link" href="./mokytojo-gidas.html">Mokytojo gidas</a>
+          <a class="mobile-menu__link" href="./index.html">Kas yra žvėriški rinkimai?</a>
+          <a class="mobile-menu__link" href="./laikmatis.html">Laikmatis žaidimui</a>
+        </div>
+      </div>
+
       <nav class="topbar topbar--subpage topbar--subpage-light">
         <a class="topbar__link topbar__link--dark" href="./mokytojo-gidas.html">Mokytojo gidas</a>
         <a class="topbar__link topbar__link--dark topbar__link--center" href="./index.html">
@@ -177,5 +199,25 @@
         </div>
       </section>
     </main>
+
+    <script>
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuButton = document.querySelector(".mobile-menu-button");
+      const mobileMenuClose = document.querySelector(".mobile-menu__close");
+
+      function setMobileMenu(open) {
+        mobileMenu.hidden = !open;
+        document.body.classList.toggle("menu-open", open);
+        mobileMenuButton.setAttribute("aria-expanded", String(open));
+      }
+
+      mobileMenuButton.addEventListener("click", () => setMobileMenu(true));
+      mobileMenuClose.addEventListener("click", () => setMobileMenu(false));
+      mobileMenu.addEventListener("click", (event) => {
+        if (event.target === mobileMenu) {
+          setMobileMenu(false);
+        }
+      });
+    </script>
   </body>
 </html>
