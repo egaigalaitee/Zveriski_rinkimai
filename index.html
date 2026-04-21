@@ -18,6 +18,29 @@
   </head>
   <body>
     <header class="hero">
+      <button
+        class="mobile-menu-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Atidaryti meniu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div id="mobile-menu" class="mobile-menu" hidden>
+        <div class="mobile-menu__panel">
+          <button class="mobile-menu__close" type="button" aria-label="Uždaryti meniu">
+            ×
+          </button>
+          <a class="mobile-menu__link" href="./mokytojo-gidas.html">Mokytojo gidas</a>
+          <a class="mobile-menu__link" href="./index.html">Kas yra žvėriški rinkimai?</a>
+          <a class="mobile-menu__link" href="./laikmatis.html">Laikmatis žaidimui</a>
+        </div>
+      </div>
+
       <nav class="topbar">
         <a class="topbar__link" href="./mokytojo-gidas.html">Mokytojo gidas</a>
         <a class="topbar__link" href="./laikmatis.html">Laikmatis žaidimui</a>
@@ -40,6 +63,10 @@
             alt="Žaidimo gyvūno iliustracija"
           />
         </div>
+
+        <p class="hero__text">
+          Tai interaktyvus stalo žaidimas, skirtas jaunimui, kuris padeda
+          suprasti, kaip veikia politika, sprendimų priėmimas ir visuomenė.
         </p>
       </div>
     </header>
@@ -48,8 +75,8 @@
       <section class="section section--dark">
         <div class="container section__grid">
           <div class="section__title-block">
-            <p class="section__title-prefix"
-            <h2 class="section__title-main">Kas yra „Žvėriški rinkimai“?</h2>
+            <p class="section__title-prefix">Kas yra</p>
+            <h2 class="section__title-main">„Žvėriški rinkimai“?</h2>
           </div>
           <div class="section__body">
             <p>
@@ -141,6 +168,24 @@
           animalImage.style.opacity = "1";
         }, 180);
       }, 5000);
+
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuButton = document.querySelector(".mobile-menu-button");
+      const mobileMenuClose = document.querySelector(".mobile-menu__close");
+
+      function setMobileMenu(open) {
+        mobileMenu.hidden = !open;
+        document.body.classList.toggle("menu-open", open);
+        mobileMenuButton.setAttribute("aria-expanded", String(open));
+      }
+
+      mobileMenuButton.addEventListener("click", () => setMobileMenu(true));
+      mobileMenuClose.addEventListener("click", () => setMobileMenu(false));
+      mobileMenu.addEventListener("click", (event) => {
+        if (event.target === mobileMenu) {
+          setMobileMenu(false);
+        }
+      });
     </script>
   </body>
 </html>
