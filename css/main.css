@@ -1717,26 +1717,32 @@ h2 {
     margin: 5px auto;
   }
 
+  .timer-page .hero--subpage {
+    min-height: 0;
+    padding: 0;
+  }
+
   .timer-page .timer-main {
     width: 100%;
-    min-height: 827px;
+    min-height: 100svh;
     padding-top: 0;
     padding-bottom: 0;
   }
 
   .timer-page .timer-stage-shell {
-    width: 393px;
-    max-width: 100%;
+    width: min(calc(100vw - 28px), 347px);
+    max-width: 347px;
     margin: 0 auto;
-    min-height: 827px;
+    min-height: 100svh;
   }
 
   .timer-page .timer-stage {
     display: block;
     position: relative;
-    width: 347px;
-    height: 644px;
-    margin: 134px auto 49px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 347 / 644;
+    margin: 122px auto 0;
     background: #050505;
     border-radius: 20px;
     overflow: hidden;
@@ -1759,21 +1765,21 @@ h2 {
   }
 
   .timer-page .timer-clock__display {
-    top: 50%;
-    left: 48.5%;
-    width: 321px;
+    top: 44.6%;
+    left: 46.5%;
+    width: 305px;
     transform: translate(-50%, -50%) rotate(90.09deg);
-    font-size: 120px;
+    font-size: 112px;
     line-height: 1;
     letter-spacing: 0.04em;
     text-shadow: none;
   }
 
   .timer-page .timer-clock__brand {
-    left: 71px;
+    left: 17.5%;
     bottom: auto;
-    top: 281px;
-    width: 38px;
+    top: 41.8%;
+    width: 34px;
     transform: none;
   }
 
@@ -1799,18 +1805,21 @@ h2 {
   }
 
   .timer-page .timer-badge--left {
-    top: 183px;
-    left: 254px;
+    top: 15.6%;
+    left: auto;
+    right: 17px;
   }
 
   .timer-page .timer-badge--top {
-    top: 285px;
-    left: 254px;
+    top: 34.9%;
+    left: auto;
+    right: 17px;
   }
 
   .timer-page .timer-badge--right {
-    top: 389px;
-    left: 254px;
+    top: 55.3%;
+    left: auto;
+    right: 17px;
   }
 
   .timer-page .timer-side-panel {
@@ -1842,21 +1851,24 @@ h2 {
 
   .timer-page #resume-button {
     width: 175px !important;
-    top: 613px;
+    top: auto;
+    bottom: 63px;
     left: 12px;
   }
 
   .timer-page #stop-button {
     width: 216px !important;
-    top: 592px;
-    left: 88px;
+    top: auto;
+    bottom: 63px;
+    left: 85px;
     min-height: 60px;
   }
 
   .timer-page #start-button {
     width: 169px !important;
-    top: 616px;
-    left: 224px;
+    top: auto;
+    bottom: 63px;
+    left: 226px;
   }
 
   #start-button {
