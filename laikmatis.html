@@ -18,6 +18,29 @@
   </head>
   <body class="timer-page">
     <header class="hero hero--subpage hero--subpage-light">
+      <button
+        class="mobile-menu-button mobile-menu-button--dark"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Atidaryti meniu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div id="mobile-menu" class="mobile-menu mobile-menu--light" hidden>
+        <div class="mobile-menu__panel">
+          <button class="mobile-menu__close" type="button" aria-label="Uždaryti meniu">
+            ×
+          </button>
+          <a class="mobile-menu__link" href="./mokytojo-gidas.html">Mokytojo gidas</a>
+          <a class="mobile-menu__link" href="./index.html">Kas yra žvėriški rinkimai?</a>
+          <a class="mobile-menu__link" href="./laikmatis.html">Laikmatis žaidimui</a>
+        </div>
+      </div>
+
       <nav class="topbar topbar--subpage topbar--subpage-light">
         <a class="topbar__link topbar__link--dark" href="./mokytojo-gidas.html">Mokytojo gidas</a>
         <a class="topbar__link topbar__link--dark topbar__link--center" href="./index.html">
@@ -47,7 +70,7 @@
                 10
               </button>
 
-              <div id="timer-display" class="timer-clock__display">2:00</div>
+              <div id="timer-display" class="timer-clock__display">3:00</div>
               <img class="timer-clock__brand" src="./logo.png" alt="" />
             </div>
           </div>
@@ -76,6 +99,9 @@
       const resumeButton = document.getElementById("resume-button");
       const presetButtons = document.querySelectorAll("[data-minutes]");
       const timerSound = document.getElementById("timer-sound");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuButton = document.querySelector(".mobile-menu-button");
+      const mobileMenuClose = document.querySelector(".mobile-menu__close");
 
       let selectedSeconds = 2 * 60;
       let remainingSeconds = selectedSeconds;
@@ -172,6 +198,20 @@
       presetButtons.forEach((button) => {
         if (button.dataset.minutes === "2") {
           button.classList.add("timer-badge--active");
+        }
+      });
+
+      function setMobileMenu(open) {
+        mobileMenu.hidden = !open;
+        document.body.classList.toggle("menu-open", open);
+        mobileMenuButton.setAttribute("aria-expanded", String(open));
+      }
+
+      mobileMenuButton.addEventListener("click", () => setMobileMenu(true));
+      mobileMenuClose.addEventListener("click", () => setMobileMenu(false));
+      mobileMenu.addEventListener("click", (event) => {
+        if (event.target === mobileMenu) {
+          setMobileMenu(false);
         }
       });
 
