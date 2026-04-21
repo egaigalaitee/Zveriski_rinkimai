@@ -208,6 +208,7 @@
 
       function setMobileMenu(open) {
         mobileMenu.hidden = !open;
+        mobileMenu.classList.toggle("is-open", open);
         document.body.classList.toggle("menu-open", open);
         mobileMenuButton.setAttribute("aria-expanded", String(open));
       }
@@ -229,6 +230,8 @@
           setMobileMenu(false);
         }
       });
+
+      setMobileMenu(false);
     </script>
   </body>
 </html>
