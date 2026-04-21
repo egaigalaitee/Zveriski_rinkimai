@@ -173,10 +173,23 @@ a {
 }
 
 .mobile-menu {
+  display: none !important;
   position: fixed;
   inset: 0;
   z-index: 50;
   background: rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-menu[hidden] {
+  display: none !important;
+}
+
+.mobile-menu.is-open {
+  display: block !important;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .mobile-menu__panel {
@@ -1207,8 +1220,7 @@ h2 {
     padding-top: 24px;
   }
 
-  .mobile-menu-button,
-  .mobile-menu {
+  .mobile-menu-button {
     display: block;
   }
 
