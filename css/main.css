@@ -1326,18 +1326,54 @@ h2 {
     font-size: 1rem;
   }
 
+  .timer-stage-shell {
+    width: min(calc(100% - 140px), 1700px);
+  }
+
+  .timer-main {
+    padding-top: 18px;
+  }
+
   .timer-clock {
-    width: min(100%, 980px);
+    width: 980px;
   }
 
   .timer-stage {
-    grid-template-columns: 1fr auto 260px 1fr;
-    gap: 46px;
+    grid-template-columns: 980px 260px;
+    justify-content: center;
+    gap: 72px;
+    min-height: 980px;
+  }
+
+  .timer-clock__display {
+    font-size: 226px;
+  }
+
+  .timer-clock__brand {
+    width: 144px;
+  }
+
+  .timer-badge {
+    width: 112px;
+    height: 112px;
+    font-size: 58px;
+  }
+
+  .timer-side-panel {
+    width: 260px;
+    margin-top: 132px;
   }
 
   .timer-action {
     min-height: 72px;
     font-size: 1.6rem;
+  }
+
+  #start-button,
+  #resume-button,
+  #stop-button {
+    width: 220px;
+    margin-left: 20px;
   }
 }
 
@@ -1363,11 +1399,39 @@ h2 {
     height: 560px;
   }
 
+  .timer-stage-shell {
+    width: min(calc(100% - 180px), 1960px);
+  }
+
   .timer-clock {
-    width: min(100%, 1120px);
+    width: 1120px;
+  }
+
+  .timer-stage {
+    grid-template-columns: 1120px 280px;
+    gap: 88px;
+    min-height: 1120px;
   }
 
   .timer-clock__display {
-    font-size: clamp(6rem, 10vw, 10rem);
+    font-size: 248px;
+  }
+
+  .timer-badge {
+    width: 122px;
+    height: 122px;
+    font-size: 62px;
+  }
+
+  .timer-side-panel {
+    width: 280px;
+    margin-top: 150px;
+  }
+
+  #start-button,
+  #resume-button,
+  #stop-button {
+    width: 236px;
+    margin-left: 22px;
   }
 }
