@@ -1258,6 +1258,13 @@ h2 {
   font-weight: 500;
 }
 
+.guide-pill-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: flex-end;
+}
+
 .guide-quote-grid {
   margin-top: 34px;
   display: grid;
@@ -1332,10 +1339,49 @@ h2 {
 }
 
 @media (min-width: 1025px) {
+  .guide-hero__intro {
+    min-height: 1008px;
+    padding-top: 219px;
+    padding-bottom: 0;
+  }
+
+  .guide-hero__content--compact {
+    max-width: none;
+  }
+
+  .guide-hero__title {
+    width: 603px;
+    margin-bottom: 66px;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 45.57px;
+  }
+
   .guide-hero__lead {
+    width: 1068px;
+    max-width: none;
     font-size: 24px;
     line-height: 1.45;
     letter-spacing: 0.02em;
+  }
+
+  .guide-main--visual {
+    padding-top: 104px;
+    padding-bottom: 172px;
+  }
+
+  .guide-section + .guide-section {
+    margin-top: 122px;
+  }
+
+  .guide-section--tight + .guide-section--tight {
+    margin-top: 136px;
+  }
+
+  .guide-section__heading--visual {
+    width: 488px;
+    max-width: none;
+    margin-right: 0;
   }
 
   .guide-section__heading p,
@@ -1354,9 +1400,15 @@ h2 {
     line-height: 1.05;
   }
 
+  .guide-section__heading--visual h2 {
+    margin-bottom: 28px;
+  }
+
   .guide-quote-grid--visual {
     margin-top: 96px;
     width: 100%;
+    grid-template-columns: 685px 618px;
+    gap: 31px;
   }
 
   .guide-quote,
@@ -1364,18 +1416,53 @@ h2 {
     min-height: 230px;
   }
 
+  .guide-quote {
+    min-height: 307px;
+    padding: 34px 44px;
+    border: 1px solid rgba(0, 0, 0, 0.92);
+    box-shadow: none;
+  }
+
   .guide-accent-card {
-    min-height: 320px;
+    min-height: 431px;
+    padding: 35px 38px 34px;
+    box-shadow: none;
   }
 
   .guide-summary--visual {
-    margin-top: 64px;
-    grid-template-columns: 360px minmax(0, 1fr);
+    margin-top: 108px;
+    grid-template-columns: 437px 889px;
+    gap: 14px;
   }
 
   .guide-summary__label {
     font-size: 32px;
-    line-height: 1.15;
+    line-height: 37.22px;
+    text-align: center;
+  }
+
+  .guide-cards--visual {
+    gap: 14px;
+    grid-template-columns: repeat(3, 437px);
+  }
+
+  .guide-accent-card h3 {
+    margin-bottom: 134px;
+    font-size: 32px;
+    line-height: 37.22px;
+  }
+
+  .guide-pill-stack .guide-pill {
+    width: 322px;
+    min-height: 65px;
+    padding: 0 18px;
+    font-size: 24px;
+    line-height: 27.92px;
+    border: 1px solid rgba(0, 0, 0, 0.92);
+  }
+
+  .guide-column--aside {
+    justify-content: flex-end;
   }
 }
 
