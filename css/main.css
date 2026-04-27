@@ -1356,13 +1356,13 @@ h2 {
 
 .guide-intro-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 420px;
-  gap: 32px 96px;
+  grid-template-columns: 603px 650px;
+  gap: 82px;
   align-items: start;
 }
 
 .guide-hero__title--new {
-  margin: 118px 0 0;
+  margin: 104px 0 0;
   width: auto;
   font-size: 48px;
   font-weight: 700;
@@ -1372,7 +1372,7 @@ h2 {
 .guide-intro-copy {
   display: flex;
   flex-direction: column;
-  gap: 38px;
+  gap: 36px;
 }
 
 .guide-hero__lead--new {
@@ -1380,20 +1380,21 @@ h2 {
   width: 100%;
   color: rgba(24, 21, 18, 0.92);
   font-size: 20px;
-  line-height: 1.42;
+  line-height: 1.38;
   letter-spacing: 0;
 }
 
 .guide-structure-card {
-  width: 100%;
-  padding: 28px 26px 24px;
+  width: 650px;
+  min-height: 146px;
+  padding: 26px 28px 24px;
   border: 1px solid rgba(24, 21, 18, 0.34);
   border-radius: 30px;
   background: transparent;
 }
 
 .guide-structure-card h2 {
-  margin: 0 0 24px;
+  margin: 0 0 28px;
   color: var(--text-dark);
   font-size: 32px;
   font-weight: 700;
@@ -1411,7 +1412,7 @@ h2 {
 .guide-main--new {
   background: var(--section-light);
   color: var(--text-dark);
-  padding: 0 0 100px;
+  padding: 0 0 88px;
 }
 
 .guide-section--new {
@@ -1419,7 +1420,7 @@ h2 {
 }
 
 .guide-process-panel {
-  padding: 42px 26px 32px;
+  padding: 36px 32px 32px;
   border-radius: 30px;
   background: #050505;
   color: var(--text-light);
@@ -1427,7 +1428,7 @@ h2 {
 }
 
 .guide-block-title--new {
-  margin-bottom: 34px;
+  margin-bottom: 38px;
   color: var(--text-light);
   font-size: 32px;
   font-weight: 700;
@@ -1436,8 +1437,8 @@ h2 {
 
 .guide-process-columns {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 38px;
+  grid-template-columns: 628px 628px;
+  gap: 20px;
 }
 
 .guide-process-columns--top {
@@ -1450,10 +1451,10 @@ h2 {
 }
 
 .guide-process-columns .guide-column p {
-  margin: 0 0 18px;
+  margin: 0 0 16px;
   color: rgba(230, 222, 203, 0.94);
   font-size: 15px;
-  line-height: 1.32;
+  line-height: 1.28;
 }
 
 .guide-process-columns .guide-column strong {
@@ -1476,16 +1477,16 @@ h2 {
 
 .guide-advice-card {
   grid-column: 1 / -1;
-  margin-top: 18px;
-  padding: 38px 34px;
+  margin-top: 30px;
+  padding: 36px 36px 34px;
   border-radius: 30px;
   background: var(--section-light);
   color: var(--text-dark);
 }
 
 .guide-advice-card h3 {
-  margin: 0 0 36px;
-  max-width: 520px;
+  margin: 0 0 34px;
+  max-width: 410px;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.08;
@@ -1514,13 +1515,13 @@ h2 {
 .guide-advice-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 28px;
+  gap: 34px;
   align-items: start;
 }
 
 .guide-tools {
-  margin-top: 34px;
-  max-width: 640px;
+  margin-top: 40px;
+  max-width: 620px;
 }
 
 .guide-tools__lead,
@@ -1536,19 +1537,19 @@ h2 {
 }
 
 .guide-tools__files {
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 }
 
 .guide-bottom-cards {
   display: grid;
-  grid-template-columns: 1fr 372px;
-  gap: 18px;
-  margin-top: 16px;
+  grid-template-columns: 685px 625px;
+  gap: 30px;
+  margin-top: 14px;
 }
 
 .guide-bottom-card {
   min-height: 214px;
-  padding: 38px 34px 28px;
+  padding: 38px 34px 30px;
   border-radius: 30px;
 }
 
@@ -1566,7 +1567,7 @@ h2 {
   display: grid;
   justify-items: center;
   align-content: center;
-  gap: 28px;
+  gap: 24px;
 }
 
 .guide-bottom-card--dark {
@@ -1574,6 +1575,7 @@ h2 {
   color: var(--text-light);
   display: grid;
   place-items: center;
+  min-height: 307px;
 }
 
 .guide-pill--dark {
