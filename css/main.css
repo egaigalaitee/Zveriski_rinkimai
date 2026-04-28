@@ -517,35 +517,35 @@ h2 {
   }
 
   .hero:not(.hero--subpage) {
-    min-height: 1186px;
-    padding: 78px 0 126px;
+    min-height: 1114px;
+    padding: 74px 0 104px;
   }
 
   .hero:not(.hero--subpage) .topbar {
     width: min(calc(100% - 100px), 1340px);
-    margin-bottom: 86px;
+    margin-bottom: 112px;
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 0.02em;
   }
 
   .hero:not(.hero--subpage) .hero__content {
-    width: min(calc(100% - 100px), 796px);
+    width: min(calc(100% - 100px), 560px);
   }
 
   .hero:not(.hero--subpage) .hero__logo {
-    width: 478px;
-    margin-bottom: 56px;
+    width: 410px;
+    margin-bottom: 72px;
   }
 
   .hero:not(.hero--subpage) .hero__animal-frame {
-    width: 400px;
-    height: 360px;
+    width: 308px;
+    height: 236px;
   }
 
   .home-about {
-    padding-top: 118px;
-    padding-bottom: 148px;
+    padding-top: 92px;
+    padding-bottom: 126px;
   }
 
   .section--dark .container,
@@ -554,8 +554,9 @@ h2 {
   }
 
   .home-about .section__grid {
-    grid-template-columns: 312px 685px;
-    gap: 82px;
+    grid-template-columns: 356px 476px;
+    justify-content: center;
+    gap: 120px;
   }
 
   .home-about .section__title-main {
@@ -568,19 +569,19 @@ h2 {
   }
 
   .home-about .section__body {
-    max-width: 685px;
-    font-size: 20px;
-    line-height: 1.42;
+    max-width: 476px;
+    font-size: 17px;
+    line-height: 1.46;
     letter-spacing: 0;
   }
 
   .home-about .section__body p + p {
-    margin-top: 12px;
+    margin-top: 8px;
   }
 
   .home-features {
-    padding-top: 90px;
-    padding-bottom: 124px;
+    padding-top: 74px;
+    padding-bottom: 82px;
   }
 
   .home-features .section__heading {
@@ -598,82 +599,86 @@ h2 {
 
   .home-features__layout {
     align-items: stretch;
+    width: min(100%, 920px);
+    margin: 0 auto;
   }
 
   .home-features__heading {
     display: flex;
     justify-content: center;
-    margin-bottom: 72px;
+    margin-bottom: 62px;
     text-align: center;
   }
 
   .home-features__intro {
-    width: 760px;
-    margin-bottom: 58px;
+    width: 100%;
+    max-width: 760px;
+    margin-bottom: 34px;
   }
 
   .home-features__intro p {
-    font-size: 20px;
-    line-height: 1.42;
+    font-size: 17px;
+    line-height: 1.5;
     letter-spacing: 0;
   }
 
   .home-features .features {
     margin-top: 0;
     grid-template-columns: none;
-    justify-content: flex-start;
-    gap: 22px;
+    justify-content: space-between;
+    gap: 24px;
   }
 
   .home-features__cards {
     flex-wrap: nowrap;
-    gap: 22px;
+    width: 100%;
+    gap: 24px;
   }
 
   .home-features .feature-card {
-    flex: 0 0 311px;
-    min-height: 431px;
-    padding: 42px 28px 34px;
+    flex: 0 0 190px;
+    min-height: 258px;
+    padding: 28px 18px 24px;
     border-radius: 30px;
-    gap: 42px;
+    gap: 24px;
     justify-content: flex-start;
     box-shadow: none;
   }
 
   .home-features .feature-card img {
-    width: 126px;
-    height: 126px;
+    width: 94px;
+    height: 94px;
   }
 
   .home-features .feature-card p {
-    max-width: 240px;
+    max-width: 154px;
     font-size: 16px;
-    line-height: 1.4;
+    line-height: 1.35;
     letter-spacing: 0;
   }
 
   .home-features__note {
-    width: 604px;
-    max-width: 604px;
-    margin: 54px 0 0 655px;
-    font-size: 20px;
-    line-height: 1.42;
+    width: 420px;
+    max-width: 420px;
+    margin: 34px 0 0 auto;
+    font-size: 17px;
+    line-height: 1.5;
     letter-spacing: 0;
     color: rgba(24, 21, 18, 0.9);
     text-align: left;
   }
 
   .home-why {
-    padding-top: 76px;
-    padding-bottom: 138px;
+    padding-top: 92px;
+    padding-bottom: 92px;
   }
 
   .home-why .section__heading {
-    max-width: 797px;
+    max-width: 692px;
   }
 
   .home-why__panel .section__heading h2 {
-    margin-bottom: 42px;
+    margin-bottom: 48px;
     font-size: 48px;
     font-weight: 600;
     line-height: 0.95;
@@ -681,8 +686,8 @@ h2 {
   }
 
   .home-why__panel .section__heading p {
-    font-size: 20px;
-    line-height: 1.45;
+    font-size: 17px;
+    line-height: 1.5;
     letter-spacing: 0;
     color: rgba(230, 222, 203, 0.88);
   }
