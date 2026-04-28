@@ -1980,8 +1980,8 @@ h2 {
 
 @media (min-width: 1600px) {
   .guide-hero__intro--new {
-    padding-top: 118px;
-    padding-bottom: 17px;
+    padding-top: 92px;
+    padding-bottom: 0;
   }
 
   .guide-hero__content--new,
@@ -1990,19 +1990,19 @@ h2 {
   }
 
   .guide-intro-grid {
-    gap: 180px;
+    gap: 140px;
   }
 
   .guide-hero__title--new {
     flex: 0 0 752px;
-    margin-top: 177px;
+    margin-top: 108px;
     font-size: 48px;
     line-height: 0.95;
   }
 
   .guide-intro-copy {
     flex: 0 0 810px;
-    gap: 109px;
+    gap: 82px;
   }
 
   .guide-hero__lead--new {
@@ -2014,13 +2014,13 @@ h2 {
 
   .guide-structure-card {
     width: 810px;
-    min-height: 335px;
+    min-height: 280px;
     margin-left: auto;
-    padding: 52px 70px 44px;
+    padding: 42px 60px 38px;
   }
 
   .guide-structure-card h2 {
-    margin-bottom: 50px;
+    margin-bottom: 34px;
     font-size: 40px;
     line-height: 1.163;
   }
@@ -2031,16 +2031,16 @@ h2 {
   }
 
   .guide-main--new {
-    padding-bottom: 151px;
+    padding-bottom: 120px;
   }
 
   .guide-process-panel {
     min-height: 1782px;
-    padding: 71px 72px 74px;
+    padding: 58px 52px 60px;
   }
 
   .guide-block-title--new {
-    margin-bottom: 78px;
+    margin-bottom: 56px;
     font-size: 48px;
   }
 
@@ -2061,22 +2061,22 @@ h2 {
   .guide-advice-card {
     flex: 0 0 789px;
     width: 789px;
-    min-height: 1289px;
-    margin-top: 0;
+    min-height: 1220px;
+    margin-top: 28px;
     margin-left: auto;
-    padding: 42px 66px 46px;
+    padding: 38px 56px 42px;
   }
 
   .guide-advice-card h3 {
     max-width: 626px;
-    margin-bottom: 74px;
+    margin-bottom: 52px;
     font-size: 24px;
     line-height: 1.163;
   }
 
   .guide-advice-card p {
     max-width: 626px;
-    margin-bottom: 64px;
+    margin-bottom: 44px;
     font-size: 20px;
     line-height: 1.163;
   }
@@ -2092,7 +2092,7 @@ h2 {
   }
 
   .guide-advice-grid ol + ol {
-    margin-top: 34px;
+    margin-top: 22px;
   }
 
   .guide-advice-card li {
@@ -2101,16 +2101,16 @@ h2 {
   }
 
   .guide-tools {
-    margin-top: 43px;
+    margin-top: 54px;
     max-width: 785px;
   }
 
   .guide-tools__lead {
-    margin-bottom: 76px;
+    margin-bottom: 52px;
   }
 
   .guide-tools__files {
-    margin-bottom: 79px;
+    margin-bottom: 56px;
   }
 
   .guide-tools__lead,
@@ -2127,7 +2127,7 @@ h2 {
 
   .guide-bottom-cards {
     gap: 22px;
-    margin-top: 21px;
+    margin-top: 28px;
   }
 
   .guide-bottom-card {
