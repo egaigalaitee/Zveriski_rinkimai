@@ -1,268 +1,376 @@
-<!DOCTYPE html>
-<html lang="lt">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laikmatis žaidimui | Žvėriški rinkimai</title>
-    <meta
-      name="description"
-      content="Žaidimo laikmatis edukaciniam stalo žaidimui Žvėriški rinkimai."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/main.css" />
-  </head>
-  <body class="timer-page">
-    <header class="hero hero--subpage">
-      <button
-        class="mobile-menu-button"
-        type="button"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-        aria-label="Atidaryti meniu"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+import React from "react";
+import styled from "styled-components";
 
-      <div id="mobile-menu" class="mobile-menu" hidden>
-        <div class="mobile-menu__panel">
-          <button class="mobile-menu__close" type="button" aria-label="Uždaryti meniu">
-            ×
-          </button>
-          <a class="mobile-menu__link" href="./mokytojo-gidas.html">Mokytojo gidas</a>
-          <a class="mobile-menu__link" href="./index.html">Kas yra žvėriški rinkimai?</a>
-          <a class="mobile-menu__link" href="./laikmatis.html">Laikmatis žaidimui</a>
-        </div>
-      </div>
+type MinuteOption = 2 | 5 | 10;
 
-      <nav class="topbar topbar--subpage">
-        <a class="topbar__link" href="./mokytojo-gidas.html">Mokytojo gidas</a>
-        <a class="topbar__link topbar__link--center" href="./index.html">
-          Kas yra žvėriški rinkimai?
-        </a>
-        <a class="topbar__link" href="./laikmatis.html">Laikmatis žaidimui</a>
-      </nav>
-    </header>
+type Wireframe2Props = {
+  timeLabel?: string;
+  selectedMinutes?: MinuteOption;
+  onPresetSelect?: (minutes: MinuteOption) => void;
+  onStart?: () => void;
+  onStop?: () => void;
+  onResume?: () => void;
+};
 
-    <main class="timer-main">
-      <section class="timer-stage-shell">
-        <section class="timer-stage">
-          <section class="timer-info-panel">
-            <div class="timer-copy">
-              <h1 class="timer-copy__title">Laikmatis žaidimui</h1>
-              <p class="timer-copy__lead">
-                Valdykite žaidimo laiką ir<br />
+const PRESET_OPTIONS: Array<{
+  value: MinuteOption;
+  label: string;
+}> = [
+  { value: 2, label: "2 min" },
+  { value: 5, label: "5 min" },
+  { value: 10, label: "10 min" },
+];
+
+export default function Wireframe2({
+  timeLabel = "2:00",
+  selectedMinutes = 2,
+  onPresetSelect,
+  onStart,
+  onStop,
+  onResume,
+}: Wireframe2Props) {
+  return (
+    <Page>
+      <TopNav aria-label="Pagrindinė navigacija">
+        <NavLink href="#mokytojo-gidas">Mokytojo gidas</NavLink>
+        <NavLink href="#rinkimai" $center>
+          Kas yra „žvėriški rinkimai“?
+        </NavLink>
+        <NavLink href="#laikmatis">Laikmatis žaidimui</NavLink>
+      </TopNav>
+
+      <ContentShell>
+        <MainGrid>
+          <InfoCard>
+            <InfoContent>
+              <Heading>Laikmatis žaidimui</Heading>
+              <Lead>
+                Valdykite žaidimo laiką ir
+                <br />
                 išlaikykite tempą
-              </p>
-              <p class="timer-copy__label">Rekomenduojamas laikas:</p>
-              <div class="timer-copy__recommendations">
+              </Lead>
+
+              <Label>Rekomenduojamas laikas:</Label>
+
+              <Recommendations>
                 <p>2 min – greitiems pasiskirstymams ir trumpiems pristatymams</p>
                 <p>5 min – kai reikia daugiau laiko pasiruošimui, bei pasitarimams</p>
                 <p>10 min – išsamesnėms diskusijoms</p>
-              </div>
-            </div>
+              </Recommendations>
+            </InfoContent>
 
-            <div class="timer-preset-row">
-              <button class="timer-preset-pill" type="button" data-minutes="2">
-                <span class="timer-preset-pill__full">2 min</span>
-                <span class="timer-preset-pill__short">2</span>
-              </button>
-              <button class="timer-preset-pill" type="button" data-minutes="5">
-                <span class="timer-preset-pill__full">5 min</span>
-                <span class="timer-preset-pill__short">5</span>
-              </button>
-              <button class="timer-preset-pill" type="button" data-minutes="10">
-                <span class="timer-preset-pill__full">10 min</span>
-                <span class="timer-preset-pill__short">10</span>
-              </button>
-            </div>
-          </section>
+            <PresetRow aria-label="Laikmačio pasirinkimai">
+              {PRESET_OPTIONS.map((option) => (
+                <PresetButton
+                  key={option.value}
+                  type="button"
+                  $active={selectedMinutes === option.value}
+                  onClick={() => onPresetSelect?.(option.value)}
+                >
+                  {option.label}
+                </PresetButton>
+              ))}
+            </PresetRow>
+          </InfoCard>
 
-          <section class="timer-display-panel">
-            <div class="timer-clock-wrap">
-              <div class="timer-ring" aria-hidden="true"></div>
-              <div id="timer-display" class="timer-clock__display">2:00</div>
-            </div>
+          <TimerCard>
+            <TimerCardInner>
+              <TimerCircle aria-label={`Laikmatis ${timeLabel}`}>
+                <TimerValue>{timeLabel}</TimerValue>
+              </TimerCircle>
 
-            <div class="timer-side-controls">
-              <button id="start-button" class="timer-action timer-action--primary" type="button">
-                Pradėti
-              </button>
-              <button id="stop-button" class="timer-action" type="button">Sustabdyti</button>
-              <button id="resume-button" class="timer-action" type="button">Pratęsti</button>
-            </div>
-          </section>
-        </section>
-      </section>
-    </main>
+              <Actions>
+                <ActionButton type="button" onClick={onStart}>
+                  Pradėti
+                </ActionButton>
+                <ActionButton type="button" onClick={onStop}>
+                  Sustabdyti
+                </ActionButton>
+                <ActionButton type="button" onClick={onResume} $singleRow>
+                  Pratęsti
+                </ActionButton>
+              </Actions>
+            </TimerCardInner>
+          </TimerCard>
+        </MainGrid>
+      </ContentShell>
+    </Page>
+  );
+}
 
-    <audio id="timer-sound" preload="auto">
-      <source src="./Laikrodzio.mp3" type="audio/mpeg" />
-    </audio>
+const Page = styled.main`
+  min-height: 100vh;
+  background: #000;
+  color: #e6decb;
+  font-family: "Poppins", sans-serif;
+  padding: 56px 32px 72px;
 
-    <script>
-      const timerDisplay = document.getElementById("timer-display");
-      const startButton = document.getElementById("start-button");
-      const stopButton = document.getElementById("stop-button");
-      const resumeButton = document.getElementById("resume-button");
-      const presetButtons = document.querySelectorAll("[data-minutes]");
-      const timerSound = document.getElementById("timer-sound");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const mobileMenuButton = document.querySelector(".mobile-menu-button");
-      const mobileMenuClose = document.querySelector(".mobile-menu__close");
-      const mobileMenuLinks = document.querySelectorAll(".mobile-menu__link");
+  @media (max-width: 1180px) {
+    padding: 36px 24px 48px;
+  }
 
-      let selectedSeconds = 2 * 60;
-      let remainingSeconds = selectedSeconds;
-      let intervalId = null;
+  @media (max-width: 768px) {
+    padding: 24px 16px 32px;
+  }
+`;
 
-      function updateBadgeProgress() {
-        const progress = selectedSeconds > 0
-          ? Math.max(0, Math.min(1, remainingSeconds / selectedSeconds))
-          : 0;
+const TopNav = styled.nav`
+  width: min(100%, 1620px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 0 4px;
 
-        presetButtons.forEach((button) => {
-          if (button.classList.contains("timer-badge--active")) {
-            button.style.setProperty("--progress", progress);
-          } else {
-            button.style.setProperty("--progress", 1);
-          }
-        });
+  @media (max-width: 1180px) {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-        document.documentElement.style.setProperty("--timer-progress", progress);
-      }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
 
-      function formatTime(totalSeconds) {
-        const minutes = Math.floor(totalSeconds / 60);
-        const seconds = String(totalSeconds % 60).padStart(2, "0");
-        return `${minutes}:${seconds}`;
-      }
+const NavLink = styled.a<{ $center?: boolean }>`
+  color: #e6decb;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  text-align: ${({ $center }) => ($center ? "center" : "left")};
+  opacity: 0.95;
 
-      function renderTimer() {
-        timerDisplay.textContent = formatTime(remainingSeconds);
-        updateBadgeProgress();
-      }
+  @media (max-width: 768px) {
+    white-space: normal;
+    font-size: 16px;
+  }
+`;
 
-      function setActionState(state) {
-        startButton.disabled = state === "running";
-        resumeButton.disabled = state === "running" || remainingSeconds <= 0;
-        stopButton.disabled = state !== "running";
-      }
+const ContentShell = styled.section`
+  width: min(100%, 1500px);
+  margin: 160px auto 0;
 
-      function clearTimer() {
-        clearInterval(intervalId);
-        intervalId = null;
-      }
+  @media (max-width: 1180px) {
+    margin-top: 72px;
+  }
 
-      function playTimerSound() {
-        timerSound.currentTime = 0;
-        timerSound.play().catch(() => {
-        });
-      }
+  @media (max-width: 768px) {
+    margin-top: 40px;
+  }
+`;
 
-      function tick() {
-        if (remainingSeconds <= 0) {
-          clearTimer();
-          playTimerSound();
-          setActionState("finished");
-          return;
-        }
+const MainGrid = styled.div`
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(420px, 1fr);
+  gap: 14px;
+  align-items: stretch;
 
-        remainingSeconds -= 1;
-        renderTimer();
+  @media (max-width: 1180px) {
+    grid-template-columns: 1fr;
+  }
+`;
 
-        if (remainingSeconds <= 0) {
-          clearTimer();
-          playTimerSound();
-          setActionState("finished");
-        }
-      }
+const SharedCard = styled.article`
+  min-height: 980px;
+  border-radius: 30px;
 
-      function startTimer() {
-        clearTimer();
-        remainingSeconds = selectedSeconds;
-        renderTimer();
-        setActionState("running");
-        intervalId = setInterval(tick, 1000);
-      }
+  @media (max-width: 1180px) {
+    min-height: 0;
+  }
+`;
 
-      function stopTimer() {
-        if (!intervalId) {
-          return;
-        }
+const InfoCard = styled(SharedCard)`
+  background: #e6decb;
+  color: #000;
+  padding: 88px 84px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-        clearTimer();
-        setActionState("paused");
-      }
+  @media (max-width: 1180px) {
+    padding: 56px 44px 48px;
+  }
 
-      function resumeTimer() {
-        if (intervalId || remainingSeconds <= 0) {
-          return;
-        }
+  @media (max-width: 768px) {
+    padding: 36px 22px 28px;
+  }
+`;
 
-        setActionState("running");
-        intervalId = setInterval(tick, 1000);
-      }
+const InfoContent = styled.div`
+  max-width: 620px;
+`;
 
-      presetButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          presetButtons.forEach((item) => item.classList.remove("timer-badge--active"));
-          button.classList.add("timer-badge--active");
+const Heading = styled.h1`
+  margin: 0 0 36px;
+  color: #000;
+  font-size: clamp(42px, 3vw, 64px);
+  font-weight: 600;
+  line-height: 0.96;
+  text-transform: uppercase;
 
-          selectedSeconds = Number(button.dataset.minutes) * 60;
-          remainingSeconds = selectedSeconds;
-          clearTimer();
-          renderTimer();
-          setActionState("idle");
-        });
-      });
+  @media (max-width: 768px) {
+    margin-bottom: 24px;
+  }
+`;
 
-      startButton.addEventListener("click", startTimer);
-      stopButton.addEventListener("click", stopTimer);
-      resumeButton.addEventListener("click", resumeTimer);
+const Lead = styled.p`
+  margin: 0 0 56px;
+  color: #000;
+  font-size: clamp(24px, 1.8vw, 42px);
+  font-weight: 400;
+  line-height: 1.35;
 
-      presetButtons.forEach((button) => {
-        if (button.dataset.minutes === "2") {
-          button.classList.add("timer-badge--active");
-        }
-      });
+  @media (max-width: 768px) {
+    margin-bottom: 36px;
+    font-size: 18px;
+  }
+`;
 
-      function setMobileMenu(open) {
-        mobileMenu.hidden = !open;
-        mobileMenu.classList.toggle("is-open", open);
-        mobileMenu.style.display = open ? "block" : "none";
-        mobileMenu.setAttribute("aria-hidden", String(!open));
-        document.body.classList.toggle("menu-open", open);
-        mobileMenuButton.setAttribute("aria-expanded", String(open));
-      }
+const Label = styled.p`
+  margin: 0 0 34px;
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
 
-      mobileMenuButton.addEventListener("click", () => setMobileMenu(true));
-      mobileMenuClose.addEventListener("click", () => setMobileMenu(false));
-      mobileMenu.addEventListener("click", (event) => {
-        if (event.target === mobileMenu) {
-          setMobileMenu(false);
-        }
-      });
+  @media (max-width: 768px) {
+    margin-bottom: 18px;
+    font-size: 20px;
+  }
+`;
 
-      mobileMenuLinks.forEach((link) => {
-        link.addEventListener("click", () => setMobileMenu(false));
-      });
+const Recommendations = styled.div`
+  color: #000;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.4;
 
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-          setMobileMenu(false);
-        }
-      });
+  p {
+    margin: 0;
+  }
 
-      renderTimer();
-      setActionState("idle");
-      setMobileMenu(false);
-    </script>
-  </body>
-</html>
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+`;
+
+const PresetRow = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+
+  @media (max-width: 768px) {
+    gap: 14px;
+  }
+`;
+
+const PresetButton = styled.button<{ $active?: boolean }>`
+  min-width: 142px;
+  height: 56px;
+  border: 1px solid #000;
+  border-radius: 999px;
+  background: ${({ $active }) => ($active ? "#000" : "#000")};
+  color: #e6decb;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    min-width: calc(50% - 7px);
+    flex: 1 1 calc(50% - 7px);
+  }
+`;
+
+const TimerCard = styled(SharedCard)`
+  border: 1px solid #e6decb;
+  background: #000;
+  padding: 32px;
+
+  @media (max-width: 1180px) {
+    padding: 32px 24px 40px;
+  }
+`;
+
+const TimerCardInner = styled.div`
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 88px;
+
+  @media (max-width: 1180px) {
+    gap: 56px;
+  }
+`;
+
+const TimerCircle = styled.div`
+  width: min(100%, 360px);
+  aspect-ratio: 1;
+  border: 16px solid #e6decb;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    width: min(100%, 280px);
+    border-width: 12px;
+  }
+`;
+
+const TimerValue = styled.div`
+  color: #e6decb;
+  font-size: clamp(72px, 5vw, 96px);
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 64px;
+  }
+`;
+
+const Actions = styled.div`
+  width: 100%;
+  max-width: 368px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 30px;
+  justify-items: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 14px;
+  }
+`;
+
+const ActionButton = styled.button<{ $singleRow?: boolean }>`
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 24px;
+  border: 1px solid #e6decb;
+  border-radius: 999px;
+  background: transparent;
+  color: #e6decb;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.1;
+  cursor: pointer;
+  grid-column: ${({ $singleRow }) => ($singleRow ? "1 / -1" : "auto")};
+  max-width: ${({ $singleRow }) => ($singleRow ? "170px" : "none")};
+  
+  @media (max-width: 768px) {
+    grid-column: auto;
+    max-width: none;
+  }
+`;
