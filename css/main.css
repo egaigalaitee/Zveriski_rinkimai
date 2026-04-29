@@ -3642,6 +3642,28 @@ h2 {
   }
 }
 
+@media (min-width: 900px) {
+  .section--light.home-features .container {
+    width: min(calc(100% - 100px), 1340px) !important;
+  }
+
+  .features.home-features__cards {
+    display: grid !important;
+    grid-template-columns: repeat(4, 311px) !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    grid-auto-flow: row !important;
+    width: min(100%, 1310px) !important;
+    margin: 54px auto 0 !important;
+    gap: 22px !important;
+  }
+
+  .features.home-features__cards .feature-card {
+    width: 311px !important;
+    min-height: 431px !important;
+  }
+}
+
 @media (min-width: 641px) {
   .home-features__layout {
     width: min(100%, 1340px);
