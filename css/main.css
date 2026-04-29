@@ -1,3 +1,4 @@
+
 :root {
   --bg: #050505;
   --text-light: #e6decb;
@@ -3158,108 +3159,110 @@ h2 {
   }
 
   .timer-page .hero--subpage {
-    padding-top: 52px;
+    padding-top: 58px;
   }
 
   .timer-page .topbar--subpage {
-    width: min(calc(100% - 250px), 1670px);
+    width: min(calc(100% - 240px), 1620px);
     grid-template-columns: 224px minmax(362px, 1fr) 241px;
     gap: 32px;
   }
 
   .timer-page .timer-main {
-    width: min(calc(100% - 120px), 1680px);
-    padding: 117px 0 101px;
+    width: min(calc(100% - 160px), 1600px);
+    padding: 132px 0 92px;
   }
 
   .timer-stage-shell {
-    width: min(calc(100% - 160px), 1504px);
+    width: min(100%, 1488px);
   }
 
   .timer-stage {
-    grid-template-columns: 901px 590px;
-    gap: 13px;
+    grid-template-columns: minmax(0, 1.64fr) minmax(0, 1fr);
+    gap: 14px;
     justify-content: center;
   }
 
   .timer-info-panel,
   .timer-display-panel {
-    min-height: 961px;
+    min-height: 994px;
   }
 
   .timer-info-panel {
-    padding: 184px 147px 150px;
+    padding: 168px 88px 66px;
   }
 
   .timer-copy__title {
-    margin-bottom: 24px;
-    font-size: 48px;
+    margin-bottom: 34px;
+    font-size: 64px;
   }
 
   .timer-copy__lead {
-    max-width: 320px;
-    margin-bottom: 42px;
-    font-size: 24px;
-    line-height: 1.45;
+    max-width: 430px;
+    margin-bottom: 54px;
+    font-size: 32px;
+    line-height: 1.32;
   }
 
   .timer-copy__label,
   .timer-copy__recommendations p {
-    font-size: 20px;
-    line-height: 1.45;
+    font-size: 22px;
+    line-height: 1.36;
   }
 
   .timer-copy__label {
-    margin-bottom: 18px;
+    margin-bottom: 30px;
+    font-weight: 600;
   }
 
   .timer-copy__recommendations {
-    gap: 0;
+    gap: 6px;
   }
 
   .timer-preset-row {
     justify-content: flex-start;
-    gap: 85px;
+    gap: 86px;
   }
 
   .timer-preset-pill {
-    min-width: 146px;
-    width: 146px;
-    min-height: 58px;
+    min-width: 142px;
+    width: 142px;
+    min-height: 56px;
     padding: 0 10px;
-    border-width: 2px;
-    font-size: 24px;
+    border-width: 1px;
+    font-size: 20px;
   }
 
   .timer-display-panel {
-    padding: 209px 58px 72px;
+    padding: 92px 40px 52px;
+    justify-content: center;
   }
 
   .timer-clock-wrap {
-    max-width: 352px;
-    margin: 0 auto 144px;
+    max-width: 378px;
+    margin: 0 auto 92px;
   }
 
   .timer-ring::after {
-    inset: 23px;
+    inset: 22px;
   }
 
   .timer-clock__display {
-    font-size: 90px;
+    font-size: 96px;
     font-weight: 600;
-    letter-spacing: 0.02em;
+    letter-spacing: 0;
   }
 
   .timer-side-controls {
-    max-width: 371px;
-    gap: 22px 33px;
+    max-width: 366px;
+    gap: 22px 28px;
   }
 
   .timer-action {
     min-width: 169px;
-    min-height: 48px;
+    min-height: 50px;
     padding: 10px 36px;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   #start-button,
@@ -3561,28 +3564,4 @@ h2 {
     font-size: 11pt;
     line-height: 1.45;
   }
-}
-/* === LAIKMATIS: SUKIMAS, HOVER, PROGRESS === */
-
-.timer-ring.is-running {
-  animation: timer-spin 2s linear infinite;
-}
-
-@keyframes timer-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Hover: mygtukas lieka fono spalvos */
-.timer-action:hover,
-.timer-preset-pill:hover {
-  background: #050505;
-  color: #E6DECB;
-  border-color: #E6DECB;
-  transform: translateY(-2px);
 }
