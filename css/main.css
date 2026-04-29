@@ -1,3 +1,4 @@
+
 :root {
   --bg: #050505;
   --text-light: #e6decb;
@@ -599,7 +600,7 @@ h2 {
 
   .home-features__layout {
     align-items: stretch;
-    width: min(100%, 920px);
+    width: min(100%, 1340px);
     margin: 0 auto;
   }
 
@@ -624,44 +625,44 @@ h2 {
 
   .home-features .features {
     margin-top: 0;
-    grid-template-columns: none;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 311px));
     justify-content: space-between;
-    gap: 24px;
+    gap: 22px;
   }
 
   .home-features__cards {
-    flex-wrap: nowrap;
     width: 100%;
-    gap: 24px;
+    gap: 22px;
   }
 
   .home-features .feature-card {
-    flex: 0 0 190px;
-    min-height: 258px;
-    padding: 28px 18px 24px;
+    width: 311px;
+    min-height: 431px;
+    padding: 42px 28px 34px;
     border-radius: 30px;
-    gap: 24px;
+    gap: 42px;
     justify-content: flex-start;
     box-shadow: none;
   }
 
   .home-features .feature-card img {
-    width: 94px;
-    height: 94px;
+    width: 126px;
+    height: 126px;
   }
 
   .home-features .feature-card p {
-    max-width: 154px;
-    font-size: 16px;
-    line-height: 1.35;
-    letter-spacing: 0;
+    max-width: 259px;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
   }
 
   .home-features__note {
-    width: 420px;
-    max-width: 420px;
-    margin: 34px 0 0 auto;
-    font-size: 17px;
+    width: 604px;
+    max-width: 604px;
+    margin: 54px 0 0 auto;
+    font-size: 20px;
     line-height: 1.5;
     letter-spacing: 0;
     color: rgba(24, 21, 18, 0.9);
@@ -3073,8 +3074,8 @@ h2 {
   }
 
   .home-features__intro {
-    width: 760px;
-    max-width: 760px;
+    width: 100%;
+    max-width: 788px;
     margin-bottom: 44px;
   }
 
@@ -3084,32 +3085,35 @@ h2 {
   }
 
   .home-features__cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 311px));
     justify-content: space-between;
-    gap: 24px;
+    gap: 22px;
   }
 
   .home-features .feature-card {
-    flex: 0 0 258px;
-    min-height: 389px;
-    padding: 38px 22px 30px;
-    gap: 34px;
+    width: 311px;
+    min-height: 431px;
+    padding: 42px 28px 34px;
+    gap: 42px;
   }
 
   .home-features .feature-card img {
-    width: 128px;
-    height: 128px;
+    width: 126px;
+    height: 126px;
   }
 
   .home-features .feature-card p {
-    max-width: 208px;
-    font-size: 16px;
+    max-width: 259px;
+    font-size: 20px;
     line-height: 1.4;
+    letter-spacing: 0.02em;
   }
 
   .home-features__note {
-    width: 580px;
-    max-width: 580px;
-    margin: 42px 0 0 auto;
+    width: 604px;
+    max-width: 604px;
+    margin: 54px 0 0 auto;
     font-size: 20px;
     line-height: 1.5;
   }
