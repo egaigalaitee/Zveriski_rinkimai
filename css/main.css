@@ -3562,3 +3562,27 @@ h2 {
     line-height: 1.45;
   }
 }
+/* === LAIKMATIS: SUKIMAS, HOVER, PROGRESS === */
+
+.timer-ring.is-running {
+  animation: timer-spin 2s linear infinite;
+}
+
+@keyframes timer-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hover: mygtukas lieka fono spalvos */
+.timer-action:hover,
+.timer-preset-pill:hover {
+  background: #050505;
+  color: #E6DECB;
+  border-color: #E6DECB;
+  transform: translateY(-2px);
+}
