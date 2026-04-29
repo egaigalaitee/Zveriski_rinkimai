@@ -1,143 +1,62 @@
-.timer-wrapper {
-  width: 1920px;
-  height: 1335px;
-  position: relative;
-  background: black;
-  margin: 0 auto;
-  font-family: "Poppins", sans-serif;
-}
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laikmatis žaidimui</title>
 
-/* NAV */
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-.timer-nav a {
-  position: absolute;
-  top: 118px;
-  color: #E6DECB;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-}
+  <link rel="stylesheet" href="css/main.css" />
+</head>
 
-.nav-left { left: 125px; }
-.nav-center { left: 778px; }
-.nav-right { right: 125px; }
+<body>
+  <main class="timer-wrapper">
 
-/* LEFT PANEL */
+    <nav class="timer-nav">
+      <a class="nav-left" href="mokytojo-gidas.html">Mokytojo gidas</a>
+      <a class="nav-center" href="index.html">Kas yra “Žvėriški rinkimai”?</a>
+      <a class="nav-right" href="laikmatis.html">Laikmatis žaidimui</a>
+    </nav>
 
-.timer-info {
-  position: absolute;
-  left: 207px;
-  top: 273px;
-  width: 901px;
-  height: 961px;
-  background: #E6DECB;
-  border-radius: 30px;
-}
+    <section class="timer-info"></section>
 
-.timer-title {
-  position: absolute;
-  left: 354px;
-  top: 457px;
-  font-size: 48px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: black;
-}
+    <h1 class="timer-title">Laikmatis žaidimui</h1>
 
-.timer-sub {
-  position: absolute;
-  left: 359px;
-  top: 532px;
-  font-size: 24px;
-  color: black;
-}
+    <p class="timer-sub">
+      Valdykite žaidimo laiką ir<br>
+      išlaikykite tempą
+    </p>
 
-.timer-text {
-  position: absolute;
-  left: 359px;
-  top: 633px;
-  width: 586px;
-  font-size: 20px;
-  color: black;
-}
+    <p class="timer-text">
+      <strong>Rekomenduojamas laikas:</strong><br><br>
+      2 min – greitiems pasiskirstymams ir trumpiems pristatymams<br>
+      5 min – kai reikia daugiau laiko pasiruošimui, bei pasitarimams<br>
+      10 min – išsamesnėms diskusijoms
+    </p>
 
-/* PRESET BUTTONS */
+    <div class="timer-presets">
+      <button type="button" data-time="120">2 min</button>
+      <button type="button" data-time="300">5 min</button>
+      <button type="button" data-time="600">10 min</button>
+    </div>
 
-.timer-presets {
-  position: absolute;
-  left: 354px;
-  top: 1048px;
-  display: flex;
-  gap: 85px;
-}
+    <section class="timer-display-box"></section>
 
-.timer-presets button {
-  width: 146px;
-  padding: 10px;
-  border-radius: 500px;
-  border: 2px solid #E6DECB;
-  background: black;
-  color: #E6DECB;
-  font-size: 24px;
-  cursor: pointer;
-}
+    <div class="timer-circle">
+      <div class="timer-time">2:00</div>
+    </div>
 
-/* RIGHT PANEL */
+    <div class="timer-controls">
+      <button type="button" id="start-button">Pradėti</button>
+      <button type="button" id="stop-button">Sustabdyti</button>
+      <button type="button" id="resume-button">Pratęsti</button>
+    </div>
 
-.timer-display-box {
-  position: absolute;
-  left: 1121px;
-  top: 273px;
-  width: 590px;
-  height: 961px;
-  border-radius: 30px;
-  border: 1px solid #E6DECB;
-}
+  </main>
 
-/* CIRCLE */
-
-.timer-circle {
-  position: absolute;
-  left: 1240px;
-  top: 483px;
-  width: 352px;
-  height: 352px;
-  border-radius: 50%;
-  border: 23px solid #E6DECB;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.timer-time {
-  font-size: 90px;
-  color: #E6DECB;
-  font-weight: 600;
-}
-
-/* CONTROLS */
-
-.timer-controls {
-  position: absolute;
-  top: 979px;
-  left: 1229px;
-  display: grid;
-  grid-template-columns: 169px 169px;
-  gap: 20px 30px;
-}
-
-.timer-controls button {
-  width: 169px;
-  padding: 10px;
-  border-radius: 3000px;
-  border: 1px solid #E6DECB;
-  background: black;
-  color: #E6DECB;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.timer-controls button:nth-child(3) {
-  grid-column: span 2;
-  justify-self: center;
-}
+  <script src="script.js"></script>
+</body>
+</html>
