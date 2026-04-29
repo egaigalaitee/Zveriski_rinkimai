@@ -1004,6 +1004,7 @@ h2 {
   font-size: clamp(2.4rem, 4vw, 4rem);
   line-height: 0.95;
   text-transform: uppercase;
+  max-width: 603px;
 }
 
 .timer-copy__lead,
@@ -1016,6 +1017,7 @@ h2 {
 }
 
 .timer-copy__lead {
+  max-width: 320px;
   margin-bottom: 54px;
 }
 
@@ -1027,12 +1029,14 @@ h2 {
 .timer-copy__recommendations {
   display: grid;
   gap: 6px;
+  max-width: 586px;
 }
 
 .timer-preset-row {
   display: flex;
   justify-content: space-between;
   gap: 16px;
+  max-width: 586px;
 }
 
 .timer-preset-pill {
@@ -1207,13 +1211,24 @@ h2 {
   }
 
   .timer-copy__title {
+    max-width: 603px;
     font-size: 48px;
+    line-height: 45.57px;
   }
 
   .timer-copy__lead,
   .timer-copy__label,
   .timer-copy__recommendations p {
     font-size: 24px;
+  }
+
+  .timer-copy__lead {
+    max-width: 320px;
+  }
+
+  .timer-copy__recommendations,
+  .timer-preset-row {
+    max-width: 586px;
   }
 
   .timer-preset-pill {
@@ -3265,39 +3280,45 @@ h2 {
   }
 
   .timer-info-panel {
-    padding: 168px 88px 66px;
+    padding: 144px 88px 58px;
   }
 
   .timer-copy__title {
-    margin-bottom: 34px;
-    font-size: 64px;
+    max-width: 603px;
+    margin-bottom: 42px;
+    font-size: 48px;
+    line-height: 45.57px;
   }
 
   .timer-copy__lead {
-    max-width: 430px;
-    margin-bottom: 54px;
-    font-size: 32px;
-    line-height: 1.32;
+    max-width: 320px;
+    margin-bottom: 62px;
+    font-size: 24px;
+    line-height: 1.45;
+    letter-spacing: 0.48px;
   }
 
   .timer-copy__label,
   .timer-copy__recommendations p {
-    font-size: 22px;
-    line-height: 1.36;
+    font-size: 20px;
+    line-height: 1.45;
+    letter-spacing: 0.4px;
   }
 
   .timer-copy__label {
-    margin-bottom: 30px;
-    font-weight: 600;
+    margin-bottom: 26px;
+    font-weight: 500;
   }
 
   .timer-copy__recommendations {
-    gap: 6px;
+    max-width: 586px;
+    gap: 2px;
   }
 
   .timer-preset-row {
-    justify-content: flex-start;
-    gap: 86px;
+    max-width: 586px;
+    justify-content: space-between;
+    gap: 20px;
   }
 
   .timer-preset-pill {
@@ -3393,13 +3414,15 @@ h2 {
   }
 
   .timer-copy__title {
-    font-size: 64px;
+    max-width: 603px;
+    font-size: 48px;
+    line-height: 45.57px;
   }
 
   .timer-copy__lead,
   .timer-copy__label,
   .timer-copy__recommendations p {
-    font-size: 32px;
+    font-size: 20px;
   }
 
   .timer-preset-pill {
