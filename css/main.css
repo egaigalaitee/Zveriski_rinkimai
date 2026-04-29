@@ -493,6 +493,75 @@ h2 {
   max-width: 220px;
 }
 
+.feature-card--custom {
+  justify-content: flex-start;
+}
+
+.feature-card-custom__icon {
+  width: 140.66px;
+  height: 184px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.feature-card-custom__text {
+  width: 100%;
+  max-width: 259px;
+  margin: 0;
+  text-align: center;
+  color: #e6decb;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.4px;
+  word-wrap: break-word;
+}
+
+.vector,
+.vector_01,
+.vector_02,
+.vector_03,
+.vector_04 {
+  position: absolute;
+  background: #e6decb;
+}
+
+.vector {
+  width: 121.7px;
+  height: 61.08px;
+  left: 0;
+  top: 122.92px;
+}
+
+.vector_01 {
+  width: 65.69px;
+  height: 45.23px;
+  left: 28.03px;
+  top: 59.33px;
+}
+
+.vector_02 {
+  width: 103.41px;
+  height: 69.26px;
+  left: 11.74px;
+  top: 13.03px;
+}
+
+.vector_03 {
+  width: 119.02px;
+  height: 20.15px;
+  left: 1.3px;
+  top: 96.98px;
+}
+
+.vector_04 {
+  width: 30.77px;
+  height: 49.53px;
+  left: 109.9px;
+  top: 0;
+}
+
 .section__note {
   max-width: 760px;
   margin: 36px auto 0;
