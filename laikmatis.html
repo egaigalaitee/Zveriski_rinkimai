@@ -1,265 +1,143 @@
-<!DOCTYPE html>
-<html lang="lt">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laikmatis žaidimui | Žvėriški rinkimai</title>
-    <meta
-      name="description"
-      content="Žaidimo laikmatis edukaciniam stalo žaidimui Žvėriški rinkimai."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/main.css" />
-  </head>
-  <body class="timer-page">
-    <header class="hero hero--subpage">
-      <button
-        class="mobile-menu-button"
-        type="button"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-        aria-label="Atidaryti meniu"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+.timer-wrapper {
+  width: 1920px;
+  height: 1335px;
+  position: relative;
+  background: black;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
 
-      <div id="mobile-menu" class="mobile-menu" hidden>
-        <div class="mobile-menu__panel">
-          <button class="mobile-menu__close" type="button" aria-label="Uždaryti meniu">
-            ×
-          </button>
-          <a class="mobile-menu__link" href="./mokytojo-gidas.html">Mokytojo gidas</a>
-          <a class="mobile-menu__link" href="./index.html">Kas yra žvėriški rinkimai?</a>
-          <a class="mobile-menu__link" href="./laikmatis.html">Laikmatis žaidimui</a>
-        </div>
-      </div>
+/* NAV */
 
-      <nav class="topbar topbar--subpage">
-        <a class="topbar__link" href="./mokytojo-gidas.html">Mokytojo gidas</a>
-        <a class="topbar__link topbar__link--center" href="./index.html">
-          Kas yra „žvėriški rinkimai“?
-        </a>
-        <a class="topbar__link" href="./laikmatis.html">Laikmatis žaidimui</a>
-      </nav>
-    </header>
+.timer-nav a {
+  position: absolute;
+  top: 118px;
+  color: #E6DECB;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
 
-    <main class="timer-main">
-      <section class="timer-stage-shell">
-        <section class="timer-stage">
-          <section class="timer-info-panel">
-            <div class="timer-copy">
-              <h1 class="timer-copy__title">Laikmatis žaidimui</h1>
-              <p class="timer-copy__lead">Valdykite žaidimo laiką ir išlaikykite tempą</p>
-              <p class="timer-copy__label">Rekomenduojamas laikas:</p>
-              <div class="timer-copy__recommendations">
-                <p>2 min – greitiems pasiskirstymams ir trumpiems pristatymams</p>
-                <p>5 min – kai reikia daugiau laiko pasiruošimui, bei pasitarimams</p>
-                <p>10 min – išsamesnėms diskusijoms</p>
-              </div>
-            </div>
+.nav-left { left: 125px; }
+.nav-center { left: 778px; }
+.nav-right { right: 125px; }
 
-            <div class="timer-preset-row">
-              <button class="timer-preset-pill" type="button" data-minutes="2">
-                <span class="timer-preset-pill__full">2 min</span>
-                <span class="timer-preset-pill__short">2</span>
-              </button>
-              <button class="timer-preset-pill" type="button" data-minutes="5">
-                <span class="timer-preset-pill__full">5 min</span>
-                <span class="timer-preset-pill__short">5</span>
-              </button>
-              <button class="timer-preset-pill" type="button" data-minutes="10">
-                <span class="timer-preset-pill__full">10 min</span>
-                <span class="timer-preset-pill__short">10</span>
-              </button>
-            </div>
-          </section>
+/* LEFT PANEL */
 
-          <section class="timer-display-panel">
-            <div class="timer-clock-wrap">
-              <div class="timer-ring" aria-hidden="true"></div>
-              <div id="timer-display" class="timer-clock__display">2:00</div>
-            </div>
+.timer-info {
+  position: absolute;
+  left: 207px;
+  top: 273px;
+  width: 901px;
+  height: 961px;
+  background: #E6DECB;
+  border-radius: 30px;
+}
 
-            <div class="timer-side-controls">
-              <button id="start-button" class="timer-action timer-action--primary" type="button">
-                Pradėti
-              </button>
-              <button id="stop-button" class="timer-action" type="button">Sustabdyti</button>
-              <button id="resume-button" class="timer-action" type="button">Pratęsti</button>
-            </div>
-          </section>
-        </section>
-      </section>
-    </main>
+.timer-title {
+  position: absolute;
+  left: 354px;
+  top: 457px;
+  font-size: 48px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: black;
+}
 
-    <audio id="timer-sound" preload="auto">
-      <source src="./Laikrodzio.mp3" type="audio/mpeg" />
-    </audio>
+.timer-sub {
+  position: absolute;
+  left: 359px;
+  top: 532px;
+  font-size: 24px;
+  color: black;
+}
 
-    <script>
-      const timerDisplay = document.getElementById("timer-display");
-      const startButton = document.getElementById("start-button");
-      const stopButton = document.getElementById("stop-button");
-      const resumeButton = document.getElementById("resume-button");
-      const presetButtons = document.querySelectorAll("[data-minutes]");
-      const timerSound = document.getElementById("timer-sound");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const mobileMenuButton = document.querySelector(".mobile-menu-button");
-      const mobileMenuClose = document.querySelector(".mobile-menu__close");
-      const mobileMenuLinks = document.querySelectorAll(".mobile-menu__link");
+.timer-text {
+  position: absolute;
+  left: 359px;
+  top: 633px;
+  width: 586px;
+  font-size: 20px;
+  color: black;
+}
 
-      let selectedSeconds = 2 * 60;
-      let remainingSeconds = selectedSeconds;
-      let intervalId = null;
+/* PRESET BUTTONS */
 
-      function updateBadgeProgress() {
-        const progress = selectedSeconds > 0
-          ? Math.max(0, Math.min(1, remainingSeconds / selectedSeconds))
-          : 0;
+.timer-presets {
+  position: absolute;
+  left: 354px;
+  top: 1048px;
+  display: flex;
+  gap: 85px;
+}
 
-        presetButtons.forEach((button) => {
-          if (button.classList.contains("timer-badge--active")) {
-            button.style.setProperty("--progress", progress);
-          } else {
-            button.style.setProperty("--progress", 1);
-          }
-        });
+.timer-presets button {
+  width: 146px;
+  padding: 10px;
+  border-radius: 500px;
+  border: 2px solid #E6DECB;
+  background: black;
+  color: #E6DECB;
+  font-size: 24px;
+  cursor: pointer;
+}
 
-        document.documentElement.style.setProperty("--timer-progress", progress);
-      }
+/* RIGHT PANEL */
 
-      function formatTime(totalSeconds) {
-        const minutes = Math.floor(totalSeconds / 60);
-        const seconds = String(totalSeconds % 60).padStart(2, "0");
-        return `${minutes}:${seconds}`;
-      }
+.timer-display-box {
+  position: absolute;
+  left: 1121px;
+  top: 273px;
+  width: 590px;
+  height: 961px;
+  border-radius: 30px;
+  border: 1px solid #E6DECB;
+}
 
-      function renderTimer() {
-        timerDisplay.textContent = formatTime(remainingSeconds);
-        updateBadgeProgress();
-      }
+/* CIRCLE */
 
-      function setActionState(state) {
-        startButton.disabled = state === "running";
-        resumeButton.disabled = state === "running" || remainingSeconds <= 0;
-        stopButton.disabled = state !== "running";
-      }
+.timer-circle {
+  position: absolute;
+  left: 1240px;
+  top: 483px;
+  width: 352px;
+  height: 352px;
+  border-radius: 50%;
+  border: 23px solid #E6DECB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-      function clearTimer() {
-        clearInterval(intervalId);
-        intervalId = null;
-      }
+.timer-time {
+  font-size: 90px;
+  color: #E6DECB;
+  font-weight: 600;
+}
 
-      function playTimerSound() {
-        timerSound.currentTime = 0;
-        timerSound.play().catch(() => {
-        });
-      }
+/* CONTROLS */
 
-      function tick() {
-        if (remainingSeconds <= 0) {
-          clearTimer();
-          playTimerSound();
-          setActionState("finished");
-          return;
-        }
+.timer-controls {
+  position: absolute;
+  top: 979px;
+  left: 1229px;
+  display: grid;
+  grid-template-columns: 169px 169px;
+  gap: 20px 30px;
+}
 
-        remainingSeconds -= 1;
-        renderTimer();
+.timer-controls button {
+  width: 169px;
+  padding: 10px;
+  border-radius: 3000px;
+  border: 1px solid #E6DECB;
+  background: black;
+  color: #E6DECB;
+  font-size: 20px;
+  cursor: pointer;
+}
 
-        if (remainingSeconds <= 0) {
-          clearTimer();
-          playTimerSound();
-          setActionState("finished");
-        }
-      }
-
-      function startTimer() {
-        clearTimer();
-        remainingSeconds = selectedSeconds;
-        renderTimer();
-        setActionState("running");
-        intervalId = setInterval(tick, 1000);
-      }
-
-      function stopTimer() {
-        if (!intervalId) {
-          return;
-        }
-
-        clearTimer();
-        setActionState("paused");
-      }
-
-      function resumeTimer() {
-        if (intervalId || remainingSeconds <= 0) {
-          return;
-        }
-
-        setActionState("running");
-        intervalId = setInterval(tick, 1000);
-      }
-
-      presetButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          presetButtons.forEach((item) => item.classList.remove("timer-badge--active"));
-          button.classList.add("timer-badge--active");
-
-          selectedSeconds = Number(button.dataset.minutes) * 60;
-          remainingSeconds = selectedSeconds;
-          clearTimer();
-          renderTimer();
-          setActionState("idle");
-        });
-      });
-
-      startButton.addEventListener("click", startTimer);
-      stopButton.addEventListener("click", stopTimer);
-      resumeButton.addEventListener("click", resumeTimer);
-
-      presetButtons.forEach((button) => {
-        if (button.dataset.minutes === "2") {
-          button.classList.add("timer-badge--active");
-        }
-      });
-
-      function setMobileMenu(open) {
-        mobileMenu.hidden = !open;
-        mobileMenu.classList.toggle("is-open", open);
-        mobileMenu.style.display = open ? "block" : "none";
-        mobileMenu.setAttribute("aria-hidden", String(!open));
-        document.body.classList.toggle("menu-open", open);
-        mobileMenuButton.setAttribute("aria-expanded", String(open));
-      }
-
-      mobileMenuButton.addEventListener("click", () => setMobileMenu(true));
-      mobileMenuClose.addEventListener("click", () => setMobileMenu(false));
-      mobileMenu.addEventListener("click", (event) => {
-        if (event.target === mobileMenu) {
-          setMobileMenu(false);
-        }
-      });
-
-      mobileMenuLinks.forEach((link) => {
-        link.addEventListener("click", () => setMobileMenu(false));
-      });
-
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-          setMobileMenu(false);
-        }
-      });
-
-      renderTimer();
-      setActionState("idle");
-      setMobileMenu(false);
-    </script>
-  </body>
-</html>
+.timer-controls button:nth-child(3) {
+  grid-column: span 2;
+  justify-self: center;
+}
