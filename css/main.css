@@ -696,8 +696,8 @@ h2 {
   .home-features .features {
     margin-top: 0;
     display: grid;
-    grid-template-columns: repeat(4, 311px);
-    justify-content: center;
+    grid-template-columns: repeat(4, minmax(0, 311px));
+    justify-content: space-between;
     gap: 22px;
   }
 
@@ -3671,17 +3671,19 @@ h2 {
   }
 
   .features.home-features__cards {
-    display: grid !important;
-    grid-template-columns: repeat(4, 311px) !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
     justify-content: center !important;
     align-items: stretch !important;
-    grid-auto-flow: row !important;
-    width: min(100%, 1310px) !important;
+    width: max-content !important;
+    max-width: none !important;
     margin: 54px auto 0 !important;
     gap: 22px !important;
   }
 
   .features.home-features__cards .feature-card {
+    flex: 0 0 311px !important;
     width: 311px !important;
     min-height: 431px !important;
   }
