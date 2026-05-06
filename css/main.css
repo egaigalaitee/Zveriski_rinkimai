@@ -696,8 +696,8 @@ h2 {
   .home-features .features {
     margin-top: 0;
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 311px));
-    justify-content: space-between;
+    grid-template-columns: repeat(4, 311px);
+    justify-content: center;
     gap: 22px;
   }
 
