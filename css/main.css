@@ -2087,7 +2087,7 @@ h2 {
 @media (min-width: 1600px) {
   .guide-hero__intro--new {
     padding-top: 92px;
-    padding-bottom: 0;
+    padding-bottom: 260px;
   }
 
   .guide-hero__content--new,
@@ -2124,6 +2124,7 @@ h2 {
     width: 810px;
     min-height: 280px;
     margin-left: auto;
+    margin-top: 220px;
     padding: 42px 60px 38px;
   }
 
