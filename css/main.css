@@ -3712,19 +3712,23 @@ h2 {
     gap: 22px;
   }
 
-  .home-features .feature-card {
-    width: 311px;
-    min-height: 431px;
-    padding: 42px 28px 34px;
-    border-radius: 30px;
-    gap: 42px;
-    justify-content: flex-start;
-  }
+.home-features .feature-card {
+  width: 311px;
+  min-height: 431px;
+  padding: 42px 28px 34px;
+  border-radius: 30px;
+  gap: 42px;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
 
-  .home-features .feature-card img {
-    width: 126px;
-    height: 126px;
-  }
+.home-features .feature-card img {
+  width: 126px;
+  height: 126px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
   .home-features .feature-card p {
     max-width: 259px;
