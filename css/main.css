@@ -2098,15 +2098,15 @@ h2 {
 
   .glossary-top-card p,
   .glossary-main--new .glossary-item {
-    font-size: 16px;
-    line-height: 1.28;
+    font-size: 20px;
+    line-height: 1.35;
   }
 
   .glossary-title--new {
     width: 100%;
     margin-bottom: 58px;
-    font-size: 32px;
-    line-height: 1;
+    font-size: 48px;
+    line-height: 0.95;
   }
 
   .glossary-top-card:first-child p {
@@ -2364,20 +2364,20 @@ h2 {
 
   .glossary-top-card h2 {
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.15;
   }
 
   .glossary-top-card p {
-    font-size: 14px;
-    line-height: 1.22;
+    font-size: 20px;
+    line-height: 1.35;
   }
 
   .glossary-title--new {
     width: 100%;
     margin-bottom: 50px;
-    font-size: 30px;
-    line-height: 1;
+    font-size: 48px;
+    line-height: 0.95;
     letter-spacing: 0;
   }
 
@@ -2401,8 +2401,8 @@ h2 {
   }
 
   .glossary-main--new .glossary-item {
-    font-size: 16px;
-    line-height: 1.4;
+    font-size: 20px;
+    line-height: 1.45;
     letter-spacing: 0.02em;
   }
 
