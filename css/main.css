@@ -2072,38 +2072,60 @@ h2 {
   }
 
   .glossary-main--new {
-    width: min(calc(100% - 100px), 1340px);
-    padding-top: 112px;
+    width: min(calc(100% - 140px), 1180px);
+    padding-top: 92px;
+    padding-bottom: 150px;
   }
 
   .glossary-top-grid {
-    grid-template-columns: repeat(2, minmax(0, 660px));
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 132px;
+    width: 100%;
+    max-width: 1030px;
+    margin: 0 auto 86px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: center;
+    gap: 12px;
   }
 
   .glossary-top-card {
-    min-height: 320px;
-    padding: 48px 46px;
-    border-radius: 28px;
+    min-height: 158px;
+    padding: 24px 28px;
+    border-radius: 18px;
+    align-items: flex-start;
   }
 
   .glossary-top-card h2 {
-    margin-bottom: 20px;
-    font-size: 22px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.08;
   }
 
   .glossary-top-card p,
   .glossary-main--new .glossary-item {
-    font-size: 20px;
-    line-height: 1.4;
+    font-size: 13px;
+    line-height: 1.26;
+    letter-spacing: 0;
   }
 
   .glossary-title--new {
-    margin-bottom: 74px;
-    font-size: 42px;
-    line-height: 0.95;
+    width: 100%;
+    margin: 0 auto 42px;
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .glossary-top-card:first-child p {
+    max-width: 365px;
+  }
+
+  .glossary-top-card:last-child {
+    display: grid;
+    grid-template-columns: 130px minmax(0, 1fr);
+    align-items: start;
+    column-gap: 18px;
+  }
+
+  .glossary-top-card:last-child p {
+    max-width: 260px;
   }
 }
 
@@ -2325,41 +2347,60 @@ h2 {
   }
 
   .glossary-main--new {
-    width: min(calc(100% - 460px), 1340px);
-    padding-top: 186px;
-    padding-bottom: 210px;
+    width: min(calc(100% - 160px), 1240px);
+    padding-top: 86px;
+    padding-bottom: 150px;
   }
 
   .glossary-top-grid {
-    grid-template-columns: repeat(2, minmax(0, 660px));
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 169px;
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto 92px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 4px;
   }
 
   .glossary-top-card {
-    min-height: 356px;
-    padding: 10px 68px;
-    border-radius: 30px;
+    min-height: 158px;
+    padding: 24px 26px;
+    border-radius: 16px;
+    align-items: flex-start;
   }
 
   .glossary-top-card h2 {
-    margin-bottom: 22px;
-    font-size: 24px;
-    line-height: 1.163;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.06;
   }
 
   .glossary-top-card p {
-    font-size: 20px;
-    line-height: 1.163;
+    font-size: 12px;
+    line-height: 1.18;
+    letter-spacing: 0;
   }
 
   .glossary-title--new {
-    width: min(100%, 820px);
-    margin-bottom: 96px;
-    font-size: 48px;
-    line-height: 0.949;
+    width: 100%;
+    margin: 0 auto 34px;
+    font-size: 27px;
+    line-height: 1;
     letter-spacing: 0;
+  }
+
+  .glossary-top-card:first-child p {
+    max-width: 360px;
+  }
+
+  .glossary-top-card:last-child {
+    display: grid;
+    grid-template-columns: 126px minmax(0, 1fr);
+    align-items: start;
+    column-gap: 18px;
+  }
+
+  .glossary-top-card:last-child p {
+    max-width: 250px;
   }
 
   .glossary-main--new .glossary-list {
@@ -2367,13 +2408,13 @@ h2 {
   }
 
   .glossary-main--new .glossary-item {
-    font-size: 24px;
-    line-height: 1.45;
-    letter-spacing: 0.02em;
+    font-size: 14px;
+    line-height: 1.38;
+    letter-spacing: 0;
   }
 
   .glossary-main--new .glossary-item + .glossary-item {
-    margin-top: 12px;
+    margin-top: 8px;
   }
 }
 
@@ -2421,6 +2462,12 @@ h2 {
     padding-top: 24px;
   }
 
+  .mobile-menu-button {
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
   body:not(.guide-page):not(.timer-page) {
     overflow-x: hidden;
   }
@@ -2440,7 +2487,7 @@ h2 {
   }
 
   .hero:not(.hero--subpage) {
-    min-height: 907px;
+    min-height: 960px;
     padding: 23px 0 0;
     background: #050505;
   }
@@ -2462,19 +2509,29 @@ h2 {
 
   .hero:not(.hero--subpage) .hero__content {
     width: 305px;
-    padding-top: 15px;
+    padding-top: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero:not(.hero--subpage) .hero__logo {
-    width: 305px;
-    margin-bottom: 40px;
+    order: 2;
+    width: 188px;
+    margin: 112px 0 0;
   }
 
   .hero:not(.hero--subpage) .hero__animal-frame {
-    width: 235px;
-    height: 235px;
-    margin: 146px auto 0;
+    order: 1;
+    width: 146px;
+    height: 146px;
+    margin: 24px auto 0;
     animation-duration: 5.5s;
+  }
+
+  .home-about {
+    padding-top: 114px;
+    padding-bottom: 202px;
   }
 
   .section {
@@ -2507,10 +2564,18 @@ h2 {
     letter-spacing: 0;
   }
 
+  .home-about .section__title-block {
+    width: 182px;
+  }
+
   .section__body {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+  }
+
+  .home-about .section__body {
+    display: none;
   }
 
   .section--light {
@@ -2600,7 +2665,7 @@ h2 {
   }
 
   .section--final {
-    padding-top: 118px;
+    padding-top: 128px;
     padding-bottom: 120px;
   }
 
@@ -2690,12 +2755,12 @@ h2 {
   }
 
   .guide-hero__intro--new {
-    padding: 96px 0 28px;
+    padding: 68px 0 16px;
   }
 
   .guide-hero__content--new,
   .guide-section--new {
-    width: min(calc(100% - 32px), 640px);
+    width: min(calc(100% - 8px), 640px);
   }
 
   .guide-intro-grid,
@@ -2707,52 +2772,58 @@ h2 {
   }
 
   .guide-intro-grid {
-    gap: 26px;
+    gap: 14px;
   }
 
   .guide-hero__title--new {
     margin-top: 0;
-    font-size: 24px;
-    line-height: 0.95;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1;
   }
 
   .guide-hero__lead--new,
   .guide-structure-card p {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 7px;
+    line-height: 1.2;
   }
 
   .guide-structure-card {
-    width: 100%;
-    padding: 24px 22px;
-    border-radius: 24px;
+    width: min(100%, 128px);
+    min-height: auto;
+    margin-left: 0;
+    padding: 12px 10px;
+    border-radius: 16px;
   }
 
   .guide-structure-card h2 {
-    margin-bottom: 22px;
-    font-size: 24px;
+    margin-bottom: 10px;
+    font-size: 13px;
     line-height: 1;
   }
 
   .guide-main--new {
-    padding-bottom: 72px;
+    padding-top: 0;
+    padding-bottom: 40px;
   }
 
   .guide-block-title--new {
-    margin-bottom: 28px;
-    font-size: 24px;
+    margin-bottom: 18px;
+    font-size: 16px;
     line-height: 1;
   }
 
   .guide-process-columns .guide-column p,
   .guide-advice-card p,
   .guide-advice-card li {
-    font-size: 15px;
-    line-height: 1.45;
+    font-size: 8px;
+    line-height: 1.3;
   }
 
   .guide-process-panel {
-    padding: 28px 18px 22px;
+    min-height: auto;
+    padding: 18px 10px 20px;
+    border-radius: 0;
   }
 
   .guide-process-columns--bottom {
@@ -2769,14 +2840,14 @@ h2 {
   }
 
   .guide-advice-card {
-    margin-top: 10px;
-    padding: 24px 20px;
-    border-radius: 24px;
+    margin-top: 16px;
+    padding: 16px 14px;
+    border-radius: 16px;
   }
 
   .guide-advice-card h3 {
-    margin-bottom: 20px;
-    font-size: 18px;
+    margin-bottom: 12px;
+    font-size: 10px;
   }
 
   .guide-pill-stack--left .guide-pill,
@@ -2787,11 +2858,11 @@ h2 {
   }
 
   .guide-tools {
-    margin-top: 24px;
+    margin-top: 18px;
   }
 
   .guide-kit {
-    margin-top: 56px;
+    margin-top: 26px;
   }
 
   .guide-block-title--kit {
@@ -2810,24 +2881,24 @@ h2 {
 
   .guide-tools__lead,
   .guide-tools__files {
-    font-size: 15px;
-    line-height: 1.45;
+    font-size: 8px;
+    line-height: 1.3;
   }
 
   .guide-bottom-cards {
-    gap: 16px;
-    margin-top: 16px;
+    gap: 10px;
+    margin-top: 10px;
   }
 
   .guide-bottom-card {
     min-height: 0;
-    padding: 28px 20px 24px;
-    border-radius: 24px;
+    padding: 14px 12px 16px;
+    border-radius: 16px;
   }
 
   .guide-bottom-card p {
-    font-size: 16px;
-    line-height: 1.45;
+    font-size: 10px;
+    line-height: 1.3;
   }
 
   .glossary-main {
@@ -2942,13 +3013,15 @@ h2 {
   .timer-page .hero--subpage {
     min-height: 0;
     padding: 0;
+    background: var(--section-light);
   }
 
   .timer-page .timer-main {
     width: 100%;
     min-height: 100svh;
     padding-top: 0;
-    padding-bottom: 32px;
+    padding-bottom: 24px;
+    background: var(--section-light);
   }
 
   .timer-page .timer-stage-shell {
@@ -2956,13 +3029,13 @@ h2 {
     max-width: none;
     margin: 0 auto;
     min-height: 100svh;
-    padding-top: 92px;
+    padding-top: 106px;
   }
 
   .timer-page .timer-stage {
     position: relative;
     display: block;
-    width: min(calc(100vw - 46px), 347px);
+    width: min(calc(100vw - 44px), 347px);
     margin: 0 auto;
   }
 
@@ -2976,17 +3049,18 @@ h2 {
 
   .timer-page .timer-display-panel {
     position: relative;
-    min-height: 644px;
+    min-height: 636px;
     padding: 0;
     border: 0;
-    border-radius: 20px;
+    border-radius: 22px;
     overflow: hidden;
+    background: #050505;
   }
 
   .timer-page .timer-clock-wrap {
     position: absolute;
-    top: 143px;
-    left: 62px;
+    top: 136px;
+    left: 56px;
     width: 214px;
     max-width: none;
     margin: 0;
@@ -3003,7 +3077,7 @@ h2 {
 
   .timer-page .timer-preset-row {
     position: absolute;
-    top: 128px;
+    top: 112px;
     right: 22px;
     display: grid;
     gap: 19px;
@@ -3036,7 +3110,7 @@ h2 {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 44px;
+    bottom: 42px;
     max-width: none;
     display: flex;
     align-items: flex-end;
