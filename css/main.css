@@ -1680,6 +1680,29 @@ h2 {
   max-width: 630px;
 }
 
+.guide-kit {
+  margin-top: 104px;
+  width: 100%;
+}
+
+.guide-block-title--kit {
+  margin-bottom: 56px;
+}
+
+.guide-process-columns--kit {
+  gap: 90px;
+  margin-bottom: 98px;
+}
+
+.guide-process-columns--kit .guide-column {
+  flex: 0 0 560px;
+  max-width: 560px;
+}
+
+.guide-process-columns--kit .guide-column p {
+  margin: 0 0 18px;
+}
+
 .guide-tools__lead,
 .guide-tools__files {
   margin: 0;
@@ -2211,7 +2234,29 @@ h2 {
 
   .guide-tools {
     margin-top: 54px;
-    max-width: 785px;
+    max-width: 100%;
+  }
+
+  .guide-kit {
+    margin-top: 128px;
+  }
+
+  .guide-block-title--kit {
+    margin-bottom: 72px;
+  }
+
+  .guide-process-columns--kit {
+    gap: 128px;
+    margin-bottom: 110px;
+  }
+
+  .guide-process-columns--kit .guide-column {
+    flex: 0 0 728px;
+    max-width: 728px;
+  }
+
+  .guide-process-columns--kit .guide-column p {
+    margin: 0 0 20px;
   }
 
   .guide-tools__lead {
@@ -2743,6 +2788,24 @@ h2 {
 
   .guide-tools {
     margin-top: 24px;
+  }
+
+  .guide-kit {
+    margin-top: 56px;
+  }
+
+  .guide-block-title--kit {
+    margin-bottom: 28px;
+  }
+
+  .guide-process-columns--kit {
+    gap: 0;
+    margin-bottom: 36px;
+  }
+
+  .guide-process-columns--kit .guide-column,
+  .guide-process-columns--kit .guide-column p {
+    max-width: 100%;
   }
 
   .guide-tools__lead,
