@@ -2084,10 +2084,10 @@ h2 {
   }
 
   .glossary-top-card {
-    min-height: 250px;
-    padding: 34px 40px;
+    min-height: 356px;
+    padding: 42px 48px;
     border-radius: 28px;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .glossary-top-card h2 {
@@ -2110,18 +2110,20 @@ h2 {
   }
 
   .glossary-top-card:first-child p {
-    max-width: 430px;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
   .glossary-top-card:last-child {
     display: grid;
-    grid-template-columns: 178px minmax(0, 1fr);
-    align-items: start;
-    column-gap: 28px;
+    grid-template-columns: 180px minmax(0, 360px);
+    align-items: center;
+    justify-content: center;
+    column-gap: 34px;
   }
 
   .glossary-top-card:last-child p {
-    max-width: 330px;
+    max-width: 360px;
   }
 }
 
@@ -2356,10 +2358,10 @@ h2 {
   }
 
   .glossary-top-card {
-    min-height: 214px;
-    padding: 28px 34px;
+    min-height: 356px;
+    padding: 46px 54px;
     border-radius: 30px;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .glossary-top-card h2 {
@@ -2382,18 +2384,20 @@ h2 {
   }
 
   .glossary-top-card:first-child p {
-    max-width: 350px;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
   .glossary-top-card:last-child {
     display: grid;
-    grid-template-columns: 160px minmax(0, 1fr);
-    align-items: start;
-    column-gap: 20px;
+    grid-template-columns: 186px minmax(0, 372px);
+    align-items: center;
+    justify-content: center;
+    column-gap: 34px;
   }
 
   .glossary-top-card:last-child p {
-    max-width: 300px;
+    max-width: 372px;
   }
 
   .glossary-main--new .glossary-list {
