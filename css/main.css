@@ -169,7 +169,7 @@ a {
 }
 
 .mobile-menu-button--dark span {
-  background: var(--text-light);
+  background: #181512;
 }
 
 .mobile-menu {
@@ -2506,7 +2506,7 @@ h2 {
 
   .hero:not(.hero--subpage) .hero__content {
     width: 305px;
-    padding-top: 26px;
+    padding-top: 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2515,20 +2515,20 @@ h2 {
   .hero:not(.hero--subpage) .hero__logo {
     order: 2;
     width: 188px;
-    margin: 112px 0 0;
+    margin: 94px 0 0;
   }
 
   .hero:not(.hero--subpage) .hero__animal-frame {
     order: 1;
     width: 146px;
     height: 146px;
-    margin: 24px auto 0;
+    margin: 18px auto 0;
     animation-duration: 5.5s;
   }
 
   .home-about {
-    padding-top: 114px;
-    padding-bottom: 202px;
+    padding-top: 92px;
+    padding-bottom: 136px;
   }
 
   .section {
@@ -2541,7 +2541,7 @@ h2 {
   }
 
   .section--dark .container {
-    width: 323px;
+    width: 311px;
   }
 
   .section__grid {
@@ -2562,7 +2562,7 @@ h2 {
   }
 
   .home-about .section__title-block {
-    width: 182px;
+    width: 188px;
   }
 
   .section__body {
@@ -2572,16 +2572,24 @@ h2 {
   }
 
   .home-about .section__body {
-    display: none;
+    display: block;
+    width: 214px;
+    font-size: 14px;
+    line-height: 1.45;
+    letter-spacing: 0;
+  }
+
+  .home-about .section__body p + p {
+    margin-top: 18px;
   }
 
   .section--light {
-    padding-top: 60px;
-    padding-bottom: 96px;
+    padding-top: 32px;
+    padding-bottom: 92px;
   }
 
   .section--light .container {
-    width: 393px;
+    width: 100%;
   }
 
   .section--light .section__heading {
@@ -2617,14 +2625,14 @@ h2 {
   }
 
   .home-features__intro p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
     letter-spacing: 0.02em;
   }
 
   .home-features__cards {
     width: 311px;
-    margin: 54px auto 0;
+    margin: 42px auto 0;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -2632,61 +2640,63 @@ h2 {
 
   .feature-card {
     min-height: 322px;
-    padding: 32px 24px 28px;
+    padding: 28px 24px 24px;
     border-radius: 30px;
-    gap: 32px;
-    justify-content: flex-start;
+    gap: 24px;
+    justify-content: center;
     box-shadow: none;
   }
 
   .feature-card img {
-    width: 108px;
-    height: 108px;
+    width: 102px;
+    height: 102px;
   }
 
   .feature-card p {
     max-width: 237px;
-    font-size: 16px;
-    line-height: 1.4;
+    font-size: 14px;
+    line-height: 1.38;
     letter-spacing: 0.02em;
   }
 
   .home-features__note {
     max-width: 311px;
     width: auto;
-    margin: 64px auto 0;
-    font-size: 16px;
+    margin: 52px auto 0;
+    font-size: 14px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: left;
   }
 
   .section--final {
-    padding-top: 128px;
-    padding-bottom: 120px;
+    padding-top: 102px;
+    padding-bottom: 118px;
   }
 
   .section--final .container {
-    width: 326px;
+    width: 311px;
   }
 
   .home-why__panel {
-    padding: 48px 18px;
-    border-radius: 24px;
+    padding: 0;
+    border-radius: 0;
+    border: 0;
   }
 
   .section--final .section__heading {
-    max-width: 326px;
+    max-width: 311px;
     text-align: center;
   }
 
   .section--final .section__heading h2 {
     font-size: 24px;
     line-height: 1.05;
+    margin-bottom: 34px;
   }
 
   .section--final .section__heading p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
     letter-spacing: 0.02em;
   }
@@ -2752,12 +2762,12 @@ h2 {
   }
 
   .guide-hero__intro--new {
-    padding: 68px 0 16px;
+    padding: 20px 0 10px;
   }
 
   .guide-hero__content--new,
   .guide-section--new {
-    width: min(calc(100% - 8px), 640px);
+    width: min(calc(100% - 10px), 640px);
   }
 
   .guide-intro-grid,
@@ -2769,7 +2779,7 @@ h2 {
   }
 
   .guide-intro-grid {
-    gap: 14px;
+    gap: 16px;
   }
 
   .guide-hero__title--new {
@@ -2786,7 +2796,7 @@ h2 {
   }
 
   .guide-structure-card {
-    width: min(100%, 128px);
+    width: min(100%, 126px);
     min-height: auto;
     margin-left: 0;
     padding: 12px 10px;
@@ -2837,8 +2847,8 @@ h2 {
   }
 
   .guide-advice-card {
-    margin-top: 16px;
-    padding: 16px 14px;
+    margin-top: 22px;
+    padding: 18px 14px;
     border-radius: 16px;
   }
 
@@ -2851,7 +2861,7 @@ h2 {
   .guide-pill--dark {
     min-width: 0;
     width: auto;
-    font-size: 16px;
+    font-size: 10px;
   }
 
   .guide-tools {
@@ -2880,6 +2890,10 @@ h2 {
   .guide-tools__files {
     font-size: 8px;
     line-height: 1.3;
+  }
+
+  .guide-tools__files {
+    margin-bottom: 18px;
   }
 
   .guide-bottom-cards {
@@ -3013,6 +3027,10 @@ h2 {
     background: var(--section-light);
   }
 
+  .timer-page .topbar {
+    display: none;
+  }
+
   .timer-page .timer-main {
     width: 100%;
     min-height: 100svh;
@@ -3026,7 +3044,7 @@ h2 {
     max-width: none;
     margin: 0 auto;
     min-height: 100svh;
-    padding-top: 106px;
+    padding-top: 92px;
   }
 
   .timer-page .timer-stage {
@@ -3046,7 +3064,7 @@ h2 {
 
   .timer-page .timer-display-panel {
     position: relative;
-    min-height: 636px;
+    min-height: 610px;
     padding: 0;
     border: 0;
     border-radius: 22px;
@@ -3056,8 +3074,8 @@ h2 {
 
   .timer-page .timer-clock-wrap {
     position: absolute;
-    top: 136px;
-    left: 56px;
+    top: 122px;
+    left: 58px;
     width: 214px;
     max-width: none;
     margin: 0;
@@ -3069,12 +3087,12 @@ h2 {
   }
 
   .timer-page .timer-clock__display {
-    font-size: 76px;
+    font-size: 80px;
   }
 
   .timer-page .timer-preset-row {
     position: absolute;
-    top: 112px;
+    top: 76px;
     right: 22px;
     display: grid;
     gap: 19px;
@@ -3107,7 +3125,7 @@ h2 {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 42px;
+    bottom: 40px;
     max-width: none;
     display: flex;
     align-items: flex-end;
