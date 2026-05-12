@@ -1,3 +1,4 @@
+
 :root {
   --bg: #050505;
   --text-light: #e6decb;
@@ -3061,21 +3062,33 @@ h2 {
 
   .timer-page .timer-clock-wrap {
     position: absolute;
-    top: 148px;
+    top: 140px;
     left: 74px;
-    width: 214px;
+    width: auto;
+    height: auto;
+    aspect-ratio: auto;
     max-width: none;
     margin: 0;
-    transform: rotate(90deg);
+    transform: none;
   }
 
+  .timer-page .timer-ring,
   .timer-page .timer-ring::after {
-    inset: 16px;
+    display: none;
   }
 
   .timer-page .timer-clock__display {
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+    transform: none;
+    display: block;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
     font-size: 120px;
     font-weight: 700;
+    line-height: 0.82;
   }
 
   .timer-page .timer-preset-row {
