@@ -2993,8 +2993,8 @@ h2 {
   }
 
   .timer-page .mobile-menu-button {
-    top: 23px;
-    right: 24px;
+    top: 18px;
+    right: 22px;
     width: 53px;
     height: 55px;
     border-radius: 10px;
@@ -3031,7 +3031,7 @@ h2 {
     max-width: none;
     margin: 0 auto;
     min-height: 100svh;
-    padding-top: 134px;
+    padding-top: 136px;
   }
 
   .timer-page .timer-stage {
@@ -3061,8 +3061,8 @@ h2 {
 
   .timer-page .timer-clock-wrap {
     position: absolute;
-    top: 158px;
-    left: 129px;
+    top: 148px;
+    left: 74px;
     width: 214px;
     max-width: none;
     margin: 0;
@@ -3080,10 +3080,10 @@ h2 {
 
   .timer-page .timer-preset-row {
     position: absolute;
-    top: 182px;
-    right: -39px;
+    top: 176px;
+    right: 27px;
     display: grid;
-    gap: 36px;
+    gap: 38px;
     width: 66px;
   }
 
@@ -3113,12 +3113,12 @@ h2 {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 43px;
+    bottom: 52px;
     max-width: none;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    gap: 30px;
+    gap: 34px;
   }
 
   .timer-page .timer-action {
