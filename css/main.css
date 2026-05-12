@@ -2451,15 +2451,16 @@ h2 {
 
   .hero:not(.hero--subpage) .hero__logo {
     order: 2;
-    width: 188px;
-    margin: 94px 0 0;
+    width: 362px;
+    max-width: none;
+    margin: 84px 0 0;
   }
 
   .hero:not(.hero--subpage) .hero__animal-frame {
     order: 1;
-    width: 146px;
-    height: 146px;
-    margin: 18px auto 0;
+    width: 362px;
+    height: 278px;
+    margin: 26px auto 0;
     animation-duration: 5.5s;
   }
 
