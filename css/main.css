@@ -702,12 +702,18 @@ h2 {
   }
 
   .home-features__cards {
-    display: grid;
+    display: flex;
     width: 100%;
+    margin: 54px auto 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
     gap: 22px;
   }
 
   .home-features .feature-card {
+    flex: 0 0 311px;
     width: 311px;
     min-height: 431px;
     padding: 42px 28px 34px;
@@ -2565,6 +2571,10 @@ h2 {
     width: 188px;
   }
 
+  .home-about .section__title-main {
+    margin-bottom: 0;
+  }
+
   .section__body {
     font-size: 16px;
     line-height: 1.5;
@@ -2590,6 +2600,10 @@ h2 {
 
   .section--light .container {
     width: 100%;
+  }
+
+  .home-features {
+    overflow: hidden;
   }
 
   .section--light .section__heading {
@@ -2644,6 +2658,8 @@ h2 {
     border-radius: 30px;
     gap: 24px;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     box-shadow: none;
   }
 
@@ -2699,6 +2715,10 @@ h2 {
     font-size: 14px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+  }
+
+  .home-why {
+    background: #050505;
   }
 
   .page-shell {
