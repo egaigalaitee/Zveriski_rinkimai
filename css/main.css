@@ -2719,8 +2719,8 @@ h2 {
   }
 
   .guide-hero__intro--new {
-    min-height: 656px;
-    padding: 18px 0 0;
+    min-height: 386px;
+    padding: 14px 0 0;
     background: var(--section-light);
   }
 
@@ -2743,16 +2743,16 @@ h2 {
   }
 
   .guide-hero__title--new {
-    width: 262px;
-    margin: 103px 0 0 35px;
-    font-size: 24px;
+    width: 184px;
+    margin: 46px 0 0 12px;
+    font-size: 16px;
     line-height: 1;
   }
 
   .guide-hero__lead--new,
   .guide-structure-card p {
-    font-size: 14px;
-    line-height: 1.18;
+    font-size: 10px;
+    line-height: 1.2;
   }
 
   .guide-intro-copy {
@@ -2760,42 +2760,42 @@ h2 {
   }
 
   .guide-structure-card {
-    width: calc(100% - 20px);
-    max-width: 374px;
-    min-height: 215px;
-    margin: 74px auto 0;
-    padding: 24px 24px 20px;
+    width: calc(100% - 28px);
+    max-width: 365px;
+    min-height: 72px;
+    margin: 28px auto 0;
+    padding: 14px 16px 12px;
     border-radius: 30px;
   }
 
   .guide-structure-card h2 {
-    margin-bottom: 22px;
-    font-size: 24px;
+    margin-bottom: 10px;
+    font-size: 12px;
     line-height: 1;
   }
 
   .guide-main--new {
     padding-top: 0;
-    padding-bottom: 56px;
+    padding-bottom: 44px;
   }
 
   .guide-block-title--new {
-    margin-bottom: 28px;
-    font-size: 24px;
+    margin-bottom: 22px;
+    font-size: 16px;
     line-height: 1;
   }
 
   .guide-process-columns .guide-column p,
   .guide-advice-card p,
   .guide-advice-card li {
-    font-size: 16px;
-    line-height: 1.32;
+    font-size: 12px;
+    line-height: 1.28;
   }
 
   .guide-process-panel {
     min-height: auto;
     width: 100%;
-    padding: 34px 38px 34px;
+    padding: 26px 12px 26px;
     border-radius: 0;
     margin-top: 0;
   }
@@ -2816,15 +2816,38 @@ h2 {
   .guide-advice-card {
     width: calc(100% - 34px);
     max-width: 359px;
-    margin: 34px auto 0;
-    padding: 24px 20px 26px;
+    margin: 28px auto 0;
+    padding: 18px 16px 20px;
     border-radius: 30px;
   }
 
   .guide-advice-card h3 {
     margin-bottom: 18px;
-    font-size: 16px;
-    line-height: 1.25;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .guide-advice-card p {
+    margin: 0 0 18px;
+  }
+
+  .guide-advice-card ol {
+    gap: 18px;
+  }
+
+  .guide-advice-grid {
+    gap: 18px;
+  }
+
+  .guide-advice-grid ol {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .guide-advice-card li {
+    margin: 0;
   }
 
   .guide-pill-stack--left .guide-pill,
@@ -2835,21 +2858,22 @@ h2 {
   }
 
   .guide-tools {
-    width: 350px;
-    margin: 44px auto 0;
+    width: 311px;
+    max-width: 311px;
+    margin: 34px auto 0;
   }
 
   .guide-kit {
-    margin-top: 52px;
+    margin-top: 0;
   }
 
   .guide-block-title--kit {
-    margin-bottom: 28px;
+    margin-bottom: 18px;
   }
 
   .guide-process-columns--kit {
     gap: 0;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
   }
 
   .guide-process-columns--kit .guide-column,
@@ -2858,44 +2882,66 @@ h2 {
   }
 
   .guide-process-columns--kit .guide-column p {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
+  }
+
+  .guide-process-columns--kit .guide-column:last-child p:last-child {
+    margin-bottom: 0;
   }
 
   .guide-tools__lead,
   .guide-tools__files {
-    font-size: 16px;
-    line-height: 1.32;
+    font-size: 12px;
+    line-height: 1.28;
   }
 
   .guide-tools__files {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .guide-bottom-cards {
-    width: calc(100% - 30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     margin: 18px auto 0;
-    gap: 14px;
+    gap: 12px;
   }
 
   .guide-bottom-card {
     min-height: 0;
     width: 100%;
     max-width: 341px;
-    padding: 22px 18px 20px;
+    padding: 18px 18px 18px;
     border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .guide-bottom-card p {
-    font-size: 16px;
-    line-height: 1.32;
+    max-width: 226px;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 1.28;
+    text-align: center;
   }
 
   .guide-bottom-card--dark {
-    min-height: 220px;
+    min-height: 142px;
   }
 
   .guide-bottom-card--light {
-    min-height: 262px;
+    min-height: 168px;
+  }
+
+  .guide-bottom-card--light p {
+    max-width: 220px;
+  }
+
+  .guide-bottom-card--dark p {
+    max-width: 224px;
   }
 
   .glossary-main {
