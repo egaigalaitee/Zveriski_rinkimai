@@ -2719,8 +2719,8 @@ h2 {
   }
 
   .guide-hero__intro--new {
-    min-height: 386px;
-    padding: 14px 0 0;
+    min-height: 656px;
+    padding: 18px 0 0;
     background: var(--section-light);
   }
 
@@ -2743,16 +2743,16 @@ h2 {
   }
 
   .guide-hero__title--new {
-    width: 184px;
-    margin: 46px 0 0 12px;
-    font-size: 16px;
+    width: 262px;
+    margin: 103px 0 0 24px;
+    font-size: 24px;
     line-height: 1;
   }
 
   .guide-hero__lead--new,
   .guide-structure-card p {
-    font-size: 10px;
-    line-height: 1.2;
+    font-size: 14px;
+    line-height: 1.18;
   }
 
   .guide-intro-copy {
@@ -2760,42 +2760,42 @@ h2 {
   }
 
   .guide-structure-card {
-    width: calc(100% - 28px);
-    max-width: 365px;
-    min-height: 72px;
-    margin: 28px auto 0;
-    padding: 14px 16px 12px;
+    width: calc(100% - 19px);
+    max-width: 374px;
+    min-height: 215px;
+    margin: 74px auto 0;
+    padding: 24px 24px 20px;
     border-radius: 30px;
   }
 
   .guide-structure-card h2 {
-    margin-bottom: 10px;
-    font-size: 12px;
+    margin-bottom: 22px;
+    font-size: 24px;
     line-height: 1;
   }
 
   .guide-main--new {
     padding-top: 0;
-    padding-bottom: 44px;
+    padding-bottom: 56px;
   }
 
   .guide-block-title--new {
-    margin-bottom: 22px;
-    font-size: 16px;
+    margin-bottom: 28px;
+    font-size: 24px;
     line-height: 1;
   }
 
   .guide-process-columns .guide-column p,
   .guide-advice-card p,
   .guide-advice-card li {
-    font-size: 12px;
-    line-height: 1.28;
+    font-size: 16px;
+    line-height: 1.18;
   }
 
   .guide-process-panel {
     min-height: auto;
     width: 100%;
-    padding: 26px 12px 26px;
+    padding: 34px 26px 34px;
     border-radius: 0;
     margin-top: 0;
   }
@@ -2816,34 +2816,35 @@ h2 {
   .guide-advice-card {
     width: calc(100% - 34px);
     max-width: 359px;
-    margin: 28px auto 0;
-    padding: 18px 16px 20px;
+    min-height: 1536px;
+    margin: 34px auto 0;
+    padding: 26px 18px 30px;
     border-radius: 30px;
   }
 
   .guide-advice-card h3 {
-    margin-bottom: 18px;
-    font-size: 12px;
-    line-height: 1.2;
+    margin-bottom: 34px;
+    font-size: 24px;
+    line-height: 1.16;
   }
 
   .guide-advice-card p {
-    margin: 0 0 18px;
+    margin: 0 0 34px;
   }
 
   .guide-advice-card ol {
-    gap: 18px;
+    gap: 34px;
   }
 
   .guide-advice-grid {
-    gap: 18px;
+    gap: 34px;
   }
 
   .guide-advice-grid ol {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 34px;
   }
 
   .guide-advice-card li {
@@ -2860,7 +2861,7 @@ h2 {
   .guide-tools {
     width: 311px;
     max-width: 311px;
-    margin: 34px auto 0;
+    margin: 44px auto 0;
   }
 
   .guide-kit {
@@ -2868,12 +2869,12 @@ h2 {
   }
 
   .guide-block-title--kit {
-    margin-bottom: 18px;
+    margin-bottom: 28px;
   }
 
   .guide-process-columns--kit {
     gap: 0;
-    margin-bottom: 18px;
+    margin-bottom: 24px;
   }
 
   .guide-process-columns--kit .guide-column,
@@ -2882,7 +2883,7 @@ h2 {
   }
 
   .guide-process-columns--kit .guide-column p {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
 
   .guide-process-columns--kit .guide-column:last-child p:last-child {
@@ -2891,12 +2892,12 @@ h2 {
 
   .guide-tools__lead,
   .guide-tools__files {
-    font-size: 12px;
-    line-height: 1.28;
+    font-size: 16px;
+    line-height: 1.18;
   }
 
   .guide-tools__files {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .guide-bottom-cards {
@@ -2905,14 +2906,14 @@ h2 {
     align-items: center;
     width: 100%;
     margin: 18px auto 0;
-    gap: 12px;
+    gap: 14px;
   }
 
   .guide-bottom-card {
     min-height: 0;
     width: 100%;
     max-width: 341px;
-    padding: 18px 18px 18px;
+    padding: 22px 18px 20px;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -2923,17 +2924,17 @@ h2 {
   .guide-bottom-card p {
     max-width: 226px;
     margin: 0 auto;
-    font-size: 12px;
-    line-height: 1.28;
+    font-size: 16px;
+    line-height: 1.32;
     text-align: center;
   }
 
   .guide-bottom-card--dark {
-    min-height: 142px;
+    min-height: 220px;
   }
 
   .guide-bottom-card--light {
-    min-height: 168px;
+    min-height: 262px;
   }
 
   .guide-bottom-card--light p {
@@ -3039,8 +3040,8 @@ h2 {
   }
 
   .timer-page .mobile-menu-button {
-    top: 18px;
-    right: 22px;
+    top: 22px;
+    right: 21px;
     width: 53px;
     height: 55px;
     border-radius: 10px;
@@ -3077,7 +3078,7 @@ h2 {
     max-width: none;
     margin: 0 auto;
     min-height: 100svh;
-    padding-top: 136px;
+    padding-top: 134px;
   }
 
   .timer-page .timer-stage {
@@ -3107,8 +3108,8 @@ h2 {
 
   .timer-page .timer-clock-wrap {
     position: absolute;
-    top: 56px;
-    left: 68px;
+    top: 44px;
+    left: 74px;
     width: auto;
     height: auto;
     aspect-ratio: auto;
@@ -3135,16 +3136,17 @@ h2 {
     display: block;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    font-size: 118px;
+    font-size: 120px;
     font-weight: 700;
-    line-height: 0.82;
+    line-height: 0.8;
     text-align: left;
+    letter-spacing: 4.8px;
   }
 
   .timer-page .timer-preset-row {
     position: absolute;
     top: 48px;
-    right: 28px;
+    right: 25px;
     display: grid;
     gap: 36px;
     width: 66px;
@@ -3156,7 +3158,7 @@ h2 {
     height: 66px;
     min-height: 66px;
     padding: 0;
-    border-width: 2px;
+    border-width: 1px;
     border-color: rgba(230, 222, 203, 0.88);
     border-radius: 50%;
     font-size: 36px;
@@ -3176,23 +3178,25 @@ h2 {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 44px;
+    bottom: 57px;
+    height: 248px;
     max-width: none;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 28px;
+    display: block;
   }
 
   .timer-page .timer-action {
-    width: 64px !important;
-    min-width: 64px;
+    position: absolute;
+    bottom: 0;
     padding: 10px 8px;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     border: 1px solid rgba(230, 222, 203, 0.88);
+    border-radius: 3000px;
+    background: #050505;
+    color: var(--text-light);
     box-shadow: none;
-    font-size: 24px;
+    font-size: 26px;
+    letter-spacing: 0.52px;
     transform: none;
   }
 
@@ -3201,26 +3205,24 @@ h2 {
   }
 
   .timer-page #resume-button {
-    order: 1;
-    width: 64px !important;
-    min-width: 64px;
-    height: 169px;
-    margin-top: 0;
+    left: 45px;
+    width: 60px !important;
+    min-width: 60px;
+    height: 175px;
   }
 
   .timer-page #stop-button {
-    order: 2;
+    left: 135px;
     width: 77px !important;
     min-width: 77px;
     height: 216px;
   }
 
   .timer-page #start-button {
-    order: 3;
-    width: 64px !important;
-    min-width: 64px;
-    height: 175px;
-    margin-top: 0;
+    right: 45px;
+    width: 60px !important;
+    min-width: 60px;
+    height: 169px;
   }
 }
 
