@@ -2752,7 +2752,6 @@ h2 {
     line-height: 1;
   }
 
-  .guide-hero__lead--new,
   .guide-structure-card p {
     font-size: 16px;
     line-height: 1.16;
@@ -2806,10 +2805,6 @@ h2 {
     background: transparent;
   }
 
-  .guide-process-columns--bottom {
-    margin-top: 0;
-  }
-
   .guide-process-columns .guide-column,
   .guide-hero__title--new,
   .guide-intro-copy,
@@ -2855,13 +2850,6 @@ h2 {
 
   .guide-advice-card li {
     margin: 0;
-  }
-
-  .guide-pill-stack--left .guide-pill,
-  .guide-pill--dark {
-    min-width: 0;
-    width: auto;
-    font-size: 16px;
   }
 
   .guide-tools {
@@ -2911,9 +2899,6 @@ h2 {
 
   .guide-tools__files {
     margin-top: 34px;
-  }
-
-  .guide-tools__files {
     margin-bottom: 30px;
   }
 
