@@ -3331,7 +3331,7 @@ h2 {
   .timer-page .timer-main {
     width: 393px;
     max-width: 100%;
-    min-height: 100svh;
+    min-height: 827px;
     padding-top: 0;
     padding-bottom: 0;
     background: var(--section-light);
@@ -3341,14 +3341,15 @@ h2 {
     width: 100%;
     max-width: none;
     margin: 0 auto;
-    min-height: 100svh;
+    min-height: 827px;
     padding-top: 134px;
   }
 
   .timer-page .timer-stage {
     position: relative;
     display: block;
-    width: min(calc(100vw - 44px), 347px);
+    width: 347px;
+    height: 644px;
     margin: 0 auto;
   }
 
@@ -3362,7 +3363,9 @@ h2 {
 
   .timer-page .timer-display-panel {
     position: relative;
+    width: 347px;
     min-height: 644px;
+    height: 644px;
     padding: 0;
     border: 0;
     border-radius: 20px;
@@ -3372,8 +3375,8 @@ h2 {
 
   .timer-page .timer-clock-wrap {
     position: absolute;
-    top: 44px;
-    left: 74px;
+    top: 78px;
+    left: 68px;
     width: auto;
     height: auto;
     aspect-ratio: auto;
@@ -3402,7 +3405,7 @@ h2 {
     text-orientation: mixed;
     font-size: 120px;
     font-weight: 700;
-    line-height: 0.8;
+    line-height: 1;
     text-align: left;
     letter-spacing: 4.8px;
   }
@@ -3410,10 +3413,10 @@ h2 {
   .timer-page .timer-preset-row {
     position: absolute;
     top: 48px;
-    right: 25px;
+    right: 27px;
     display: grid;
     gap: 36px;
-    width: 66px;
+    width: 67px;
   }
 
   .timer-page .timer-preset-pill {
@@ -3442,8 +3445,8 @@ h2 {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 57px;
-    height: 248px;
+    bottom: 25px;
+    height: 286px;
     max-width: none;
     display: block;
   }
@@ -3469,7 +3472,7 @@ h2 {
   }
 
   .timer-page #resume-button {
-    left: 45px;
+    left: 44px;
     width: 60px !important;
     min-width: 60px;
     height: 175px;
@@ -3483,7 +3486,7 @@ h2 {
   }
 
   .timer-page #start-button {
-    right: 45px;
+    right: 44px;
     width: 60px !important;
     min-width: 60px;
     height: 169px;
