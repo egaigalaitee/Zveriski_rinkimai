@@ -2719,8 +2719,8 @@ h2 {
   }
 
   .guide-hero__intro--new {
-    min-height: 656px;
-    padding: 18px 0 0;
+    min-height: 0;
+    padding: 18px 0 22px;
     background: var(--section-light);
   }
 
@@ -2778,8 +2778,10 @@ h2 {
   }
 
   .guide-main--new {
-    padding-top: 30px;
+    padding-top: 24px;
     padding-bottom: 0;
+    background: #000;
+    color: var(--text-light);
   }
 
   .guide-block-title--new {
@@ -2802,7 +2804,8 @@ h2 {
     padding: 0 0 46px;
     border-radius: 0;
     margin-top: 0;
-    background: transparent;
+    background: #000;
+    color: var(--text-light);
   }
 
   .guide-process-columns .guide-column,
@@ -2921,6 +2924,14 @@ h2 {
     max-width: 341px;
     margin: 65px auto 33px;
     gap: 14px;
+  }
+
+  .guide-section--new:last-child {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 65px 0 33px;
+    background: var(--section-light);
   }
 
   .guide-bottom-card {
