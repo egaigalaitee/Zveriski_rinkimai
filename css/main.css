@@ -3190,7 +3190,7 @@ h2 {
 
   .timer-page .timer-clock__display {
     position: absolute;
-    top: 355px;
+    top: 325px;
     left: 50%;
     z-index: 2;
     display: block;
@@ -3290,17 +3290,17 @@ h2 {
   }
 
   .timer-page #resume-button {
-    top: 671px;
+    top: 625px;
     left: 129px;
   }
 
   .timer-page #stop-button {
-    top: 621px;
+    top: 575px;
     left: 129px;
   }
 
   .timer-page #start-button {
-    top: 571px;
+    top: 525px;
     left: 129px;
   }
 }
