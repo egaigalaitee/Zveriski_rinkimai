@@ -3174,7 +3174,14 @@ h2 {
     background: #050505;
   }
 
-  .timer-page .timer-clock-wrap,
+  .timer-page .timer-clock-wrap {
+    display: block;
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+  }
+
   .timer-page .timer-ring,
   .timer-page .timer-ring::after {
     display: none;
@@ -3200,13 +3207,14 @@ h2 {
 
   .timer-page .timer-preset-row {
     position: absolute;
-    top: 123px;
-    left: 50%;
+    top: 182px;
+    left: 60px;
     z-index: 2;
     display: flex;
-    width: auto;
-    gap: 34px;
-    transform: translateX(-50%);
+    width: 273px;
+    justify-content: space-between;
+    gap: 0;
+    transform: none;
   }
 
   .timer-page .timer-preset-pill {
