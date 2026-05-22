@@ -3096,18 +3096,22 @@ h2 {
   }
 
   .timer-page .mobile-menu-button {
+    position: absolute;
     top: 22px;
     right: 21px;
+    z-index: 10;
     width: 53px;
     height: 55px;
     border-radius: 10px;
     padding: 10px 8px 8px;
+    background: transparent;
   }
 
   .timer-page .mobile-menu-button span {
     width: 30px;
     height: 4px;
     margin: 5px auto;
+    background: #181512;
   }
 
   .timer-page .hero--subpage {
@@ -3128,33 +3132,20 @@ h2 {
 
   .timer-page .timer-main {
     width: 100%;
-    max-width: none;
     min-height: 100svh;
-    height: auto;
     margin: 0;
     padding: 0;
     background: var(--section-light);
-    overflow: visible;
+    overflow-x: hidden;
+    overflow-y: visible;
   }
 
-  .timer-page .timer-stage-shell {
-    position: relative;
-    width: min(100%, 393px);
-    max-width: 393px;
-    min-height: max(827px, 100svh);
-    height: auto;
-    margin: 0 auto;
-    padding: 0;
-    background: var(--section-light);
-  }
-
+  .timer-page .timer-stage-shell,
   .timer-page .timer-stage {
     position: relative;
-    display: block;
     width: min(100%, 393px);
     max-width: 393px;
     min-height: max(827px, 100svh);
-    height: auto;
     margin: 0 auto;
     padding: 0;
     background: var(--section-light);
@@ -3176,7 +3167,6 @@ h2 {
     max-width: 347px;
     height: 644px;
     min-height: 644px;
-    display: block;
     padding: 0;
     border: 0;
     border-radius: 20px;
@@ -3184,65 +3174,55 @@ h2 {
     background: #050505;
   }
 
-  .timer-page .timer-clock-wrap {
-    position: static;
-    width: auto;
-    height: auto;
-    max-width: none;
-    margin: 0;
-    aspect-ratio: auto;
-    transform: none;
-  }
-
-  .timer-page .timer-ring {
-    display: none;
-  }
-
+  .timer-page .timer-clock-wrap,
+  .timer-page .timer-ring,
   .timer-page .timer-ring::after {
     display: none;
   }
 
   .timer-page .timer-clock__display {
     position: absolute;
-    top: 24px;
-    left: 69px;
+    top: 272px;
+    left: 50%;
     z-index: 2;
-    width: auto;
-    transform: none;
     display: block;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
+    width: auto;
+    writing-mode: horizontal-tb;
+    text-orientation: initial;
+    transform: translateX(-50%);
     font-size: 120px;
     font-weight: 700;
-    line-height: 0.82;
-    text-align: left;
+    line-height: 1;
     letter-spacing: 4.8px;
+    text-align: center;
     color: rgba(230, 222, 203, 1);
   }
 
   .timer-page .timer-preset-row {
     position: absolute;
-    top: 47px;
-    left: auto;
-    right: 45px;
+    top: 123px;
+    left: 50%;
     z-index: 2;
-    display: grid;
-    gap: 36px;
-    width: 67px;
+    display: flex;
+    width: auto;
+    gap: 34px;
+    transform: translateX(-50%);
   }
 
   .timer-page .timer-preset-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 67px;
     min-width: 67px;
     height: 66px;
     min-height: 66px;
     padding: 0;
-    border-width: 1px;
-    border-color: rgba(230, 222, 203, 1);
+    border: 1px solid rgba(230, 222, 203, 1);
     border-radius: 50%;
-    font-size: 36px;
     background: #050505;
     color: rgba(230, 222, 203, 1);
+    box-shadow: none;
   }
 
   .timer-page .timer-preset-pill__full {
@@ -3258,58 +3238,68 @@ h2 {
 
   .timer-page .timer-side-controls {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
+    left: 50%;
+    top: 435px;
+    width: 139px;
+    height: auto;
     max-width: none;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
   }
 
   .timer-page .timer-action {
-    position: absolute;
+    position: static;
     z-index: 2;
-    padding: 10px 8px;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    writing-mode: horizontal-tb;
+    text-orientation: initial;
     border: 0.5px solid rgba(230, 222, 203, 1);
     border-radius: 3000px;
     background: #050505;
     color: rgba(230, 222, 203, 1);
     box-shadow: none;
-    font-size: 26px;
-    letter-spacing: 0.52px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.32px;
     transform: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  }
+
+  .timer-page .timer-action:disabled {
+    opacity: 0.46;
   }
 
   .timer-page .timer-action:not(:disabled):hover {
-    transform: translateY(-2px);
+    transform: none;
+    background: #050505;
+    color: rgba(230, 222, 203, 1);
   }
 
   .timer-page #resume-button {
-    top: 420px;
-    left: 44px;
-    width: 60px !important;
-    min-width: 60px;
-    height: 175px;
+    width: 139px !important;
+    min-width: 139px;
+    height: 34px;
+    order: 3;
   }
 
   .timer-page #stop-button {
-    top: 378px;
-    left: 136px;
-    width: 77px !important;
-    min-width: 77px;
-    height: 216px;
+    width: 139px !important;
+    min-width: 139px;
+    height: 34px;
+    order: 2;
   }
 
   .timer-page #start-button {
-    top: 425px;
-    right: 44px;
-    width: 60px !important;
-    min-width: 60px;
-    height: 169px;
+    width: 139px !important;
+    min-width: 139px;
+    height: 34px;
+    order: 1;
   }
 }
 
