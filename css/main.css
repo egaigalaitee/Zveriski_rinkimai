@@ -3824,8 +3824,9 @@ h2 {
   }
 
   .home-about {
-    padding: 0 0 34mm;
-  }
+  padding-top: 100px;
+  padding-bottom: 132px;
+}
 
   .home-about .container {
     width: calc(100% - 30mm);
