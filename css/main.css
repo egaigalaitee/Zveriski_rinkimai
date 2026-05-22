@@ -2479,7 +2479,7 @@ h2 {
   }
 
   .home-about {
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 132px;
   }
 
@@ -3145,8 +3145,7 @@ h2 {
     position: relative;
     width: min(100%, 393px);
     max-width: 393px;
-    min-height: 827px;
-    height: 827px;
+    min-height: 100svh;
     margin: 0 auto;
     padding: 0;
     background: var(--section-light);
@@ -3160,27 +3159,36 @@ h2 {
     display: none;
   }
 
-  .timer-page .timer-display-panel {
-    position: absolute;
-    top: 127px;
-    left: 22px;
-    width: 347px;
+  .timer-page .timer-stage {
+    width: min(82vw, 347px);
     max-width: 347px;
-    height: 644px;
     min-height: 644px;
+    margin: 120px auto 0;
+    padding: 56px 24px 40px;
+    border-radius: 20px;
+    background: #050505;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .timer-page .timer-display-panel {
+    position: static;
+    width: 100%;
+    max-width: none;
+    min-height: 0;
+    height: auto;
     padding: 0;
     border: 0;
-    border-radius: 20px;
-    overflow: hidden;
-    background: #050505;
+    border-radius: 0;
+    overflow: visible;
+    background: transparent;
+    display: contents;
   }
 
   .timer-page .timer-clock-wrap {
-    display: block;
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
+    display: contents;
   }
 
   .timer-page .timer-ring,
@@ -3189,33 +3197,33 @@ h2 {
   }
 
   .timer-page .timer-clock__display {
-    position: absolute;
-    top: 325px;
-    left: 50%;
+    position: static;
     z-index: 2;
     display: block;
-    width: 321px;
+    width: 100%;
+    max-width: 321px;
     writing-mode: horizontal-tb;
     text-orientation: initial;
-    transform: translateX(-50%);
-    font-size: 120px;
+    transform: none;
+    font-size: clamp(88px, 24vw, 120px);
     font-weight: 700;
-    line-height: 1;
+    line-height: 0.9;
     letter-spacing: 4.8px;
     text-align: center;
     color: rgba(230, 222, 203, 1);
+    margin: 0 0 55px;
   }
 
   .timer-page .timer-preset-row {
-    position: absolute;
-    top: 218px;
-    left: 59px;
+    position: static;
     z-index: 2;
     display: flex;
-    width: 274px;
-    justify-content: flex-start;
-    gap: 35px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
     transform: none;
+    margin: 0 0 120px;
   }
 
   .timer-page .timer-preset-pill {
@@ -3246,17 +3254,19 @@ h2 {
   }
 
   .timer-page .timer-side-controls {
-    position: absolute;
-    inset: 0;
+    position: static;
     width: 100%;
-    height: 100%;
+    height: auto;
     max-width: none;
     transform: none;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
   }
 
   .timer-page .timer-action {
-    position: absolute;
+    position: static;
     z-index: 2;
     display: flex;
     align-items: center;
@@ -3276,7 +3286,8 @@ h2 {
     transform: none;
     width: 139px !important;
     min-width: 139px;
-    height: 34px;
+    height: 48px;
+    margin: 0;
   }
 
   .timer-page .timer-action:disabled {
@@ -3289,19 +3300,12 @@ h2 {
     color: rgba(230, 222, 203, 1);
   }
 
+  .timer-page #start-button,
+  .timer-page #stop-button,
   .timer-page #resume-button {
-    top: 625px;
-    left: 129px;
-  }
-
-  .timer-page #stop-button {
-    top: 575px;
-    left: 129px;
-  }
-
-  .timer-page #start-button {
-    top: 525px;
-    left: 129px;
+    top: auto;
+    left: auto;
+    right: auto;
   }
 }
 
@@ -3401,8 +3405,8 @@ h2 {
   }
 
   .home-about {
-    padding-top: 100;
-    padding-bottom: 132px;
+    padding-top: 0;
+    padding-bottom: 304px;
   }
 
   .home-about .container {
@@ -3824,9 +3828,8 @@ h2 {
   }
 
   .home-about {
-  padding-top: 100px;
-  padding-bottom: 132px;
-}
+    padding: 0 0 34mm;
+  }
 
   .home-about .container {
     width: calc(100% - 30mm);
