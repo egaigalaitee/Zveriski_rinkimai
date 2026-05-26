@@ -43,6 +43,29 @@
   }
 }
 
+/* Animation layer: subtle intro and scroll reveal motion without changing layout */
+@keyframes intro-rise {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes intro-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -128,7 +151,6 @@ a {
 .topbar__link {
   opacity: 0.86;
   transition: opacity 0.2s ease, transform 0.2s ease;
-  animation: fade-up 0.7s ease both;
 }
 
 .topbar__link--dark {
@@ -243,8 +265,6 @@ a {
   width: min(calc(100% - 48px), 760px);
   margin: 0 auto;
   text-align: center;
-  animation: fade-up 0.8s ease both;
-  animation-delay: 0.15s;
 }
 
 .hero__title-wrap {
@@ -463,6 +483,41 @@ h2 {
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28);
 }
 
+.guide-bottom-card,
+.glossary-top-card,
+.guide-structure-card,
+.guide-advice-card,
+.timer-info-panel,
+.timer-display-panel {
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    background-color 0.28s ease,
+    opacity 0.28s ease;
+}
+
+.guide-bottom-card:hover,
+.glossary-top-card:hover,
+.guide-structure-card:hover,
+.guide-advice-card:hover,
+.timer-info-panel:hover,
+.timer-display-panel:hover {
+  transform: translateY(-6px);
+}
+
+.glossary-top-card:hover,
+.guide-bottom-card--light:hover,
+.guide-structure-card:hover,
+.guide-advice-card:hover,
+.timer-info-panel:hover {
+  box-shadow: 0 22px 46px rgba(0, 0, 0, 0.12);
+}
+
+.guide-bottom-card--dark:hover,
+.timer-display-panel:hover {
+  box-shadow: 0 22px 46px rgba(0, 0, 0, 0.22);
+}
+
 .feature-card:nth-child(1) {
   animation-delay: 0.08s;
 }
@@ -507,6 +562,41 @@ h2 {
     transition: none !important;
     scroll-behavior: auto !important;
   }
+
+  .reveal-pending,
+  .reveal-pending.reveal-visible {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Scroll reveal states, added by animations.js */
+.reveal-pending {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.reveal-pending.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-pending.reveal-stagger-1 {
+  transition-delay: 0.08s;
+}
+
+.reveal-pending.reveal-stagger-2 {
+  transition-delay: 0.16s;
+}
+
+.reveal-pending.reveal-stagger-3 {
+  transition-delay: 0.24s;
+}
+
+.reveal-pending.reveal-stagger-4 {
+  transition-delay: 0.32s;
 }
 
 .section--final {
@@ -1353,6 +1443,58 @@ h2 {
   pointer-events: auto;
   text-decoration: none;
   cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.guide-pill:hover,
+.mobile-menu__link:hover {
+  transform: translateY(-2px);
+}
+
+.anim-intro-fade {
+  animation: intro-fade 0.7s ease both;
+}
+
+.anim-intro-rise {
+  animation: intro-rise 0.95s ease both;
+}
+
+.anim-delay-1 {
+  animation-delay: 0.08s;
+}
+
+.anim-delay-2 {
+  animation-delay: 0.16s;
+}
+
+.anim-delay-3 {
+  animation-delay: 0.24s;
+}
+
+.anim-delay-4 {
+  animation-delay: 0.32s;
+}
+
+.topbar__link {
+  position: relative;
+}
+
+.topbar__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.22s ease;
+  opacity: 0.55;
+}
+
+.topbar__link:hover::after {
+  transform: scaleX(1);
 }
 
 .guide-pill-stack {
