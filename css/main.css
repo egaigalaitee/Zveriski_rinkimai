@@ -1655,7 +1655,8 @@ h2 {
 }
 
 .guide-process-panel {
-  min-height: 2423px;
+  min-height: 0;
+  height: auto;
   padding: 58px 32px 42px;
   border-radius: 30px;
   background: #050505;
@@ -1672,21 +1673,24 @@ h2 {
 }
 
 .guide-process-columns {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(40px, 6vw, 96px);
+  align-items: start;
 }
 
 .guide-process-columns .guide-column p {
   margin: 0 0 24px;
   color: rgba(230, 222, 203, 0.94);
-  font-size: 20px;
-  line-height: 1.163;
+  font-size: clamp(15px, 1.1vw, 20px);
+  line-height: 1.5;
+  max-width: 620px;
+  overflow-wrap: break-word;
 }
 
 .guide-process-columns .guide-column {
-  flex: 0 0 628px;
-  max-width: 628px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .guide-process-columns .guide-column strong {
@@ -1709,12 +1713,14 @@ h2 {
 
 .guide-advice-card {
   width: 100%;
-  min-height: 950px;
+  min-height: 0;
+  height: auto;
   margin-top: 104px;
   padding: 61px 41px 36px;
   border-radius: 30px;
   background: var(--section-light);
   color: var(--text-dark);
+  overflow-wrap: break-word;
 }
 
 .guide-advice-card h3 {
@@ -1749,14 +1755,14 @@ h2 {
 }
 
 .guide-advice-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 4vw, 48px);
   align-items: start;
 }
 
 .guide-advice-grid ol {
-  flex: 0 0 587px;
+  min-width: 0;
 }
 
 .guide-tools {
@@ -2271,7 +2277,8 @@ h2 {
   }
 
   .guide-process-panel {
-    min-height: 1782px;
+    min-height: 0;
+    height: auto;
     padding: 58px 52px 60px;
   }
 
@@ -2281,23 +2288,21 @@ h2 {
   }
 
   .guide-process-columns {
-    gap: 148px;
+    gap: clamp(64px, 7vw, 148px);
   }
 
   .guide-process-columns .guide-column {
-    flex: 0 0 782px;
-    max-width: 782px;
+    max-width: 100%;
   }
 
   .guide-process-columns .guide-column p {
     font-size: 20px;
-    line-height: 1.163;
+    line-height: 1.5;
   }
 
   .guide-advice-card {
-    flex: 0 0 789px;
     width: 789px;
-    min-height: 1220px;
+    min-height: 0;
     margin-top: 28px;
     margin-left: auto;
     padding: 38px 56px 42px;
@@ -2314,7 +2319,7 @@ h2 {
     max-width: 626px;
     margin-bottom: 44px;
     font-size: 20px;
-    line-height: 1.163;
+    line-height: 1.5;
   }
 
   .guide-advice-grid {
@@ -2333,7 +2338,7 @@ h2 {
 
   .guide-advice-card li {
     font-size: 20px;
-    line-height: 1.163;
+    line-height: 1.5;
   }
 
   .guide-tools {
