@@ -1704,14 +1704,18 @@ h2 {
   align-items: flex-start;
 }
 
-.guide-pill-stack--left .guide-pill {
+.guide-pill-stack--left .guide-pill,
+.guide-pill--dark {
   min-width: 126px;
   min-height: 41px;
   padding: 0 24px;
   border-radius: 999px;
-  background: var(--section-light);
-  color: var(--text-dark);
+  background: #050505;
+  color: var(--text-light);
   font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
 }
 
 .guide-advice-card {
@@ -1858,14 +1862,6 @@ h2 {
   align-items: center;
   justify-content: center;
   min-height: 307px;
-}
-
-.guide-pill--dark {
-  min-width: 252px;
-  min-height: 56px;
-  background: #050505;
-  color: var(--text-light);
-  font-size: 20px;
 }
 
 .glossary-page {
@@ -2390,7 +2386,8 @@ h2 {
     line-height: 1.163;
   }
 
-  .guide-pill-stack--left .guide-pill {
+  .guide-pill-stack--left .guide-pill,
+  .guide-pill--dark {
     min-width: 314px;
     min-height: 69px;
     font-size: 20px;
@@ -2423,12 +2420,6 @@ h2 {
 
   .guide-bottom-card--dark p {
     max-width: 517px;
-  }
-
-  .guide-pill--dark {
-    min-width: 252px;
-    min-height: 56px;
-    font-size: 20px;
   }
 
   .glossary-page .hero--subpage {
@@ -3086,8 +3077,10 @@ h2 {
     align-items: center;
   }
 
-  .guide-pill-stack--left .guide-pill {
+  .guide-pill-stack--left .guide-pill,
+  .guide-pill--dark {
     width: 174px;
+    min-width: 174px;
     min-height: 38px;
     padding: 0 10px;
     border-radius: 300px;
@@ -4032,6 +4025,7 @@ h2 {
 
   .guide-pill-stack--left .guide-pill,
   .guide-pill--dark {
+    width: 160px;
     min-width: 160px;
     min-height: 38px;
     font-size: 14px;
