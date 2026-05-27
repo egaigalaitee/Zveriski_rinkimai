@@ -4068,6 +4068,242 @@ h2 {
   }
 }
 
+/* Aspect-ratio responsive layer: preserves the visual system while preventing
+   overstretching on ultra-wide screens and over-tall spacing on squarer ones. */
+@media (aspect-ratio: 16/9) {
+  .hero:not(.hero--subpage) {
+    min-height: min(100vh, 1114px);
+  }
+
+  .hero:not(.hero--subpage) .hero__content {
+    width: min(calc(100% - 100px), 560px);
+  }
+
+  .section,
+  .guide-main,
+  .glossary-main,
+  .timer-main {
+    padding-top: clamp(72px, 5vw, 96px);
+    padding-bottom: clamp(72px, 5vw, 96px);
+  }
+}
+
+@media (aspect-ratio: 16/10) {
+  .hero:not(.hero--subpage) {
+    min-height: min(100vh, 1040px);
+    padding-top: clamp(56px, 4vw, 74px);
+    padding-bottom: clamp(88px, 6vw, 120px);
+  }
+
+  .topbar,
+  .topbar--subpage,
+  .container,
+  .guide-hero__content--new,
+  .guide-section--new,
+  .glossary-main--new,
+  .timer-stage-shell {
+    width: min(calc(100% - 88px), 1380px);
+  }
+
+  .home-about .section__grid {
+    gap: clamp(64px, 7vw, 110px);
+  }
+
+  .guide-intro-grid,
+  .guide-process-columns,
+  .guide-process-columns--kit,
+  .guide-bottom-cards {
+    gap: clamp(28px, 3vw, 54px);
+  }
+
+  .timer-stage {
+    gap: clamp(14px, 2vw, 28px);
+  }
+}
+
+@media (min-aspect-ratio: 21/9) {
+  :root {
+    --container: 1480px;
+  }
+
+  .topbar,
+  .topbar--subpage,
+  .container,
+  .guide-hero__content--new,
+  .guide-section--new,
+  .glossary-main--new,
+  .timer-main,
+  .timer-stage-shell {
+    width: min(calc(100% - 160px), 1560px);
+  }
+
+  .hero:not(.hero--subpage) {
+    min-height: min(100vh, 980px);
+    padding-top: clamp(42px, 4vh, 72px);
+    padding-bottom: clamp(72px, 8vh, 132px);
+  }
+
+  .hero:not(.hero--subpage) .hero__content {
+    width: min(calc(100% - 160px), 640px);
+  }
+
+  .hero:not(.hero--subpage) .hero__logo {
+    width: min(100%, 430px);
+  }
+
+  .hero:not(.hero--subpage) .hero__animal-frame {
+    width: min(100%, 360px);
+    height: 270px;
+  }
+
+  .section,
+  .guide-main,
+  .glossary-main,
+  .timer-main {
+    padding-top: clamp(68px, 5vh, 104px);
+    padding-bottom: clamp(72px, 6vh, 120px);
+  }
+
+  .home-about .section__grid {
+    grid-template-columns: minmax(320px, 380px) minmax(540px, 680px);
+    justify-content: center;
+    gap: clamp(90px, 8vw, 150px);
+  }
+
+  .home-features__cards,
+  .home-features .features,
+  .features {
+    justify-content: center;
+  }
+
+  .guide-process-columns,
+  .guide-process-columns--kit {
+    gap: clamp(72px, 6vw, 140px);
+  }
+
+  .guide-advice-card {
+    max-width: 820px;
+    margin-left: auto;
+  }
+
+  .guide-bottom-cards {
+    gap: clamp(18px, 2vw, 32px);
+  }
+
+  .glossary-top-grid {
+    gap: clamp(18px, 2vw, 28px);
+    margin-bottom: clamp(72px, 7vh, 120px);
+  }
+
+  .timer-stage {
+    grid-template-columns: minmax(0, 1.25fr) minmax(420px, 0.95fr);
+    gap: clamp(18px, 2vw, 28px);
+  }
+
+  .timer-info-panel,
+  .timer-display-panel {
+    min-height: clamp(760px, 74vh, 920px);
+  }
+}
+
+@media (max-aspect-ratio: 4/3) {
+  .topbar,
+  .topbar--subpage,
+  .container,
+  .guide-hero__content--new,
+  .guide-section--new,
+  .glossary-main--new,
+  .timer-main,
+  .timer-stage-shell {
+    width: min(calc(100% - 64px), 1240px);
+  }
+
+  .hero:not(.hero--subpage) {
+    min-height: auto;
+    padding-top: clamp(40px, 4vh, 64px);
+    padding-bottom: clamp(56px, 6vh, 88px);
+  }
+
+  .hero:not(.hero--subpage) .topbar {
+    margin-bottom: clamp(40px, 5vh, 80px);
+  }
+
+  .hero:not(.hero--subpage) .hero__logo {
+    width: min(100%, 340px);
+    margin-bottom: clamp(28px, 4vh, 54px);
+  }
+
+  .hero:not(.hero--subpage) .hero__animal-frame {
+    width: min(100%, 280px);
+    height: 220px;
+  }
+
+  .section,
+  .guide-main,
+  .glossary-main,
+  .timer-main {
+    padding-top: clamp(56px, 5vh, 80px);
+    padding-bottom: clamp(56px, 5vh, 84px);
+  }
+
+  .home-about {
+    padding-top: clamp(48px, 5vh, 72px);
+    padding-bottom: clamp(72px, 6vh, 110px);
+  }
+
+  .home-about .section__grid,
+  .guide-intro-grid,
+  .guide-process-columns,
+  .guide-process-columns--kit,
+  .guide-bottom-cards,
+  .glossary-top-grid,
+  .timer-stage {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(24px, 3vh, 40px);
+  }
+
+  .home-features__cards,
+  .home-features .features,
+  .features {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: clamp(18px, 2.5vh, 28px);
+  }
+
+  .guide-structure-card,
+  .guide-advice-card,
+  .guide-process-panel,
+  .guide-bottom-card,
+  .glossary-top-card,
+  .timer-info-panel,
+  .timer-display-panel {
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+  }
+
+  .guide-advice-card,
+  .timer-info-panel,
+  .timer-display-panel {
+    padding-top: clamp(28px, 3vh, 44px);
+    padding-bottom: clamp(28px, 3vh, 44px);
+  }
+
+  .guide-tools,
+  .guide-kit {
+    margin-top: clamp(28px, 3vh, 44px);
+  }
+
+  .glossary-main--new {
+    padding-top: clamp(72px, 6vh, 104px);
+    padding-bottom: clamp(72px, 6vh, 104px);
+  }
+
+  .timer-clock-wrap {
+    margin-bottom: clamp(36px, 4vh, 64px);
+  }
+}
+
 @media (min-width: 1600px) {
   :root {
     --container: 1400px;
