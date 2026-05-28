@@ -335,7 +335,9 @@ h1 {
 }
 
 .home-why__panel {
-  border: 1px solid rgba(230, 222, 203, 0.72);
+  border: none;
+  outline: none;
+  box-shadow: none;
   border-radius: 30px;
   padding: 94px 32px 90px;
 }
@@ -740,7 +742,8 @@ h2 {
     padding: 42px 28px 34px;
     border-radius: 30px;
     gap: 42px;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
     box-shadow: none;
   }
 
@@ -1704,8 +1707,7 @@ h2 {
   align-items: flex-start;
 }
 
-.guide-pill-stack--left .guide-pill,
-.guide-pill--dark {
+.primary-button {
   min-width: 126px;
   min-height: 41px;
   padding: 0 24px;
@@ -2386,8 +2388,7 @@ h2 {
     line-height: 1.163;
   }
 
-  .guide-pill-stack--left .guide-pill,
-  .guide-pill--dark {
+  .primary-button {
     min-width: 314px;
     min-height: 69px;
     font-size: 20px;
@@ -3077,13 +3078,21 @@ h2 {
     align-items: center;
   }
 
-  .guide-pill-stack--left .guide-pill,
-  .guide-pill--dark {
+  .primary-button {
     width: 174px;
     min-width: 174px;
-    min-height: 38px;
-    padding: 0 10px;
-    border-radius: 300px;
+    height: 40px;
+    min-height: 40px;
+    padding: 0 24px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
   }
 
   .guide-bottom-cards {
@@ -4023,12 +4032,21 @@ h2 {
     margin-bottom: 24px;
   }
 
-  .guide-pill-stack--left .guide-pill,
-  .guide-pill--dark {
-    width: 160px;
-    min-width: 160px;
-    min-height: 38px;
-    font-size: 14px;
+  .primary-button {
+    width: 174px;
+    min-width: 174px;
+    height: 40px;
+    min-height: 40px;
+    padding: 0 24px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
   }
 
   .glossary-top-grid {
