@@ -3,7 +3,7 @@
   --bg-dark: #050505;
   --text-dark: #181512;
   --text-light: #e6decb;
-  --shell: 1440px;
+  --shell: 1200px;
 }
 
 * {
@@ -22,6 +22,11 @@ body {
   overflow-x: hidden;
 }
 
+body.guide-page-clean {
+  background: var(--bg-light) !important;
+  color: var(--text-dark) !important;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -34,7 +39,7 @@ img {
 }
 
 .shell {
-  width: min(calc(100% - 64px), 1200px);
+  width: min(calc(100% - 64px), var(--shell));
   margin: 0 auto;
 }
 
@@ -42,14 +47,18 @@ img {
   background: var(--bg-light);
 }
 
+body.guide-page-clean .page-header {
+  background: var(--bg-light) !important;
+}
+
 .topbar {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
   gap: 24px;
-  padding-top: 38px;
-  font-size: 14px;
-  font-weight: 400;
+  padding-top: 34px;
+  font-size: 0.78rem;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -69,36 +78,55 @@ img {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(280px, 1fr) minmax(320px, 610px);
-  gap: clamp(40px, 7vw, 120px);
-  align-items: end;
-  padding: clamp(64px, 8vw, 104px) 0 48px;
+  grid-template-columns: minmax(280px, 1fr) minmax(360px, 520px);
+  gap: clamp(40px, 6vw, 96px);
+  align-items: start;
+  padding: clamp(72px, 9vw, 120px) 0 64px;
+}
+
+body.guide-page-clean .hero {
+  display: grid !important;
+  grid-template-columns: minmax(280px, 1fr) minmax(360px, 520px) !important;
+  gap: clamp(40px, 6vw, 96px) !important;
+  align-items: start !important;
+  padding: clamp(72px, 9vw, 120px) 0 64px !important;
+  background: var(--bg-light) !important;
+  color: var(--text-dark) !important;
 }
 
 .hero h1 {
   margin: 0;
-  max-width: 12ch;
-  font-size: clamp(2.2rem, 4vw, 4.5rem);
-  font-weight: 600;
+  max-width: 11ch;
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  font-weight: 700;
   line-height: 0.95;
   text-transform: uppercase;
 }
 
 .structure-card {
   width: 100%;
-  min-height: 196px;
-  padding: 36px 38px 32px;
-  border-radius: 24px;
+  min-height: 168px;
+  padding: 30px 34px 28px;
+  border-radius: 20px;
   background: var(--bg-dark);
   color: var(--text-light);
-  align-self: start;
+}
+
+body.guide-page-clean .structure-card {
+  justify-self: end;
+  width: min(100%, 520px) !important;
+  min-height: 168px !important;
+  padding: 30px 34px 28px !important;
+  border-radius: 20px !important;
+  background: var(--bg-dark) !important;
+  color: var(--text-light) !important;
 }
 
 .structure-card h2 {
-  margin: 0 0 26px;
-  font-size: clamp(1.5rem, 2.2vw, 2rem);
-  font-weight: 600;
-  line-height: 1.08;
+  margin: 0 0 18px;
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.05;
   text-transform: uppercase;
 }
 
@@ -112,80 +140,82 @@ img {
   background: var(--bg-dark);
 }
 
+body.guide-page-clean .main-content {
+  background: var(--bg-dark) !important;
+}
+
 .dark-panel {
-  width: 100%;
-  margin: 0;
-  padding: clamp(40px, 4vw, 56px) clamp(24px, 4vw, 48px) clamp(56px, 6vw, 80px);
-  border-radius: 0;
-  background: transparent;
+  width: min(100%, 100%);
+  margin: 0 auto;
+  padding: clamp(42px, 5vw, 64px) 0 clamp(72px, 7vw, 96px);
   color: var(--text-light);
 }
 
-.game-flow h2,
-.tips-section h2,
-.kit-section h2 {
-  margin: 0 0 34px;
-  font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
+body.guide-page-clean .dark-panel {
+  width: min(100%, 100%) !important;
+  margin: 0 auto !important;
+  padding: clamp(42px, 5vw, 64px) 0 clamp(72px, 7vw, 96px) !important;
+  background: transparent !important;
+  color: var(--text-light) !important;
 }
 
 .game-flow,
 .tips-section,
 .kit-section,
 .resources-section {
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
+  width: min(100%, 1120px);
+  margin: 0 auto;
+}
+
+.game-flow h2,
+.tips-section h2,
+.kit-section h2 {
+  margin: 0 0 36px;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .two-columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(36px, 5vw, 96px);
+  gap: clamp(44px, 6vw, 92px);
   align-items: start;
 }
 
 .text-column {
   min-width: 0;
-  max-width: 520px;
 }
 
 .text-column p {
-  margin: 0 0 22px;
-  font-size: clamp(0.95rem, 1vw, 1.15rem);
+  margin: 0 0 20px;
+  max-width: 520px;
+  font-size: clamp(0.95rem, 1vw, 1.05rem);
   line-height: 1.5;
   overflow-wrap: break-word;
 }
 
-.text-column strong {
-  font-weight: 700;
-  color: var(--text-light);
-}
-
 .tips-section {
-  margin-top: 112px;
+  margin-top: clamp(90px, 9vw, 128px);
 }
 
 .tips-heading {
-  max-width: 640px;
-  margin-bottom: 54px;
+  max-width: 700px;
+  margin-bottom: 48px;
 }
 
 .tips-heading h2 {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .tips-heading p {
   margin: 0;
-  font-size: clamp(0.95rem, 1.05vw, 1.25rem);
+  font-size: clamp(0.95rem, 1.05vw, 1.15rem);
   line-height: 1.45;
 }
 
 .tips-list {
-  width: min(100%, 1380px);
-  margin: 0 auto;
   display: grid;
   gap: 22px;
 }
@@ -195,7 +225,7 @@ img {
   grid-template-columns: 48px minmax(0, 1fr);
   gap: 20px;
   align-items: start;
-  padding: 22px 28px;
+  padding: 22px 24px;
   border-radius: 16px;
   background: var(--bg-light);
   color: var(--text-dark);
@@ -215,26 +245,26 @@ img {
 
 .tip-copy h3 {
   margin: 0 0 10px;
-  font-size: clamp(1rem, 1.15vw, 1.15rem);
-  font-weight: 500;
+  font-size: clamp(1rem, 1.15vw, 1.1rem);
+  font-weight: 600;
   line-height: 1.25;
 }
 
 .tip-copy p {
   margin: 0;
   font-size: clamp(0.9rem, 0.95vw, 1rem);
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 .kit-section {
-  margin-top: 108px;
+  margin-top: clamp(96px, 9vw, 128px);
 }
 
 .resources-section {
-  margin-top: 86px;
+  margin-top: clamp(72px, 7vw, 96px);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
-  gap: clamp(32px, 4vw, 72px);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
+  gap: clamp(32px, 4vw, 64px);
   align-items: end;
 }
 
@@ -245,16 +275,16 @@ img {
 .resources-lead,
 .resources-files {
   margin: 0;
-  font-size: clamp(0.95rem, 1.05vw, 1.25rem);
+  font-size: clamp(0.95rem, 1.05vw, 1.1rem);
   line-height: 1.45;
 }
 
 .resources-lead {
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 
 .resources-files {
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 
 .pill-button {
@@ -284,27 +314,27 @@ img {
 
 .resources-card {
   min-height: 236px;
-  padding: 34px 30px 30px;
-  border-radius: 24px;
+  padding: 30px 28px;
+  border-radius: 22px;
   background: var(--bg-light);
   color: var(--text-dark);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
 }
 
 .resources-card p {
   margin: 0;
   max-width: 28ch;
-  font-size: clamp(1rem, 1.05vw, 1.2rem);
+  font-size: clamp(1rem, 1.05vw, 1.1rem);
   line-height: 1.35;
   text-align: center;
 }
 
 .support-section {
-  padding: 82px 0 54px;
+  padding: clamp(72px, 8vw, 96px) 0 54px;
   background: var(--bg-light);
 }
 
@@ -313,7 +343,7 @@ img {
   margin: 0 auto 74px;
   color: var(--text-dark);
   font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.05;
   text-align: center;
   text-transform: uppercase;
@@ -322,17 +352,16 @@ img {
 .support-logos {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 34px;
+  gap: 32px;
   align-items: center;
   width: min(100%, 1120px);
-  margin: 0 auto 90px;
+  margin: 0 auto 84px;
 }
 
 .partner-logo-slot {
   aspect-ratio: 1;
   width: 100%;
   background: var(--bg-dark);
-  border-radius: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -344,7 +373,6 @@ img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  display: block;
   padding: 18px;
 }
 
@@ -400,11 +428,7 @@ img {
   }
 
   .two-columns {
-    gap: 48px;
-  }
-
-  .resources-section {
-    gap: 40px;
+    gap: 56px;
   }
 }
 
@@ -414,43 +438,46 @@ img {
   }
 
   .topbar {
-    font-size: 12px;
+    font-size: 0.72rem;
     gap: 16px;
   }
 
   .hero {
     grid-template-columns: 1fr;
     gap: 28px;
-    align-items: start;
     padding-top: 72px;
   }
 
-  .hero h1 {
-    max-width: none;
+  body.guide-page-clean .hero {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    padding-top: 72px !important;
   }
 
-  .structure-card {
-    max-width: 620px;
-  }
-
-  .two-columns,
-  .resources-section {
-    grid-template-columns: 1fr;
-  }
-
-  .tips-list {
-    gap: 18px;
-  }
-
-  .text-column,
+  .hero h1,
+  .structure-card,
   .resources-copy,
   .resources-card {
     max-width: 100%;
   }
 
+  .two-columns,
+  .resources-section,
+  .support-logos {
+    grid-template-columns: 1fr;
+  }
+
   .resources-card {
-    justify-self: start;
     width: min(100%, 430px);
+  }
+
+  body.guide-page-clean .structure-card {
+    justify-self: start;
+  }
+
+  .support-logos {
+    width: min(100%, 520px);
+    gap: 18px;
   }
 
   .page-footer {
@@ -487,9 +514,12 @@ img {
     padding: 52px 0 32px;
   }
 
+  body.guide-page-clean .hero {
+    padding: 52px 0 32px !important;
+  }
+
   .dark-panel {
-    padding: 32px 20px 48px;
-    border-radius: 0;
+    padding: 32px 0 48px;
   }
 
   .game-flow h2,
@@ -511,15 +541,9 @@ img {
     padding: 20px 18px;
   }
 
-  .tip-badge {
-    width: 30px;
-    height: 30px;
-  }
-
   .support-logos {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     width: min(100%, 520px);
-    gap: 18px;
   }
 }
 
@@ -542,8 +566,7 @@ img {
   }
 
   .dark-panel {
-    padding: 28px 16px 40px;
-    border-radius: 0;
+    padding: 28px 0 40px;
   }
 
   .text-column p,
@@ -573,475 +596,10 @@ img {
   }
 
   .support-logos {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: min(100%, 260px);
   }
 
   .partner-logo-slot:last-child {
-    grid-column: 1 / -1;
-    width: 50%;
-    margin: 0 auto;
-  }
-}
-
-/* Page-scoped hard overrides to prevent generic hero/topbar styles from breaking the guide layout. */
-.guide-page-clean {
-  background: var(--bg-light);
-  color: var(--text-dark);
-  overflow-x: hidden;
-}
-
-.guide-page-clean .page-header {
-  background: var(--bg-light);
-}
-
-.guide-page-clean .shell {
-  width: min(calc(100% - 64px), 1200px);
-  margin: 0 auto;
-}
-
-.guide-page-clean .topbar {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: center;
-  gap: 24px;
-  padding-top: 38px;
-  font-size: 14px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.guide-page-clean .topbar a:first-child {
-  justify-self: start;
-}
-
-.guide-page-clean .topbar a:nth-child(2) {
-  justify-self: center;
-  text-align: center;
-}
-
-.guide-page-clean .topbar a:last-child {
-  justify-self: end;
-  text-align: right;
-}
-
-.guide-page-clean .hero {
-  display: grid;
-  grid-template-columns: minmax(280px, 1fr) minmax(320px, 610px);
-  gap: clamp(40px, 7vw, 120px);
-  align-items: end;
-  padding: clamp(64px, 8vw, 104px) 0 48px;
-  background: var(--bg-light);
-  color: var(--text-dark);
-}
-
-.guide-page-clean .hero h1 {
-  margin: 0;
-  max-width: 12ch;
-  font-size: clamp(2.2rem, 4vw, 4.5rem);
-  font-weight: 600;
-  line-height: 0.95;
-  text-transform: uppercase;
-}
-
-.guide-page-clean .structure-card {
-  width: 100%;
-  min-height: 196px;
-  padding: 36px 38px 32px;
-  border-radius: 24px;
-  background: var(--bg-dark);
-  color: var(--text-light);
-  align-self: start;
-}
-
-.guide-page-clean .structure-card h2 {
-  margin: 0 0 26px;
-  font-size: clamp(1.5rem, 2.2vw, 2rem);
-  font-weight: 600;
-  line-height: 1.08;
-  text-transform: uppercase;
-}
-
-.guide-page-clean .structure-card p {
-  margin: 0;
-  font-size: clamp(0.9rem, 1vw, 1rem);
-  line-height: 1.35;
-}
-
-.guide-page-clean .main-content {
-  background: var(--bg-dark);
-}
-
-.guide-page-clean .dark-panel {
-  width: 100%;
-  margin: 0;
-  padding: clamp(40px, 4vw, 56px) clamp(24px, 4vw, 48px) clamp(56px, 6vw, 80px);
-  border-radius: 0;
-  background: transparent;
-  color: var(--text-light);
-}
-
-.guide-page-clean .game-flow,
-.guide-page-clean .tips-section,
-.guide-page-clean .kit-section,
-.guide-page-clean .resources-section {
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.guide-page-clean .game-flow h2,
-.guide-page-clean .tips-section h2,
-.guide-page-clean .kit-section h2,
-.guide-page-clean .support-section h2 {
-  margin: 0 0 34px;
-  font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.guide-page-clean .two-columns {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(36px, 5vw, 96px);
-  align-items: start;
-}
-
-.guide-page-clean .text-column {
-  min-width: 0;
-  max-width: 520px;
-}
-
-.guide-page-clean .text-column p {
-  margin: 0 0 22px;
-  font-size: clamp(0.95rem, 1vw, 1.15rem);
-  line-height: 1.5;
-  overflow-wrap: break-word;
-}
-
-.guide-page-clean .tips-section {
-  margin-top: 112px;
-}
-
-.guide-page-clean .tips-heading {
-  max-width: 640px;
-  margin-bottom: 54px;
-}
-
-.guide-page-clean .tips-heading h2 {
-  margin-bottom: 16px;
-}
-
-.guide-page-clean .tips-heading p {
-  margin: 0;
-  font-size: clamp(0.95rem, 1.05vw, 1.25rem);
-  line-height: 1.45;
-}
-
-.guide-page-clean .tips-list {
-  width: min(100%, 1380px);
-  margin: 0 auto;
-  display: grid;
-  gap: 22px;
-}
-
-.guide-page-clean .tip-card {
-  display: grid;
-  grid-template-columns: 48px minmax(0, 1fr);
-  gap: 20px;
-  align-items: start;
-  padding: 22px 28px;
-  border-radius: 16px;
-  background: var(--bg-light);
-  color: var(--text-dark);
-}
-
-.guide-page-clean .tip-badge {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--bg-dark);
-  color: var(--text-light);
-  display: grid;
-  place-items: center;
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-.guide-page-clean .tip-copy h3 {
-  margin: 0 0 10px;
-  font-size: clamp(1rem, 1.15vw, 1.15rem);
-  font-weight: 500;
-  line-height: 1.25;
-}
-
-.guide-page-clean .tip-copy p {
-  margin: 0;
-  font-size: clamp(0.9rem, 0.95vw, 1rem);
-  line-height: 1.4;
-}
-
-.guide-page-clean .kit-section {
-  margin-top: 108px;
-}
-
-.guide-page-clean .resources-section {
-  margin-top: 86px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
-  gap: clamp(32px, 4vw, 72px);
-  align-items: end;
-}
-
-.guide-page-clean .resources-copy {
-  max-width: 620px;
-}
-
-.guide-page-clean .resources-lead,
-.guide-page-clean .resources-files {
-  margin: 0;
-  font-size: clamp(0.95rem, 1.05vw, 1.25rem);
-  line-height: 1.45;
-}
-
-.guide-page-clean .resources-lead {
-  margin-bottom: 34px;
-}
-
-.guide-page-clean .resources-files {
-  margin-bottom: 34px;
-}
-
-.guide-page-clean .resources-card {
-  min-height: 236px;
-  padding: 34px 30px 30px;
-  border-radius: 24px;
-  background: var(--bg-light);
-  color: var(--text-dark);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 28px;
-}
-
-.guide-page-clean .resources-card p {
-  margin: 0;
-  max-width: 28ch;
-  font-size: clamp(1rem, 1.05vw, 1.2rem);
-  line-height: 1.35;
-  text-align: center;
-}
-
-.guide-page-clean .support-section {
-  padding: 82px 0 54px;
-  background: var(--bg-light);
-}
-
-.guide-page-clean .support-section h2 {
-  max-width: 20ch;
-  margin: 0 auto 74px;
-  text-align: center;
-}
-
-.guide-page-clean .support-logos {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 34px;
-  align-items: center;
-  width: min(100%, 1120px);
-  margin: 0 auto 90px;
-}
-
-@media (max-width: 1200px) {
-  .guide-page-clean .shell {
-    width: min(calc(100% - 56px), 1100px);
-  }
-
-  .guide-page-clean .hero {
-    gap: 56px;
-  }
-
-  .guide-page-clean .two-columns {
-    gap: 48px;
-  }
-
-  .guide-page-clean .resources-section {
-    gap: 40px;
-  }
-}
-
-@media (max-width: 900px) {
-  .guide-page-clean .shell {
-    width: min(calc(100% - 40px), 900px);
-  }
-
-  .guide-page-clean .topbar {
-    font-size: 12px;
-    gap: 16px;
-  }
-
-  .guide-page-clean .hero {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    align-items: start;
-    padding-top: 72px;
-  }
-
-  .guide-page-clean .hero h1 {
-    max-width: none;
-  }
-
-  .guide-page-clean .structure-card {
-    max-width: 620px;
-  }
-
-  .guide-page-clean .two-columns,
-  .guide-page-clean .resources-section {
-    grid-template-columns: 1fr;
-  }
-
-  .guide-page-clean .tips-list {
-    gap: 18px;
-  }
-
-  .guide-page-clean .text-column,
-  .guide-page-clean .resources-copy,
-  .guide-page-clean .resources-card {
-    max-width: 100%;
-  }
-
-  .guide-page-clean .resources-card {
-    justify-self: start;
-    width: min(100%, 430px);
-  }
-
-  .guide-page-clean .page-footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .guide-page-clean .page-footer p {
-    text-align: left;
-  }
-}
-
-@media (max-width: 768px) {
-  .guide-page-clean .shell {
-    width: min(calc(100% - 32px), 760px);
-  }
-
-  .guide-page-clean .topbar {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-    padding-top: 22px;
-    gap: 12px;
-  }
-
-  .guide-page-clean .topbar a:first-child,
-  .guide-page-clean .topbar a:nth-child(2),
-  .guide-page-clean .topbar a:last-child {
-    justify-self: center;
-    text-align: center;
-  }
-
-  .guide-page-clean .hero {
-    padding: 52px 0 32px;
-  }
-
-  .guide-page-clean .dark-panel {
-    padding: 32px 20px 48px;
-    border-radius: 0;
-  }
-
-  .guide-page-clean .game-flow h2,
-  .guide-page-clean .tips-section h2,
-  .guide-page-clean .kit-section h2,
-  .guide-page-clean .support-section h2 {
-    font-size: 24px;
-  }
-
-  .guide-page-clean .tips-section,
-  .guide-page-clean .kit-section,
-  .guide-page-clean .resources-section {
-    margin-top: 64px;
-  }
-
-  .guide-page-clean .tip-card {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    padding: 20px 18px;
-  }
-
-  .guide-page-clean .tip-badge {
-    width: 30px;
-    height: 30px;
-  }
-
-  .guide-page-clean .support-logos {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: min(100%, 520px);
-    gap: 18px;
-  }
-}
-
-@media (max-width: 480px) {
-  .guide-page-clean .shell {
-    width: min(calc(100% - 24px), 456px);
-  }
-
-  .guide-page-clean .hero {
-    padding-top: 44px;
-  }
-
-  .guide-page-clean .hero h1 {
-    font-size: clamp(2rem, 12vw, 3.2rem);
-  }
-
-  .guide-page-clean .structure-card {
-    padding: 24px 20px 22px;
-    border-radius: 20px;
-  }
-
-  .guide-page-clean .dark-panel {
-    padding: 28px 16px 40px;
-    border-radius: 0;
-  }
-
-  .guide-page-clean .text-column p,
-  .guide-page-clean .tips-heading p,
-  .guide-page-clean .tip-copy p,
-  .guide-page-clean .resources-lead,
-  .guide-page-clean .resources-files,
-  .guide-page-clean .resources-card p,
-  .guide-page-clean .page-footer p {
-    font-size: 14px;
-  }
-
-  .guide-page-clean .resources-card {
-    width: 100%;
-    min-height: 0;
-    padding: 24px 18px;
-  }
-
-  .guide-page-clean .resources-card p {
-    max-width: 24ch;
-  }
-
-  .guide-page-clean .pill-button {
-    min-width: 162px;
-    min-height: 38px;
-    font-size: 14px;
-  }
-
-  .guide-page-clean .support-logos {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: min(100%, 260px);
-  }
-
-  .guide-page-clean .partner-logo-slot:last-child {
     grid-column: 1 / -1;
     width: 50%;
     margin: 0 auto;
