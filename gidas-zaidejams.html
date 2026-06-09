@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gidas žaidėjams</title>
+    <title>Gidas žaidėjams | Žvėriški rinkimai</title>
     <meta
       name="description"
       content="Gidas žaidėjams edukaciniam stalo žaidimui Žvėriški rinkimai."
@@ -16,19 +16,50 @@
     />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body>
-    <header class="page-header">
-      <div class="shell">
-        <nav class="topbar" aria-label="Pagrindinė navigacija">
-          <a href="#">Gidas žaidėjams</a>
-          <a href="#">Kas yra „žvėriški rinkimai“?</a>
-          <a href="#">Laikmatis žaidimui</a>
-        </nav>
+  <body class="guide-page-v2">
+    <header class="hero hero--subpage hero--subpage-light">
+      <button
+        class="mobile-menu-button mobile-menu-button--dark"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Atidaryti meniu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-        <section class="hero">
-          <h1>Gidas žaidėjams</h1>
+      <div id="mobile-menu" class="mobile-menu mobile-menu--light" hidden>
+        <div class="mobile-menu__panel">
+          <button class="mobile-menu__close" type="button" aria-label="Uždaryti meniu">
+            ×
+          </button>
+          <a class="mobile-menu__link" href="./gidas-zaidejams.html">Gidas žaidėjams</a>
+          <a class="mobile-menu__link" href="./index.html">Kas yra žvėriški rinkimai?</a>
+          <a class="mobile-menu__link" href="./laikmatis.html">Laikmatis žaidimui</a>
+        </div>
+      </div>
 
-          <article class="structure-card">
+      <nav class="topbar topbar--subpage topbar--subpage-light">
+        <a class="topbar__link topbar__link--dark" href="./gidas-zaidejams.html"
+          >Gidas žaidėjams</a
+        >
+        <a class="topbar__link topbar__link--dark topbar__link--center" href="./index.html">
+          Kas yra „žvėriški rinkimai“?
+        </a>
+        <a class="topbar__link topbar__link--dark" href="./laikmatis.html"
+          >Laikmatis žaidimui</a
+        >
+      </nav>
+    </header>
+
+    <section class="guide-v2-hero">
+      <div class="guide-v2-shell">
+        <div class="guide-v2-hero-grid">
+          <h1 class="guide-v2-title">Gidas žaidėjams</h1>
+
+          <article class="guide-v2-structure">
             <h2>Struktūra ir trukmė</h2>
             <p>
               Trukmė: 2 pamokos (iš viso apie 90 min)<br />
@@ -36,32 +67,31 @@
               Žaidėjų: 6–30 žmonių
             </p>
           </article>
-        </section>
+        </div>
       </div>
-    </header>
+    </section>
 
-    <main class="main-content">
-      <div class="shell">
-        <section class="dark-panel">
-          <section class="game-flow">
+    <main class="guide-v2-main">
+      <section class="guide-v2-dark">
+        <div class="guide-v2-shell">
+          <section class="guide-v2-flow">
             <h2>Žaidimo eiga</h2>
 
-            <div class="two-columns">
-              <div class="text-column">
+            <div class="guide-v2-columns">
+              <div class="guide-v2-column">
                 <p>
                   Susiskirstymas <strong>2 min</strong>: Žaidėjai burtų keliu traukia
-                  žetonus, kurie nustato jų rolę! Partijos narys arba
-                  Pilietis/Rinkėjas.
+                  žetonus, kurie nustato jų rolę! Partijos narys arba Pilietis/Rinkėjas.
                 </p>
                 <p>
-                  Personažų pasirinkimas: Kiekvienas žaidėjas (tiek partijos narys,
-                  tiek rinkėjas) traukia kortelę su gyvūno atvaizdu.
+                  Personažų pasirinkimas: Kiekvienas žaidėjas (tiek partijos narys, tiek
+                  rinkėjas) traukia kortelę su gyvūno atvaizdu.
                 </p>
                 <p>
                   Pasiruošimas ir prisistatymas po <strong>2 min</strong>: Kūrybinis
-                  pasirinkimas: Žaidėjai gali pasirinkti: naudoti autoriaus jau
-                  paruoštas vertybes arba pasikliauti fantazija ir susikurti savo
-                  partijos bei rinkėjo ideologiją, pavadinimą bei vertybes patys.
+                  pasirinkimas: Žaidėjai gali pasirinkti: naudoti autoriaus jau paruoštas
+                  vertybes arba pasikliauti fantazija ir susikurti savo partijos bei
+                  rinkėjo ideologiją, pavadinimą bei vertybes patys.
                 </p>
                 <p>
                   Kiekviena partija turi <strong>2 min</strong> prisistatyti rinkėjams,
@@ -69,7 +99,7 @@
                 </p>
               </div>
 
-              <div class="text-column">
+              <div class="guide-v2-column">
                 <p>
                   <strong>
                     Šis procesas kartojamas 4 turus, kurių metu mokiniai sprendžia
@@ -88,8 +118,7 @@
                 </p>
                 <p>
                   Sprendimų pristatymas po <strong>2 min</strong>: Kiekviena partija turi
-                  iki 2 minučių įtikinti rinkėjus, kad jų siūlomas kelias yra
-                  geriausias.
+                  iki 2 minučių įtikinti rinkėjus, kad jų siūlomas kelias yra geriausias.
                 </p>
                 <p>
                   Provokacija ir diskusija <strong>10 min</strong>: Rinkėjai traukia
@@ -110,8 +139,8 @@
             </div>
           </section>
 
-          <section class="tips-section">
-            <div class="tips-heading">
+          <section class="guide-v2-tips">
+            <div class="guide-v2-tips-heading">
               <h2>Patarimai mokytojui: kaip aktyvinti žaidimą ir padrąsinti mokinius?</h2>
               <p>
                 Kad žaidimas vyktų sklandžiai, o mokiniai jaustųsi laisvai,
@@ -119,81 +148,80 @@
               </p>
             </div>
 
-            <div class="tips-list">
-              <article class="tip-card">
-                <div class="tip-badge">1</div>
-                <div class="tip-copy">
+            <div class="guide-v2-tip-list">
+              <article class="guide-v2-tip-card">
+                <div class="guide-v2-tip-badge">1</div>
+                <div class="guide-v2-tip-copy">
                   <h3>Svarbiausia – tai fantazijos erdvė</h3>
                   <p>
-                    Pati pradžia yra kritinė: paaiškinkite mokiniams, kad šis
-                    žaidimas yra fantazija. Tai panašu į filmus ar knygas, kur rimtos
-                    moralinės ir gyvenimiškos temos pateikiamos per pasakiškus
-                    elementus. Nors temos rimtos, forma yra saugi, ji leidžia
-                    eksperimentuoti su idėjomis be baimės suklysti.
+                    Pati pradžia yra kritinė: paaiškinkite mokiniams, kad šis žaidimas
+                    yra fantazija. Tai panašu į filmus ar knygas, kur rimtos moralinės ir
+                    gyvenimiškos temos pateikiamos per pasakiškus elementus. Nors temos
+                    rimtos, forma yra saugi, ji leidžia eksperimentuoti su idėjomis be
+                    baimės suklysti.
                   </p>
                 </div>
               </article>
 
-              <article class="tip-card">
-                <div class="tip-badge">2</div>
-                <div class="tip-copy">
+              <article class="guide-v2-tip-card">
+                <div class="guide-v2-tip-badge">2</div>
+                <div class="guide-v2-tip-copy">
                   <h3>„Nėra kvailų klausimų“</h3>
                   <p>
                     Paskatinkite mokinius drąsiai kalbėti ir klausti visko, kas šauna į
-                    galvą. Rinkėjams: Būkite kritiški. Priimkite viską, ką sako
-                    partijos, „jautriai“ – lyg tai tiesiogiai lemtų jūsų, kaip miško
-                    gyventojo, likimą. Diskusija: Tai galimybė klausti ko tik norite.
-                    Priminkite, kad būtent provokuojantys ir netikėti klausimai
-                    geriausiai išjudina diskusiją.
+                    galvą. Rinkėjams: Būkite kritiški. Priimkite viską, ką sako partijos,
+                    „jautriai“ – lyg tai tiesiogiai lemtų jūsų, kaip miško gyventojo,
+                    likimą. Diskusija: Tai galimybė klausti ko tik norite. Priminkite,
+                    kad būtent provokuojantys ir netikėti klausimai geriausiai išjudina
+                    diskusiją.
                   </p>
                 </div>
               </article>
 
-              <article class="tip-card">
-                <div class="tip-badge">3</div>
-                <div class="tip-copy">
+              <article class="guide-v2-tip-card">
+                <div class="guide-v2-tip-badge">3</div>
+                <div class="guide-v2-tip-copy">
                   <h3>Nuo realybės link interpretacijos</h3>
                   <p>
-                    Žaidimo situacijos atspindi tikras gyvenimo problemas: DI
-                    atsiradimą, krizes, istorines nesantaikas ar socialinę atskirtį.
-                    Patarimas: Jei mokiniams sunku pradėti, pirmiausia trumpai
-                    aptarkite, kaip ši situacija atrodytų realiame pasaulyje. Radus
-                    realų atitikmenį, bus daug lengviau jį „perkelti“ į žaidimo
-                    metaforą.
+                    Žaidimo situacijos atspindi tikras gyvenimo problemas: DI atsiradimą,
+                    krizes, istorines nesantaikas ar socialinę atskirtį. Patarimas: Jei
+                    mokiniams sunku pradėti, pirmiausia trumpai aptarkite, kaip ši
+                    situacija atrodytų realiame pasaulyje. Radus realų atitikmenį, bus
+                    daug lengviau jį „perkelti“ į žaidimo metaforą.
                   </p>
                 </div>
               </article>
 
-              <article class="tip-card">
-                <div class="tip-badge">4</div>
-                <div class="tip-copy">
+              <article class="guide-v2-tip-card">
+                <div class="guide-v2-tip-badge">4</div>
+                <div class="guide-v2-tip-copy">
                   <h3>Kantrybė ir laikas</h3>
                   <p>
                     Normalu, kad pradžioje mokiniams gali būti sunku iškart įsijausti į
                     gyvūno rolę ar sujungti politinę ideologiją su fantazija. Duokite
-                    jiems laiko „apšilti“. Dažniausiai po pirmo turo barjerai išnyksta
-                    ir mokiniai natūraliai įsitraukia į diskusijų azartą.
+                    jiems laiko „apšilti“. Dažniausiai po pirmo turo barjerai išnyksta ir
+                    mokiniai natūraliai įsitraukia į diskusijų azartą.
                   </p>
                 </div>
               </article>
             </div>
           </section>
 
-          <section class="kit-section">
+          <section class="guide-v2-kit">
             <h2>Kas sudaro žaidimo rinkinį?</h2>
 
-            <div class="two-columns two-columns--kit">
-              <div class="text-column">
+            <div class="guide-v2-columns guide-v2-columns--kit">
+              <div class="guide-v2-column">
                 <p><strong>Kortelės ir situacijos</strong></p>
                 <p>
-                  <strong>80 situacijų kortelių:</strong> įvairios socialinės,
-                  ekonominės ir politinės problemos (nuo DI įtakos iki valstybės
-                  krizių), kurias mokiniai turės išspręsti.
+                  <strong>80 situacijų kortelių:</strong> įvairios socialinės, ekonominės
+                  ir politinės problemos (nuo DI įtakos iki valstybės krizių), kurias
+                  mokiniai turės išspręsti.
                 </p>
                 <p>
-                  <strong>60 gairių kortelių (klaustukai):</strong>
-                  žodžiai-užuominos, padedantys rinkėjams suformuluoti aštrius ir
-                  provokuojančius klausimus diskusijai.
+                  <strong>60 gairių kortelių (klaustukai):</strong> žodžiai-užuominos,
+                  padedantys rinkėjams suformuluoti aštrius ir provokuojančius klausimus
+                  diskusijai.
                 </p>
                 <p>
                   <strong>60 personažų kortelių:</strong> 20 skirtingų gyvūnų rūšių,
@@ -208,7 +236,7 @@
                 </p>
               </div>
 
-              <div class="text-column">
+              <div class="guide-v2-column">
                 <p><strong>Žetonai</strong></p>
                 <p>
                   <strong>60 balsavimo žetonų:</strong> Skirti rinkėjams atiduoti savo
@@ -248,81 +276,107 @@
                   kiršinti kitas partijas ar kelti abejones jų sprendimais.
                 </p>
                 <p>
-                  <strong>Laimėti bet kokia kaina:</strong> Naudokite populistinę
-                  retoriką, žadėkite neįmanomus dalykus ir stebėkite, ar rinkėjai
-                  sugebės jus perprasti.
+                  <strong>Laimėti bet kokia kaina:</strong> Naudokite populistinę retoriką,
+                  žadėkite neįmanomus dalykus ir stebėkite, ar rinkėjai sugebės jus
+                  perprasti.
                 </p>
               </div>
             </div>
           </section>
 
-          <section class="resources-section">
-            <div class="resources-copy">
-              <p class="resources-lead">
+          <section class="guide-v2-resources">
+            <div class="guide-v2-resources-copy">
+              <p class="guide-v2-resources-lead">
                 Įvaldėte žaidimo pagrindus? Metas patiems kurti šio pasaulio politinį
-                veidą! Kūrybinėje versijoje mokiniai patys formuoja partijų
-                ideologijas ir rinkėjų lūkesčius.
+                veidą! Kūrybinėje versijoje mokiniai patys formuoja partijų ideologijas
+                ir rinkėjų lūkesčius.
               </p>
-              <p class="resources-files">
+              <p class="guide-v2-resources-files">
                 <strong>Atsisiųskite darbo įrankius (PDF):</strong><br />
-                <strong>Partijos Manifestas:</strong> Vieta partijos vardui, vertybėms
-                ir programai suformuluoti.<br />
+                <strong>Partijos Manifestas:</strong> Vieta partijos vardui, vertybėms ir
+                programai suformuluoti.<br />
                 <strong>Piliečio Portretas:</strong> Rinkėjo prioritetų ir tapatybės
                 gryninimo lapas.
               </p>
-              <a class="pill-button pill-button--light" href="#">Bloknotai</a>
+              <div class="guide-v2-button-row">
+                <span class="guide-v2-pill guide-v2-pill--light">Bloknotai</span>
+              </div>
             </div>
 
-            <div class="resources-card">
+            <article class="guide-v2-glossary-card">
               <p>
                 <strong>Sąvokų žodynas:</strong> Kad mokymosi procesas būtų dar
-                efektyvesnis, pridedu pagrindines politines sąvokas, kurie bus
-                naudojami žaidime. Rekomenduojama jas peržiūrėti prieš žaidimą arba
-                pasitelkti žaidimo metu, jei mokiniai užduotų klausimų.
+                efektyvesnis, pridedu pagrindines politines sąvokas, kurie bus naudojami
+                žaidime. Rekomenduojama jas peržiūrėti prieš žaidimą arba pasitelkti
+                žaidimo metu, jei mokiniai užduotų klausimų.
               </p>
-              <a class="pill-button pill-button--dark" href="#">Sąvokų žodynas</a>
-            </div>
+              <a class="guide-v2-pill guide-v2-pill--dark" href="./savoku-zodynas.html"
+                >Sąvokų žodynas</a
+              >
+            </article>
           </section>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <section class="support-section">
-        <div class="shell">
+      <section class="guide-v2-support">
+        <div class="guide-v2-shell">
           <h2>Projektas įgyvendintas su partnerių parama</h2>
 
-          <div class="support-logos" aria-label="Partnerių logotipų vietos">
-            <div class="partner-logo-slot">
-              <img class="partner-logo" src="" alt="Partnerio 1 logotipas" />
-              <span class="partner-logo-slot__label">Partneris 1</span>
-            </div>
-            <div class="partner-logo-slot">
-              <img class="partner-logo" src="" alt="Partnerio 2 logotipas" />
-              <span class="partner-logo-slot__label">Partneris 2</span>
-            </div>
-            <div class="partner-logo-slot">
-              <img class="partner-logo" src="" alt="Partnerio 3 logotipas" />
-              <span class="partner-logo-slot__label">Partneris 3</span>
-            </div>
-            <div class="partner-logo-slot">
-              <img class="partner-logo" src="" alt="Partnerio 4 logotipas" />
-              <span class="partner-logo-slot__label">Partneris 4</span>
-            </div>
-            <div class="partner-logo-slot">
-              <img class="partner-logo" src="" alt="Partnerio 5 logotipas" />
-              <span class="partner-logo-slot__label">Partneris 5</span>
-            </div>
+          <div class="guide-v2-support-logos">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
 
-          <footer class="page-footer">
-            <div class="footer-mark">Žvėriški<br />rinkimai</div>
+          <footer class="guide-v2-footer">
+            <div class="guide-v2-footer-mark">Žvėriški rinkimai</div>
             <p>
               © 2026 Emilija Gaigalaitė.<br />
-              Žaidimo „Žvėriški rinkimai“ autorė ir kūrėja.<br />
+              Žaidimo „Žvėriški rinkimai“ autoriai ir kūrėjai.<br />
               Visos teisės saugomos.
             </p>
           </footer>
         </div>
       </section>
     </main>
+
+    <script src="./animations.js" defer></script>
+    <script>
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuButton = document.querySelector(".mobile-menu-button");
+      const mobileMenuClose = document.querySelector(".mobile-menu__close");
+      const mobileMenuLinks = document.querySelectorAll(".mobile-menu__link");
+
+      function setMobileMenu(open) {
+        mobileMenu.hidden = !open;
+        mobileMenu.classList.toggle("is-open", open);
+        mobileMenu.style.display = open ? "block" : "none";
+        mobileMenu.setAttribute("aria-hidden", String(!open));
+        document.body.classList.toggle("menu-open", open);
+        mobileMenuButton.setAttribute("aria-expanded", String(open));
+      }
+
+      mobileMenuButton.addEventListener("click", () => setMobileMenu(true));
+      mobileMenuClose.addEventListener("click", () => setMobileMenu(false));
+      mobileMenu.addEventListener("click", (event) => {
+        if (event.target === mobileMenu) {
+          setMobileMenu(false);
+        }
+      });
+
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", () => setMobileMenu(false));
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          setMobileMenu(false);
+        }
+      });
+
+      setMobileMenu(false);
+    </script>
   </body>
 </html>
